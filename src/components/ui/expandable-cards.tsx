@@ -2,10 +2,16 @@ import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "../../hooks/use-outside-click.ts";
 
-export function ProductCard() {
-  const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
-    null
-  );
+type Card = {
+  title: string;
+  description: string;
+  src: string;
+  link: string;
+  content: () => JSX.Element;
+};
+
+export function ProductCard({ cards }: { cards: Card[] }) {
+  const [active, setActive] = useState<Card[][number] | boolean | null>(null);
   const id = useId();
   const ref = useRef<HTMLDivElement>(null);
 
@@ -42,7 +48,7 @@ export function ProductCard() {
       </AnimatePresence>
       <AnimatePresence>
         {active && typeof active === "object" ? (
-          <div className="fixed inset-0  grid place-items-center z-[100]">
+          <div className="fixed inset-0 grid place-items-center z-[100]">
             <motion.button
               key={`button-${active.title}-${id}`}
               layout
@@ -66,7 +72,7 @@ export function ProductCard() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white  sm:rounded-3xl overflow-hidden"
+              className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white  sm:rounded-3xl overflow-hidden"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <img
@@ -100,11 +106,11 @@ export function ProductCard() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    href={active.ctaLink}
+                    href={active.link}
                     target="_blank"
                     className="px-4 py-3 text-sm rounded-full font-bold bg-blue text-white"
                   >
-                    {active.ctaText}
+                    Visit
                   </motion.a>
                 </div>
                 <div className="pt-4 relative px-4">
@@ -125,6 +131,7 @@ export function ProductCard() {
           </div>
         ) : null}
       </AnimatePresence>
+
       <ul className="max-w-2xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 items-start gap-4">
         {cards.map((card) => (
           <motion.div
@@ -197,96 +204,3 @@ export const CloseIcon = () => {
     </motion.svg>
   );
 };
-
-const cards = [
-  {
-    description: "Lana Del Rey",
-    title: "Web3 Gaming",
-    src: "/web3gaming1.png",
-    ctaText: "Visit",
-    ctaLink: "#",
-    content: () => {
-      return (
-        <p>
-          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
-          her melancholic and cinematic music style. Born Elizabeth Woolridge
-          Grant in New York City, she has captivated audiences worldwide with
-          her haunting voice and introspective lyrics. <br /> <br /> Her songs
-          often explore themes of tragic romance, glamour, and melancholia,
-          drawing inspiration from both contemporary and vintage pop culture.
-          With a career that has seen numerous critically acclaimed albums, Lana
-          Del Rey has established herself as a unique and influential figure in
-          the music industry, earning a dedicated fan base and numerous
-          accolades.
-        </p>
-      );
-    },
-  },
-  {
-    description: "Babbu Maan",
-    title: "Web3 Gaming future",
-    src: "/web3gaming2.jpg",
-    ctaText: "Visit",
-    ctaLink: "#",
-    content: () => {
-      return (
-        <p>
-          Babu Maan, a legendary Punjabi singer, is renowned for his soulful
-          voice and profound lyrics that resonate deeply with his audience. Born
-          in the village of Khant Maanpur in Punjab, India, he has become a
-          cultural icon in the Punjabi music industry. <br /> <br /> His songs
-          often reflect the struggles and triumphs of everyday life, capturing
-          the essence of Punjabi culture and traditions. With a career spanning
-          over two decades, Babu Maan has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
-        </p>
-      );
-    },
-  },
-
-  {
-    description: "Metallica",
-    title: "Web3 Gaming story",
-    src: "/web3gaming3.jpg",
-    ctaText: "Visit",
-    ctaLink: "#",
-    content: () => {
-      return (
-        <p>
-          Metallica, an iconic American heavy metal band, is renowned for their
-          powerful sound and intense performances that resonate deeply with
-          their audience. Formed in Los Angeles, California, they have become a
-          cultural icon in the heavy metal music industry. <br /> <br /> Their
-          songs often reflect themes of aggression, social issues, and personal
-          struggles, capturing the essence of the heavy metal genre. With a
-          career spanning over four decades, Metallica has released numerous hit
-          albums and singles that have garnered them a massive fan following
-          both in the United States and abroad.
-        </p>
-      );
-    },
-  },
-  {
-    description: "Lord Himesh",
-    title: "web3 Gaming story",
-    src: "/web3gaming4.png",
-    ctaText: "Visit",
-    ctaLink: "#",
-    content: () => {
-      return (
-        <p>
-          Himesh Reshammiya, a renowned Indian music composer, singer, and
-          actor, is celebrated for his distinctive voice and innovative
-          compositions. Born in Mumbai, India, he has become a prominent figure
-          in the Bollywood music industry. <br /> <br /> His songs often feature
-          a blend of contemporary and traditional Indian music, capturing the
-          essence of modern Bollywood soundtracks. With a career spanning over
-          two decades, Himesh Reshammiya has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
-        </p>
-      );
-    },
-  },
-];
