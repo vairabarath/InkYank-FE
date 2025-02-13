@@ -7,7 +7,7 @@ const Home = () => {
       <section className="relative min-h-[90vh] flex flex-col items-center justify-center text-center px-6 overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 z-0 bg-gradient-to-br from-black via-blue-900 to-gray-900">
-          <div className="absolute inset-0 opacity-10 bg-[url('/matrix-bg.png')] bg-cover bg-center"></div>
+          <div className="absolute inset-0 opacity-20 bg-[url('/blockchain_bg.png')] bg-no-repeat  bg-center"></div>
         </div>
 
         {/* Content */}
