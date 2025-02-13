@@ -75,7 +75,7 @@ const Navbar = () => {
             )}
 
             {link.submenu && (
-              <div className="absolute z-50 top-full left-1/2 transform -translate-x-1/2 hidden group-hover:flex flex-col min-w-[400px] bg-white shadow-lg shadow-blue-200 rounded-md overflow-hidden">
+              <div className="absolute z-50 top-full left-1/2 transform -translate-x-1/2 hidden group-hover:flex flex-col min-w-[400px] bg-white shadow-lg  rounded-md overflow-hidden">
                 {link.submenu.map((item) => (
                   <NavLink
                     to={item.path}
