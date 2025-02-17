@@ -12,7 +12,7 @@ const About = () => {
         </h1>
         <h2 className="text-2xl md:text-3xl font-bold text-center max-w-3xl">
           Enabling blockchain technology accessible to the masses by creating
-          <AnimatedText color="blue" text=" Web3 games" />.
+          <AnimatedText color="blue" text=" Web3 games" />,
           <AnimatedText color="blue" text=" DApps" />,
           <AnimatedText color="blue" text=" DeFi" />, and
           <AnimatedText color="blue" text=" Blockchain infrastructure " />
