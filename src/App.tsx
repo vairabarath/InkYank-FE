@@ -7,6 +7,7 @@ import Web3gaming from "./pages/Products/Web3gaming";
 import Defi from "./pages/Products/Defi";
 import BlockchainInfra from "./pages/Products/BlockchainInfra";
 import Career from "./pages/Career";
+import RecruitmentForm from "./components/careers/form";
 function App() {
   return (
     <>
@@ -16,6 +17,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/careers" element={<Career />} />
+        <Route path="/form" element={<RecruitmentForm />} />
 
         {/* products routes */}
         <Route path="/products/web3-gaming" element={<Web3gaming />} />

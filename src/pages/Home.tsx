@@ -7,7 +7,20 @@ const Home = () => {
       <section className="relative min-h-[90vh] flex flex-col items-center justify-center text-center px-6 overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 z-0 bg-gradient-to-br from-black via-blue-900 to-gray-900">
-          <div className="absolute inset-0 opacity-20 bg-[url('/blockchain_bg.png')] bg-no-repeat  bg-center"></div>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <motion.img
+              src="/blockchain_bg.png"
+              alt="bglogo"
+              className="min-h-[500px] object-cover object-center"
+              animate={{
+                scale: [1, 1.2],
+                opacity: [0.1, 0.3],
+              }}
+              transition={{
+                duration: 1.5,
+              }}
+            />
+          </div>
         </div>
 
         {/* Content */}

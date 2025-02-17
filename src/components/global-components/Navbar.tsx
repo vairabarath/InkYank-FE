@@ -12,6 +12,10 @@ const Navbar = () => {
       path: "/",
     },
     {
+      name: "About",
+      path: "/about",
+    },
+    {
       name: "Products",
       submenu: [
         {
@@ -33,10 +37,6 @@ const Navbar = () => {
           path: "/products/defi",
         },
       ],
-    },
-    {
-      name: "About",
-      path: "/about",
     },
     {
       name: "Contact",

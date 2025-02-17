@@ -5,24 +5,24 @@ import "../../../node_modules/swiper/swiper.min.css";
 const Mission = () => {
   const missions = [
     {
-      title: "Empowering the Decentralized Future",
+      title: "Optimized On-Chain Logic",
       description:
-        "Our mission is to democratize access to decentralized technologies by developing scalable and secure blockchain solutions. We aim to provide individuals, developers, and businesses with the tools needed to unlock the full potential of blockchain, Web3, and decentralized finance.",
+        "We strive to integrate most of the app and game logic on-chain while ensuring cost efficiency, maximizing transparency, and maintaining seamless performance.",
     },
     {
-      title: "Building Trust in the Digital Economy",
+      title: "Democratizing Finance with DeFi",
       description:
-        "We strive to create a more transparent, secure, and accessible digital world by providing innovative blockchain infrastructure. Our solutions enable businesses to build decentralized applications that redefine industries such as finance, gaming, and entertainment.",
+        "Our goal is to make financial systems more accessible and inclusive through decentralized finance, eliminating barriers and promoting financial freedom for all.",
     },
     {
-      title: "Revolutionizing Financial Systems",
+      title: "Unlocking Blockchain’s Potential in Gaming",
       description:
-        "Our mission is to transform traditional financial systems through decentralized technologies, offering individuals and organizations new ways to manage, invest, and transact securely and autonomously.",
+        "We harness the full power of blockchain to revolutionize gaming, enabling true asset ownership, transparent mechanics, and innovative play-to-earn models.",
     },
     {
-      title: "Enhancing Digital Experiences with Blockchain",
+      title: "Building Robust Blockchain Infrastructure",
       description:
-        "We are committed to revolutionizing gaming, entertainment, and financial ecosystems with blockchain-based solutions that prioritize user sovereignty, fairness, and transparency.",
+        "We are dedicated to developing powerful infrastructure tools that strengthen blockchain networks, enhance user experience, and drive widespread adoption.",
     },
   ];
 

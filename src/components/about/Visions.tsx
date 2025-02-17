@@ -47,13 +47,11 @@ const Visions = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <Card title="Shaping a Decentralized World">
+          <Card title="Seamless On-Chain Integration">
             <p>
-              "Our vision is to empower individuals across the globe with
-              decentralized technologies that foster greater financial
-              inclusion, security, and freedom. We envision a future where
-              blockchain is the foundation of a fairer, more transparent digital
-              world."
+              "We envision a future where most app and game logic operates
+              efficiently on-chain, ensuring transparency, security, and
+              cost-effective execution."
             </p>
           </Card>
         </motion.div>
@@ -65,12 +63,11 @@ const Visions = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <Card title="Leading the Blockchain Revolution">
+          <Card title="A Truly Decentralized Financial Ecosystem">
             <p>
-              "We aim to lead the next generation of decentralized applications,
-              where blockchain is seamlessly integrated into every sector. Our
-              vision is to build an open, accessible, and decentralized digital
-              economy for all."
+              "We aim to create a financial landscape where DeFi empowers
+              individuals globally, eliminating intermediaries and enabling
+              open, permissionless access."
             </p>
           </Card>
         </motion.div>
@@ -82,12 +79,11 @@ const Visions = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true }}
         >
-          <Card title="Unlocking New Possibilities for Everyone">
+          <Card title="Revolutionizing Gaming with Blockchain">
             <p>
-              "We see a future where blockchain unlocks new opportunities for
-              businesses and individuals alike, enabling a frictionless,
-              decentralized world powered by trust, transparency, and
-              innovation."
+              "We see blockchain redefining gaming by enabling true digital
+              ownership, fair play, and immersive decentralized experiences for
+              players worldwide."
             </p>
           </Card>
         </motion.div>
@@ -99,12 +95,11 @@ const Visions = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           viewport={{ once: true }}
         >
-          <Card title="Transforming the Way We Interact Online">
+          <Card title="Empowering Innovation with Scalable Infrastructure">
             <p>
-              "Our vision is to create a future where every digital interaction,
-              from gaming to finance, is decentralized, fair, and governed by
-              users themselves. We believe that blockchain will redefine how
-              individuals and businesses collaborate online."
+              "Our vision is to build cutting-edge blockchain infrastructure
+              that supports developers and users, driving the mass adoption of
+              decentralized technologies."
             </p>
           </Card>
         </motion.div>

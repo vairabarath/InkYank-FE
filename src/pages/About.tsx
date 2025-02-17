@@ -11,12 +11,18 @@ const About = () => {
           What we do
         </h1>
         <h2 className="text-2xl md:text-3xl font-bold text-center max-w-3xl">
-          <AnimatedText color="blue" text="Revolutionizing blockchain" /> with
-          next-gen <AnimatedText color="blue" text="Web3 solutions" />. Explore
-          our cutting-edge products in
-          <AnimatedText color="blue" text=" gaming" />,
+          We are committed to making blockchain technology accessible to the
+          masses while staying true to the
+          <AnimatedText color="blue" text=" principles of decentralization" />.
+          Our solutions, including
+          <AnimatedText color="blue" text=" Web3 games" />.
+          <AnimatedText color="blue" text=" Entertainment DApps" />,
           <AnimatedText color="blue" text=" DeFi" />, and
-          <AnimatedText color="blue" text=" blockchain infrastructure" />.
+          <AnimatedText
+            color="blue"
+            text=" scalable blockchain infrastructure"
+          />
+          , bridge the gap between usability and trustless innovation.
         </h2>
       </div>
       <div className="mt-12">
