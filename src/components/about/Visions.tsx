@@ -49,9 +49,9 @@ const Visions = () => {
         >
           <Card title="Seamless On-Chain Integration">
             <p>
-              "We envision a future where most app and game logic operates
+              We envision a future where most app and game logic operates
               efficiently on-chain, ensuring transparency, security, and
-              cost-effective execution."
+              cost-effective execution.
             </p>
           </Card>
         </motion.div>
@@ -65,9 +65,9 @@ const Visions = () => {
         >
           <Card title="A Truly Decentralized Financial Ecosystem">
             <p>
-              "We aim to create a financial landscape where DeFi empowers
+              We aim to create a financial landscape where DeFi empowers
               individuals globally, eliminating intermediaries and enabling
-              open, permissionless access."
+              open, permissionless access.
             </p>
           </Card>
         </motion.div>
@@ -81,9 +81,9 @@ const Visions = () => {
         >
           <Card title="Revolutionizing Gaming with Blockchain">
             <p>
-              "We see blockchain redefining gaming by enabling true digital
+              We see blockchain redefining gaming by enabling true digital
               ownership, fair play, and immersive decentralized experiences for
-              players worldwide."
+              players worldwide.
             </p>
           </Card>
         </motion.div>
@@ -97,9 +97,9 @@ const Visions = () => {
         >
           <Card title="Empowering Innovation with Scalable Infrastructure">
             <p>
-              "Our vision is to build cutting-edge blockchain infrastructure
-              that supports developers and users, driving the mass adoption of
-              decentralized technologies."
+              Our vision is to build cutting-edge blockchain infrastructure that
+              supports developers and users, driving the mass adoption of
+              decentralized technologies.
             </p>
           </Card>
         </motion.div>
