@@ -9,7 +9,7 @@ export const FlipWords = ({
   words: string;
   className?: string;
 }) => {
-  const [currentWord, setCurrentWord] = useState(words);
+  const [currentWord, _setCurrentWord] = useState(words);
 
   return (
     <AnimatePresence>
