@@ -4,16 +4,13 @@ const Career = () => {
   return (
     <div className="bg-blue-50 text-gray-800">
       {/* Hero Section */}
-      <section className="bg-blue-600 text-white py-16">
+      <section className="bg-blue-600 text-white py-20">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Join Our Team</h1>
           <p className="text-lg md:text-xl mb-6">
             Empower your career with opportunities to learn, grow, and make an
             impact.
           </p>
-          <button className="bg-white text-blue-600 px-6 py-3 rounded-md font-semibold shadow-lg hover:bg-gray-100">
-            View Open Positions
-          </button>
         </div>
       </section>
 
@@ -148,7 +145,8 @@ const Career = () => {
       <footer className="bg-blue-600 text-white py-8">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <p className="text-lg">
-            Ready to kickstart your career? Join us today!
+            If you are interested in teaching blockchain to empower the youths ?
+            Join us today!
           </p>
           <button className="mt-4 bg-white text-blue-600 px-6 py-3 rounded-md font-semibold shadow-lg hover:bg-gray-100">
             Get Started

@@ -4,7 +4,7 @@ import { useOutsideClick } from "../../hooks/use-outside-click.ts";
 
 type Card = {
   title: string;
-  description: string;
+  description?: string;
   src: string;
   link: string;
   content: () => JSX.Element;

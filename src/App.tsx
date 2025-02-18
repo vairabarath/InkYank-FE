@@ -8,6 +8,7 @@ import Defi from "./pages/Products/Defi";
 import BlockchainInfra from "./pages/Products/BlockchainInfra";
 import Career from "./pages/Career";
 import RecruitmentForm from "./components/careers/form";
+import Community from "./pages/Community";
 function App() {
   return (
     <>
@@ -18,6 +19,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/careers" element={<Career />} />
         <Route path="/form" element={<RecruitmentForm />} />
+        <Route path="/community" element={<Community />} />
 
         {/* products routes */}
         <Route path="/products/web3-gaming" element={<Web3gaming />} />

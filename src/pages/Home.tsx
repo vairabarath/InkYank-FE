@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FlipWords } from "../components/ui/Flipwords";
 
 const Home = () => {
   return (
@@ -25,20 +26,25 @@ const Home = () => {
 
         {/* Content */}
         <motion.h1
-          className="text-4xl md:text-6xl font-extrabold z-10"
+          className="text-2xl md:text-5xl max-w-5xl  font-extrabold z-10"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Enter the Future of <span className="text-blue-500">Blockchain</span>
+          Revolutionizing Blockchain for
+          <FlipWords
+            className="text-blue-500 ml-2"
+            words={"Gaming and Decentralized Finance"}
+          />
         </motion.h1>
         <motion.p
-          className="text-lg md:text-xl mt-4 z-10"
+          className="text-md md:text-xl max-w-2xl mt-4 z-10"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Powering DeFi, Web3 Games, and Digital Economies through innovation.
+          We build scalable on-chain solutions, empower DeFi ecosystems, and
+          redefine gaming with blockchain technology
         </motion.p>
         <motion.div
           className="flex gap-4 mt-6 z-10"
@@ -49,7 +55,12 @@ const Home = () => {
           <button className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700">
             Explore Web3
           </button>
-          <button className="px-6 py-3 border-2 border-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 hover:text-white">
+          <button
+            onClick={() => {
+              window.location.href = "/careers";
+            }}
+            className="px-6 py-3 border-2 border-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 hover:text-white"
+          >
             Join Us
           </button>
         </motion.div>

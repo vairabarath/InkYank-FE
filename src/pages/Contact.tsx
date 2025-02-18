@@ -1,7 +1,12 @@
 import { Home, Mail, Phone } from "lucide-react";
 import AnimatedText from "../components/ui/animated-text";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+import { useState } from "react";
 
 const Contact = () => {
+  const [subject, setSubject] = useState("");
+  const [customSubject, setCustomSubject] = useState("");
   return (
     <div>
       <div className="bg-gradient-to-b from-blue-100 to-white">
@@ -30,6 +35,15 @@ const Contact = () => {
                   placeholder="Enter your name"
                   className="w-full p-2 mb-4 border rounded outline-none"
                 />
+                <label className="block mb-2 font-semibold">Phone Number</label>
+                <PhoneInput
+                  country={"in"}
+                  enableSearch={true}
+                  containerClass="mb-4 "
+                  inputClass=""
+                  buttonClass=" bg-gray-100 px-4"
+                />
+
                 <label className="block mb-2 font-semibold" htmlFor="email">
                   E-mail
                 </label>
@@ -39,6 +53,39 @@ const Contact = () => {
                   placeholder="Enter your email"
                   className="w-full p-2 mb-4 border rounded outline-none"
                 />
+
+                <div>
+                  <label className="block mb-2 font-semibold" htmlFor="subject">
+                    Subject
+                  </label>
+                  <div className="w-full">
+                    <select
+                      id="subject"
+                      value={subject}
+                      onChange={(e) => setSubject(e.target.value)}
+                      className="w-full p-2 mb-2 border rounded outline-none bg-white appearance-none"
+                    >
+                      <option value="">Select a subject</option>
+                      <option value="general">General Inquiry</option>
+                      <option value="support">Technical Support</option>
+                      <option value="feedback">Feedback / Suggestions</option>
+                      <option value="other">Other</option>
+                    </select>
+
+                    {subject === "other" && (
+                      <div className="w-full">
+                        <input
+                          type="text"
+                          placeholder="Enter your subject"
+                          value={customSubject}
+                          onChange={(e) => setCustomSubject(e.target.value)}
+                          className="w-full p-2 mb-2 border rounded outline-none mt-2 bg-white"
+                        />
+                      </div>
+                    )}
+                  </div>
+                </div>
+
                 <label className="block mb-2 font-semibold" htmlFor="message">
                   Message
                 </label>
@@ -59,23 +106,38 @@ const Contact = () => {
                 Contact Information
               </h2>
               <div className="mt-8">
-                <div className="flex items-center gap-1 ">
-                  <Home className="w-5 h-5 mb-3 text-blue" />
-                  <p className="mb-2 text-lg">
-                    <strong>Address:</strong> 123 Main Street, City, Country
-                  </p>
+                <div className="flex items-start gap-2">
+                  <Home className="w-5 h-5 text-blue mt-1" />
+                  <div className="flex items-start gap-5">
+                    <h4 className="text-lg font-bold">Address:</h4>
+
+                    <p className="text-gray-800 ">
+                      InkYank Private Limited,
+                      <br />
+                      63/A,
+                      <br />
+                      Masterplan complex,
+                      <br />
+                      Thittasalai,
+                      <br />
+                      Theni - 625531
+                    </p>
+                  </div>
                 </div>
-                <div className="flex items-center gap-1">
+
+                <div className="flex items-center mt-2 gap-1">
                   <Phone className="w-5 h-5 mb-3 text-blue" />
-                  <p className="mb-2 text-lg">
-                    <strong>Phone:</strong> +123 456 7890
-                  </p>
+                  <div className="mb-2 flex items-start gap-7">
+                    <h4 className="text-lg font-bold">Phone:</h4>
+                    <p className="text-gray-800">+91 8903333780</p>
+                  </div>
                 </div>
-                <div className="flex items-center gap-1">
+                <div className="flex items-center  mt-2 gap-1">
                   <Mail className="w-5 h-5 mb-3 text-blue" />
-                  <p className="mb-2 text-lg">
-                    <strong>Email:</strong> contact@example.com
-                  </p>
+                  <div className="mb-2 flex items-start gap-8">
+                    <h4 className="text-lg font-bold">Email:</h4>
+                    <p className="text-gray-800">contact@inkyank.com</p>
+                  </div>
                 </div>
               </div>
             </div>
