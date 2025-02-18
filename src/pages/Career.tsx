@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Box, ChevronsLeftRightEllipsis, ReceiptText } from "lucide-react";
 
 const Career = () => {
   return (
@@ -107,37 +108,74 @@ const Career = () => {
 
       {/* Training Programs */}
       <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
             Training Programs
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Blockchain Basics",
-                duration: "3 Months",
-              },
-              {
-                title: "Fullstack Development",
-                duration: "6 Months",
-              },
-              {
-                title: "Smart Contract Development",
-                duration: "4 Months",
-              },
-            ].map((training, index) => (
-              <motion.div
-                key={index}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg"
+
+          <motion.div
+            className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg flex flex-col md:flex-row items-center justify-between"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="w-full md:w-1/2">
+              {[
+                {
+                  title: "Blockchain Basics",
+                  duration: "3 Months",
+                  icon: <Box className="h-8 w-8 text-blue-600" />,
+                },
+                {
+                  title: "Fullstack Development",
+                  duration: "6 Months",
+                  icon: (
+                    <ChevronsLeftRightEllipsis className="h-8 w-8 text-blue-600" />
+                  ),
+                },
+                {
+                  title: "Smart Contract Development",
+                  duration: "4 Months",
+                  icon: <ReceiptText className="h-8 w-8 text-blue-600" />,
+                },
+              ].map((training, index) => (
+                <motion.div
+                  key={index}
+                  className="mb-4"
+                  initial={{ opacity: 0, x: -100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    delay: index * 0.3,
+                    duration: 0.6,
+                    type: "spring",
+                    stiffness: 80,
+                  }}
+                >
+                  <div className="flex items-center">
+                    {training.icon}
+                    <h3 className="text-2xl font-bold ml-4">
+                      {training.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-600">Duration: {training.duration}</p>
+                  {index < 2 && <hr className="my-4 border-gray-300" />}
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="w-full md:w-1/2 flex justify-center items-center">
+              <motion.button
+                className="bg-blue cursor-pointer transition-all duration-300 ease-in-out border border-blue hover:bg-white hover:text-blue text-white font-semibold py-2 px-4 rounded-md"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 1 }}
               >
-                <h3 className="text-2xl font-bold mb-2">{training.title}</h3>
-                <p className="text-gray-600">Duration: {training.duration}</p>
-                <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-700">
-                  Enroll Now
-                </button>
-              </motion.div>
-            ))}
-          </div>
+                Enroll Now
+              </motion.button>
+            </div>
+          </motion.div>
         </div>
       </section>
 

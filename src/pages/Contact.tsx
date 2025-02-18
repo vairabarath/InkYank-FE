@@ -67,6 +67,7 @@ const Contact = () => {
                     >
                       <option value="">Select a subject</option>
                       <option value="general">General Inquiry</option>
+                      <option value="Business">Business Inquiry</option>
                       <option value="support">Technical Support</option>
                       <option value="feedback">Feedback / Suggestions</option>
                       <option value="other">Other</option>
@@ -114,9 +115,7 @@ const Contact = () => {
                     <p className="text-gray-800 ">
                       InkYank Private Limited,
                       <br />
-                      63/A,
-                      <br />
-                      Masterplan complex,
+                      63/A Masterplan complex,
                       <br />
                       Thittasalai,
                       <br />

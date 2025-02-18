@@ -6,6 +6,9 @@
   --animate-drawLineHorizontal: drawLineHorizontal 1s ease-in-out forwards;
   --animate-drawLineHorizontalLg: drawLineHorizontalLg 1s ease-in-out forwards;
 
+  --animate-drawSmallLineHorizontal: drawSmallLineHorizontal 1s ease-in-out
+    forwards;
+
   --color-blue: #0869ff;
   --color-purple: #9668fd;
 
@@ -15,6 +18,15 @@
     }
     100% {
       height: 3rem;
+    }
+  }
+
+  @keyframes drawLgLineVertical {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 4rem;
     }
   }
 
@@ -33,6 +45,15 @@
     }
     100% {
       width: 77.8%;
+    }
+  }
+
+  @keyframes drawSmallLineHorizontal {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 66.1%;
     }
   }
 }
