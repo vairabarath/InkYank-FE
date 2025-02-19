@@ -9,6 +9,7 @@ import BlockchainInfra from "./pages/Products/BlockchainInfra";
 import Career from "./pages/Career";
 import RecruitmentForm from "./components/careers/form";
 import Community from "./pages/Community";
+import Footer from "./components/global-components/Footer";
 function App() {
   return (
     <>
@@ -29,6 +30,7 @@ function App() {
           element={<BlockchainInfra />}
         />
       </Routes>
+      <Footer />
     </>
   );
 }
