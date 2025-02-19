@@ -1,3 +1,4 @@
+import MobileSidebar from "./MobileSidebar";
 import Navbar from "./Navbar";
 
 const Header = () => {
@@ -8,11 +9,14 @@ const Header = () => {
           <img src="/logo.png" alt="LOGO" className="w-[150px] md:w-[225px]" />
         </div>
 
-        <div>
+        <div className="flex-1 flex justify-center">
           <Navbar />
         </div>
 
-        <div className="hidden md:block">
+        {/* mobile sidebar */}
+        <MobileSidebar />
+
+        <div className="hidden lg:block">
           <button className="bg-blue cursor-pointer transition-all duration-300 ease-in-out border border-blue hover:bg-white hover:text-blue text-white font-semibold py-2 px-4 rounded-md">
             Get Started
           </button>

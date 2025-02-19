@@ -10,16 +10,9 @@ const Home = () => {
         <div className="absolute inset-0 z-0 bg-gradient-to-br from-black via-blue-900 to-gray-900">
           <div className="absolute inset-0 flex items-center justify-center">
             <motion.img
-              src="/blockchain_bg.png"
+              src="/blockchain_bg_gif.gif"
               alt="bglogo"
-              className="min-h-[500px] object-cover object-center"
-              animate={{
-                scale: [1, 1.2],
-                opacity: [0.1, 0.3],
-              }}
-              transition={{
-                duration: 1.5,
-              }}
+              className="min-h-[500px] opacity-10 object-cover object-center"
             />
           </div>
         </div>
@@ -29,8 +22,7 @@ const Home = () => {
           className="text-2xl md:text-5xl max-w-5xl  font-extrabold z-10"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
+          transition={{ duration: 0.8 }}>
           Revolutionizing Blockchain for
           <FlipWords
             className="text-blue-500 ml-2"
@@ -41,8 +33,7 @@ const Home = () => {
           className="text-md md:text-xl max-w-2xl mt-4 z-10"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
+          transition={{ duration: 1 }}>
           We build scalable on-chain solutions, empower DeFi ecosystems, and
           redefine gaming with blockchain technology
         </motion.p>
@@ -50,8 +41,7 @@ const Home = () => {
           className="flex gap-4 mt-6 z-10"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2 }}
-        >
+          transition={{ duration: 1.2 }}>
           <button className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700">
             Explore Web3
           </button>
@@ -59,8 +49,7 @@ const Home = () => {
             onClick={() => {
               window.location.href = "/careers";
             }}
-            className="px-6 py-3 border-2 border-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 hover:text-white"
-          >
+            className="px-6 py-3 border-2 border-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 hover:text-white">
             Join Us
           </button>
         </motion.div>
@@ -69,13 +58,11 @@ const Home = () => {
         <motion.div
           className="absolute bottom-10 left-10 w-40 h-40 rounded-full bg-blue blur-3xl opacity-30 z-0"
           animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.3, 0.2] }}
-          transition={{ repeat: Infinity, duration: 5 }}
-        ></motion.div>
+          transition={{ repeat: Infinity, duration: 5 }}></motion.div>
         <motion.div
           className="absolute top-10 right-10 w-40 h-40 rounded-full bg-blue blur-3xl opacity-30 z-0"
           animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.3, 0.2] }}
-          transition={{ repeat: Infinity, duration: 5 }}
-        ></motion.div>
+          transition={{ repeat: Infinity, duration: 5 }}></motion.div>
       </section>
     </main>
   );
