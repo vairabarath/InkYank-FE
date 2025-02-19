@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Box, ChevronsLeftRightEllipsis, ReceiptText } from "lucide-react";
 import TrainingPrograms from "../components/careers/TrainingProgram";
 
 const Career = () => {
@@ -47,7 +46,8 @@ const Career = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-blue-300">
+                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-blue-300"
+              >
                 <div className="text-4xl mb-4">{item.icon}</div>
                 <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>
@@ -92,7 +92,8 @@ const Career = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-blue-300">
+                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-blue-300"
+              >
                 <h3 className="text-2xl font-bold mb-2">{job.title}</h3>
                 <p className="text-gray-600">{job.location}</p>
                 <p className="text-blue-600 font-semibold">{job.type}</p>
