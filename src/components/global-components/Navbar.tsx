@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import { navLinks } from "../../helper/Navlink";
 
