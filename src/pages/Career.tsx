@@ -66,24 +66,24 @@ const Career = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                title: "Frontend Developer",
+                title: "Frontend Developer - Internship ",
                 location: "Remote",
-                type: "Full-time",
+                type: "Part-time / Full-time",
               },
               {
-                title: "Blockchain Intern",
-                location: "On-site",
-                type: "Internship",
+                title: "Blockchain Developer - Internship",
+                location: "Remote",
+                type: "Part-time / Full-time",
               },
               {
-                title: "Backend Engineer",
+                title: "Backend Engineer - Internship",
                 location: "Remote",
-                type: "Full-time",
+                type: "Part-time / Full-time",
               },
               {
-                title: "UX/UI Designer",
+                title: "UX/UI Designer - Internship",
                 location: "Remote",
-                type: "Part-time",
+                type: "Part-time / Full-time",
               },
             ].map((job, index) => (
               <motion.div

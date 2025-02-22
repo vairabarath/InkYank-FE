@@ -1,4 +1,4 @@
-import { Facebook, Home, Instagram, Twitter } from "lucide-react";
+import { Linkedin, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -9,23 +9,22 @@ const Footer = () => {
         <div className="max-w-[1440px] w-[90%] mx-auto px-6 grid grid-cols-1 gap-10 text-center md:grid-cols-3 md:text-left">
           {/* Column 1 - Contact */}
           <div className="flex flex-col items-center md:items-center space-y-5">
-            <h2 className="text-xl text-white">CONTACT</h2>
+            <h2 className="text-xl text-white">QUICK NAVIGATE</h2>
             <hr className="border-gray-600 w-16" />
-            <div className="flex items-start gap-2 text-left">
-              <Home className="text-white text-2xl" />
-              <p className="text-gray-300">
-                InkYank Private Limited,
-                <br />
-                63/A Masterplan Complex,
-                <br />
-                Thittasalai,
-                <br />
-                Theni - 625531
-              </p>
+            <div className="flex flex-col gap-2">
+              <a
+                className="border border-gray-500 py-2 px-6 hover:bg-gray-800 transition"
+                href="/community"
+              >
+                Home
+              </a>
+              <a
+                className="border border-gray-500 py-2 px-6 hover:bg-gray-800 transition"
+                href="/contact"
+              >
+                Contact Us
+              </a>
             </div>
-            <button className="border border-gray-500 py-2 px-6 hover:bg-gray-800 transition">
-              Contact Now
-            </button>
           </div>
 
           {/* Column 2 - Social Media */}
@@ -33,13 +32,13 @@ const Footer = () => {
             <h2 className="text-xl text-white">SOCIAL MEDIA</h2>
             <div className="flex justify-center gap-4">
               <a href="#" className="hover:text-gray-400 transition">
-                <Facebook className="text-blue-500 text-2xl" />
+                <img src="/Discord.png" alt="Discord" className="w-7" />
               </a>
               <a href="#" className="hover:text-gray-400 transition">
                 <Twitter className="text-blue-400 text-2xl" />
               </a>
               <a href="#" className="hover:text-gray-400 transition">
-                <Instagram className="text-pink-400 text-2xl" />
+                <Linkedin className="text-blue text-2xl" />
               </a>
             </div>
           </div>

@@ -95,7 +95,11 @@ export function ProductCard({ cards }: { cards: Card[] }) {
                     </motion.h3>
                     <motion.p
                       layoutId={`description-${active.description}-${id}`}
-                      className="text-neutral-600 00 text-base"
+                      className={` ${
+                        active.description == "lanching soon"
+                          ? "text-red-600"
+                          : "text-neutral-600"
+                      }   text-base`}
                     >
                       {active.description}
                     </motion.p>
@@ -159,7 +163,11 @@ export function ProductCard({ cards }: { cards: Card[] }) {
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${card.description}-${id}`}
-                  className="text-gray-600 00 text-center md:text-left text-base"
+                  className={` ${
+                    card.description == "lanching soon"
+                      ? "text-red-600"
+                      : "text-neutral-600"
+                  }  text-center md:text-left text-base`}
                 >
                   {card.description}
                 </motion.p>

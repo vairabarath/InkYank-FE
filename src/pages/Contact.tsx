@@ -1,4 +1,4 @@
-import { Home, Mail, Phone } from "lucide-react";
+import { Linkedin, Mail, Twitter } from "lucide-react";
 import AnimatedText from "../components/ui/animated-text";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -107,29 +107,10 @@ const Contact = () => {
                 Contact Information
               </h2>
               <div className="mt-8">
-                <div className="flex items-start gap-2">
-                  <Home className="w-5 h-5 text-blue mt-1" />
-                  <div className="flex items-start gap-5">
-                    <h4 className="text-lg font-bold">Address:</h4>
-
-                    <p className="text-gray-800 ">
-                      InkYank Private Limited,
-                      <br />
-                      63/A Masterplan complex,
-                      <br />
-                      Thittasalai,
-                      <br />
-                      Theni - 625531
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center mt-2 gap-1">
-                  <Phone className="w-5 h-5 mb-3 text-blue" />
-                  <div className="mb-2 flex items-start gap-7">
-                    <h4 className="text-lg font-bold">Phone:</h4>
-                    <p className="text-gray-800">+91 8903333780</p>
-                  </div>
+                <div className="flex items-center mt-2 gap-4">
+                  <Twitter className="w-5 h-5 mb-3 text-blue" />
+                  <Linkedin className="w-5 h-5 mb-3 text-blue" />
+                  <img src="/Discord.png" alt="" className="w-7 h-7 mb-3" />
                 </div>
                 <div className="flex items-center  mt-2 gap-1">
                   <Mail className="w-5 h-5 mb-3 text-blue" />

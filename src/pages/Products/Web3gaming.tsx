@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 const Web3gamingCards = [
   {
-    description: "Lana Del Rey",
-    title: "Web3 Gaming",
+    description: "lanching soon",
+    title: "Completely Decentralized Web3 Game",
     src: "/web3gaming1.png",
     link: "#",
     content: () => {
@@ -25,8 +25,8 @@ const Web3gamingCards = [
     },
   },
   {
-    description: "Babbu Maan",
-    title: "Web3 Gaming future",
+    description: "In progress",
+    title: "Sin Coin",
     src: "/web3gaming2.jpg",
     link: "#",
     content: () => {
@@ -47,8 +47,8 @@ const Web3gamingCards = [
   },
 
   {
-    description: "Metallica",
-    title: "Web3 Gaming story",
+    description: "In progress",
+    title: "NFT Based Card Game",
     src: "/web3gaming3.jpg",
     link: "#",
     content: () => {
@@ -68,8 +68,8 @@ const Web3gamingCards = [
     },
   },
   {
-    description: "Lord Himesh",
-    title: "web3 Gaming story",
+    description: "In progress",
+    title: "NFT Game",
     src: "/web3gaming4.png",
     link: "#",
     content: () => {
