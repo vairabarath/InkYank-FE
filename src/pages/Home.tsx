@@ -1,5 +1,6 @@
 import Hero from "../components/home/Hero";
 import BlockchainSection from "../components/home/Logos";
+import Services from "../components/home/Services";
 
 const Home = () => {
   return (
@@ -8,6 +9,9 @@ const Home = () => {
       <section className="relative min-h-[90vh] flex flex-col items-center justify-center text-center px-6 overflow-hidden">
         {/* Animated Background */}
         <Hero />
+      </section>
+      <section className="w-full">
+        <Services />
       </section>
       <section>
         <BlockchainSection />

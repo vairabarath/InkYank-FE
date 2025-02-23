@@ -18,7 +18,8 @@ const AnimatedText = ({ text, color }: { text: string; color?: string }) => {
           variants={wordVariants}
           custom={i}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
           {char}
         </motion.span>

@@ -16,7 +16,7 @@ const Career = () => {
       </section>
 
       {/* Why Join Us */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">Why Join Us?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -57,8 +57,13 @@ const Career = () => {
         </div>
       </section>
 
+      {/* Training Programs */}
+      <section className="bg-blue-50 py-16">
+        <TrainingPrograms />
+      </section>
+
       {/* Open Positions */}
-      <section className="bg-blue-100 py-16">
+      <section className="bg-white  py-16">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
             Open Positions
@@ -104,11 +109,6 @@ const Career = () => {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Training Programs */}
-      <section>
-        <TrainingPrograms />
       </section>
 
       {/* Footer */}

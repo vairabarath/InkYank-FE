@@ -92,7 +92,7 @@ const Contact = () => {
                 </label>
                 <textarea
                   rows={5}
-                  placeholder="Enter your name"
+                  placeholder="Enter your message"
                   className="w-full p-2 mb-4 border rounded outline-none"
                 />
 
@@ -109,7 +109,7 @@ const Contact = () => {
               <div className="mt-8">
                 <div className="flex items-center  mt-2 gap-1">
                   <Mail className="w-5 h-5 mb-3 text-blue" />
-                  <div className="mb-2 flex items-start gap-8">
+                  <div className="mb-2 flex items-start gap-3">
                     <h4 className="text-xl font-bold">Email:</h4>
                     <p className="text-gray-800 text-xl">contact@inkyank.com</p>
                   </div>

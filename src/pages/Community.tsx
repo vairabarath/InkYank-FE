@@ -103,7 +103,7 @@ const Community = () => {
               >
                 {CardData.map((card, index) => (
                   <SwiperSlide key={index}>
-                    <div className=" bg-transparent p-4 rounded-lg border min-h-70 max-h-70 border-white">
+                    <div className=" bg-transparent p-4 rounded-lg border min-h-50 max-h-50 border-white">
                       <p className="text-white">{card.body}</p>
                     </div>
                   </SwiperSlide>

@@ -29,8 +29,8 @@ const TrainingProgram = () => {
   ];
 
   return (
-    <div className="py-16">
-      <h2 className="text-3xl text-center md:text-4xl font-bold mb-6">
+    <div className="">
+      <h2 className="text-3xl text-center md:text-4xl font-bold mb-10">
         Training Program
       </h2>
       <div className="max-w-4xl mx-auto">
