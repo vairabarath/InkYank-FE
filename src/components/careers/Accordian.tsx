@@ -35,7 +35,6 @@ export default function Accordion({
     value || "Enrollment"
   );
 
-  // Notify parent when selected changes
   useEffect(() => {
     onChange?.(selected);
   }, [selected, onChange]);
@@ -68,40 +67,47 @@ export function AccordionItem({
   }
 
   const { selected, setSelected } = context;
-  const open = selected === value; // Determine if this item is open
+  const open = selected === value;
   const ref = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
 
-  // Update height when open state changes
   useEffect(() => {
     if (open && ref.current) {
-      setHeight(ref.current.scrollHeight); // Expand to full height
+      setHeight(ref.current.scrollHeight);
     } else {
-      setHeight(0); // Collapse
+      setHeight(0);
     }
   }, [open]);
 
-  // Handle click to toggle open/close
   const handleClick = () => {
     if (open) {
-      setSelected(null); // Close the currently open item
+      setSelected(null);
     } else {
-      setSelected(value); // Open this item and close others
+      setSelected(value);
     }
   };
 
   return (
-    <div className="shadow-lg">
-      <li className="border-b border-blue bg-white" {...props}>
+    <div className="shadow-lg group">
+      <li className="border-b border-blue bg-white " {...props}>
         <header
           role="button"
           onClick={handleClick}
           className="flex justify-between items-center p-4 cursor-pointer"
         >
-          <div className="md:text-xl font-semibold">{trigger}</div>
+          <div
+            className={`md:text-xl font-semibold bg-gradient-to-r from-blue-500 to-blue-500 
+                   bg-[length:0%_100%] bg-no-repeat transition-all duration-700  ${
+                     open ? "bg-[length:100%_100%] text-transparent" : ""
+                   }
+                   group-hover:bg-[length:100%_100%] group-hover:text-transparent 
+                   bg-clip-text`}
+          >
+            {trigger}
+          </div>
           <ChevronDown
             size={16}
-            className={`transition-transform duration-300 ${
+            className={`transition-transform duration-300 group-hover:text-blue ${
               open ? "rotate-180" : ""
             }`}
           />

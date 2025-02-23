@@ -1,5 +1,7 @@
 import { ArrowRightIcon, CircleHelp, Stars } from "lucide-react";
 import Accordion, { AccordionItem } from "./Accordian";
+import { motion } from "framer-motion";
+import { FlipWords } from "../ui/Flipwords";
 // Import icons
 
 const TrainingProgram = () => {
@@ -138,23 +140,47 @@ const TrainingProgram = () => {
           </AccordionItem>
 
           <AccordionItem value="Enrollment" trigger="Enroll Now">
-            <div className="bg-blue-50 p-6 rounded-lg shadow-md ">
+            <motion.div
+              initial={{ opacity: 0, y: 20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -20, scale: 0.95 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="bg-blue-50 p-6 rounded-lg shadow-md"
+            >
               <div className="pb-4 w-full flex items-center justify-between">
                 <h2 className="text-xl md:text-2xl font-semibold mb-4">
-                  Available Training Programs
+                  <FlipWords words="Available Training Programs" />
                 </h2>
                 <button
                   className="bg-blue-600 hidden md:block transition-all duration-300 ease-in-out border border-blue-600 
-                             hover:bg-white hover:text-blue-600 text-white font-semibold py-2 px-6 rounded-md"
+                    hover:bg-white hover:text-blue-600 text-white font-semibold py-2 px-6 rounded-md"
                 >
                   Enroll Now
                 </button>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+              {/* Animated Program Cards */}
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { staggerChildren: 0.2 },
+                  },
+                }}
+                className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+              >
                 {Programs.map((program, index) => (
-                  <div
+                  <motion.div
                     key={index}
-                    className="bg-white p-4 rounded-lg border border-gray-300 shadow-sm hover:shadow-md transition-all"
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.2 }}
+                    className="bg-white p-4 rounded-lg border border-gray-300 shadow-sm hover:shadow-md "
                   >
                     <h3 className="text-lg font-semibold">{program.title}</h3>
                     <div className=" text-gray-600 text-sm mt-2">
@@ -163,18 +189,19 @@ const TrainingProgram = () => {
                     <div className=" text-gray-500 text-sm mt-1">
                       {program.type}
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
+
               <div className="my-5 w-full text-center ">
                 <button
-                  className="bg-blue-600  md:hidden transition-all duration-300 ease-in-out border border-blue-600 
-                             hover:bg-white hover:text-blue-600 text-white font-semibold py-2 px-6 rounded-md"
+                  className="bg-blue-600 md:hidden transition-all duration-300 ease-in-out border border-blue-600 
+                  hover:bg-white hover:text-blue-600 text-white font-semibold py-2 px-6 rounded-md"
                 >
                   Enroll Now
                 </button>
               </div>
-            </div>
+            </motion.div>
           </AccordionItem>
         </Accordion>
       </div>

@@ -18,7 +18,7 @@ export const FlipWords = ({
           opacity: 0,
           y: 10,
         }}
-        animate={{
+        whileInView={{
           opacity: 1,
           y: 0,
         }}
@@ -42,7 +42,7 @@ export const FlipWords = ({
           <motion.span
             key={word + wordIndex}
             initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{
               delay: wordIndex * 0.3,
               duration: 0.3,
@@ -53,7 +53,7 @@ export const FlipWords = ({
               <motion.span
                 key={word + letterIndex}
                 initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
-                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{
                   delay: wordIndex * 0.3 + letterIndex * 0.05,
                   duration: 0.2,

@@ -12,7 +12,6 @@ const Home = () => {
       <section>
         <BlockchainSection />
       </section>
-      <section></section>
     </main>
   );
 };

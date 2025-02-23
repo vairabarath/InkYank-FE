@@ -1,32 +1,22 @@
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { navLinks } from "../../helper/Navlink";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, X } from "lucide-react";
+import { useState } from "react";
 
-const MobileSidebar = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+const MobileSidebar = ({ isSidebarOpen, toggleSidebar }: any) => {
   const [activeSubmenu, setActiveSubmenu] = useState(null);
-
-  const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
   return (
     <div className="lg:hidden">
-      <button
-        className="text-gray-800 focus:outline-none"
-        onClick={toggleSidebar}
-      >
-        <Menu size={30} />
-      </button>
-
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full bg-white shadow-lg z-50 w-64 transform ${
+        className={`fixed top-0 left-0 h-full bg-white shadow-lg z-[1000] w-64 transform ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >
         <button
-          className="absolute top-6 right-4 text-gray-800 focus:outline-none "
-          onClick={toggleSidebar}
+          className="absolute top-6 right-4 text-gray-800 focus:outline-none"
+          onClick={toggleSidebar} // Close the sidebar
         >
           <X size={25} />
         </button>
@@ -41,7 +31,7 @@ const MobileSidebar = () => {
                 <NavLink
                   to={link.path}
                   className="block py-2 px-4 text-gray-900 font-semibold"
-                  onClick={toggleSidebar}
+                  onClick={toggleSidebar} // Close the sidebar on link click
                 >
                   {link.name}
                 </NavLink>
@@ -70,7 +60,7 @@ const MobileSidebar = () => {
                       to={item.path}
                       key={item.title}
                       className="block py-2 px-4 text-gray-700"
-                      onClick={toggleSidebar}
+                      onClick={toggleSidebar} // Close the sidebar on link click
                     >
                       {item.title}
                     </NavLink>
