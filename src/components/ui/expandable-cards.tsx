@@ -117,13 +117,13 @@ export function ProductCard({ cards }: { cards: Card[] }) {
                     Visit
                   </motion.a>
                 </div>
-                <div className="pt-4 relative px-4">
+                <div className="py-4 relative px-4 flex-1 overflow-y-auto max-h-[50vh]">
                   <motion.div
                     layout
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto 00 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="text-neutral-600 text-sm lg:text-base"
                   >
                     {typeof active.content === "function"
                       ? active.content()

@@ -1,4 +1,5 @@
 import Hero from "../components/home/Hero";
+import BlockchainSection from "../components/home/Logos";
 
 const Home = () => {
   return (
@@ -8,6 +9,10 @@ const Home = () => {
         {/* Animated Background */}
         <Hero />
       </section>
+      <section>
+        <BlockchainSection />
+      </section>
+      <section></section>
     </main>
   );
 };

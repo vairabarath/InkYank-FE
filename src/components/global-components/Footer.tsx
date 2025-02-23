@@ -2,8 +2,8 @@ import { Linkedin, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gray-900 text-white py-10">
-      <div className="flex flex-col items-center gap-10">
+    <footer className="w-full bg-[#1C388C] text-white py-4">
+      <div className="flex flex-col items-center gap-5">
         <h2 className="text-4xl font-semibold">LOGO</h2>
 
         <div className="max-w-[1440px] w-[90%] mx-auto px-6 grid grid-cols-1 gap-10 text-center md:grid-cols-3 md:text-left">

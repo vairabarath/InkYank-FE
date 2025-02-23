@@ -10,16 +10,15 @@ const Web3gamingCards = [
     content: () => {
       return (
         <p>
-          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
-          her melancholic and cinematic music style. Born Elizabeth Woolridge
-          Grant in New York City, she has captivated audiences worldwide with
-          her haunting voice and introspective lyrics. <br /> <br /> Her songs
-          often explore themes of tragic romance, glamour, and melancholia,
-          drawing inspiration from both contemporary and vintage pop culture.
-          With a career that has seen numerous critically acclaimed albums, Lana
-          Del Rey has established herself as a unique and influential figure in
-          the music industry, earning a dedicated fan base and numerous
-          accolades.
+          Introducing a fully decentralized guess game that will change the way
+          you think about decentralized interactive entertainment. This
+          innovative game relies on decentralized principles to create a fair,
+          transparent, and secure environment for players. Every element, from
+          the mechanics to the rewards, is governed by the players themselves,
+          ensuring no central authority or interference. While we can’t reveal
+          all the details just yet, trust that it’s designed to bring an
+          entirely new level of excitement and engagement. Get ready – the full
+          unveiling will be coming soon!
         </p>
       );
     },
@@ -32,15 +31,17 @@ const Web3gamingCards = [
     content: () => {
       return (
         <p>
-          Babu Maan, a legendary Punjabi singer, is renowned for his soulful
-          voice and profound lyrics that resonate deeply with his audience. Born
-          in the village of Khant Maanpur in Punjab, India, he has become a
-          cultural icon in the Punjabi music industry. <br /> <br /> His songs
-          often reflect the struggles and triumphs of everyday life, capturing
-          the essence of Punjabi culture and traditions. With a career spanning
-          over two decades, Babu Maan has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
+          Introducing Sin Coin, a revolutionary Web3 game that inherits the
+          legendary Proof of Work ideology, offering a unique blend of effort
+          and reward. In Sin Coin, players will engage in challenges that
+          require genuine effort and skill, mirroring the core principles of
+          Proof of Work, where success is earned through hard work rather than
+          luck alone. But what truly sets Sin Coin apart is its dynamic reward
+          system – players will be rewarded not only based on their commitment
+          and efforts but also with an exciting element of randomness, ensuring
+          every experience is thrilling and unpredictable. Get ready for a game
+          where your actions matter and every decision counts, as you strive for
+          rewards that are as much about strategy as they are about chance!
         </p>
       );
     },
@@ -48,42 +49,48 @@ const Web3gamingCards = [
 
   {
     description: "In progress",
-    title: "NFT Based Card Game",
+    title: "NFT-Based Card Game",
     src: "/web3gaming3.jpg",
     link: "#",
     content: () => {
       return (
         <p>
-          Metallica, an iconic American heavy metal band, is renowned for their
-          powerful sound and intense performances that resonate deeply with
-          their audience. Formed in Los Angeles, California, they have become a
-          cultural icon in the heavy metal music industry. <br /> <br /> Their
-          songs often reflect themes of aggression, social issues, and personal
-          struggles, capturing the essence of the heavy metal genre. With a
-          career spanning over four decades, Metallica has released numerous hit
-          albums and singles that have garnered them a massive fan following
-          both in the United States and abroad.
+          Experience a revolution in card gaming with an NFT-based card game
+          that fuses the classic, strategic gameplay you love with the power of
+          decentralization. This isn't just another card game—it's a paradigm
+          shift. By integrating blockchain technology, every card becomes a true
+          asset, owned by you and free from interference. Gone are the days of
+          centralized control or changes that affect the game’s integrity. With
+          our gaming mechanics, players can truly own, trade, and build their
+          own card decks, while ensuring that each move is governed by the
+          community, not a centralized authority. Get ready to consume card
+          games in an entirely new way—one where your collection is yours, and
+          your gameplay is as secure as it is thrilling.
         </p>
       );
     },
   },
   {
     description: "In progress",
-    title: "NFT Game",
+    title: "Decentralized NFT-Based Game",
     src: "/web3gaming4.png",
     link: "#",
     content: () => {
       return (
         <p>
-          Himesh Reshammiya, a renowned Indian music composer, singer, and
-          actor, is celebrated for his distinctive voice and innovative
-          compositions. Born in Mumbai, India, he has become a prominent figure
-          in the Bollywood music industry. <br /> <br /> His songs often feature
-          a blend of contemporary and traditional Indian music, capturing the
-          essence of modern Bollywood soundtracks. With a career spanning over
-          two decades, Himesh Reshammiya has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
+          Imagine a completely decentralized game experience where every element
+          is controlled by the players, not just a marketplace or developer.
+          This NFT-based game goes beyond selling digital pets or traits that
+          developers/companies/players don’t even truly own or create. Here,
+          everything from the characters to the in-game assets is entirely
+          on-chain, giving players full control over what they acquire, create,
+          and trade. With no centralized system, the game ensures a seamless,
+          truly decentralized experience. Whether you’re hunting for rare items
+          or forging new experiences, this game will redefine how on-chain
+          transactions are used, creating a unique opportunity for blockchain
+          ecosystems across all chains—completely agnostic to any specific
+          blockchain. Get ready for a new era of gaming where your actions shape
+          the entire world, and every transaction brings value to the community.
         </p>
       );
     },

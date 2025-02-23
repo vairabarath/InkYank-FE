@@ -1,56 +1,123 @@
 import { motion } from "framer-motion";
 import { ProductCard } from "../../components/ui/expandable-cards";
+import { div } from "framer-motion/client";
 
 const BlockchainInfrastructureCards = [
   {
     description: "Secure Nodes",
-    title: "Blockchain Security",
+    title: "Blockchain Infrastructure",
     src: "/BlockchainSecurity.jpg",
     link: "#",
+
     content: () => (
       <p>
-        Secure nodes are the backbone of blockchain infrastructure, ensuring
-        decentralization and protecting against potential cyber threats. These
-        nodes validate and verify transactions to maintain a secure network.
+        We are at the forefront of the blockchain revolution, specializing in
+        blockchain infrastructure products and services. Our expertise lies in
+        building and deploying robust, scalable, and secure solutions that form
+        the bedrock of decentralized applications and networks. From core
+        protocol development to bespoke infrastructure services, we empower
+        businesses and innovators to harness the transformative potential of
+        blockchain technology. Explore our offerings to discover how we can help
+        you build the future of decentralized systems.
       </p>
     ),
   },
   {
     description: "Decentralized Systems",
-    title: "Infrastructure Solutions",
+    title: "Improving PoW Transaction Speed and Scripting",
     src: "/DecenterlizedSystem.jpg",
     link: "#",
     content: () => (
       <p>
-        Decentralized systems form the foundation of blockchain technology,
-        eliminating single points of failure and empowering peer-to-peer
-        interactions securely.
+        In the world of blockchain, transaction speed and scripting capabilities
+        are critical for scalability and user experience. This infrastructure
+        project focuses on enhancing the Proof of Work (PoW) consensus mechanism
+        to significantly improve transaction processing speeds. By optimizing
+        block propagation times, reducing latency, and implementing advanced
+        scripting features, this project aims to make PoW-based networks more
+        efficient and versatile. The improvements will not only accelerate
+        transaction confirmations but also enable more complex and customizable
+        smart contract functionalities, opening doors for innovative use cases.
+        This upgrade is designed to ensure that PoW chains remain competitive in
+        an era where speed and flexibility are paramount, while maintaining the
+        security and decentralization that PoW is known for.
       </p>
     ),
   },
   {
     description: "Smart Contracts",
-    title: "Future of Agreements",
+    title: "Layer 01 Game Chain",
     src: "/SmartContract.jpg",
     link: "#",
     content: () => (
       <p>
-        Smart contracts revolutionize digital agreements by enabling automated,
-        trustless, and immutable transactions within blockchain ecosystems.
+        This project introduces a Layer 1 Proof of Work (PoW) blockchain
+        specifically designed to function as a gaming chain, integrating unique
+        features tailored for the gaming industry. By leveraging the inherent
+        security and decentralization of PoW, this chain will provide a robust
+        foundation for in-game economies, asset ownership, and transparent
+        gameplay mechanics. Key features include low-latency transaction
+        processing, native support for non-fungible tokens (NFTs), and
+        customizable scripting for game developers to create immersive
+        experiences. Additionally, the chain will incorporate mechanisms for
+        player rewards, decentralized governance, and interoperability with
+        other gaming platforms. This infrastructure aims to revolutionize the
+        gaming industry by offering a secure, scalable, and feature-rich
+        blockchain solution that empowers developers and gamers alike.
       </p>
     ),
   },
   {
     description: "Scalability Solutions",
-    title: "Scaling Blockchain",
+    title: "Beyond Proof of Work, lies Proof of Truth.",
     src: "/ScalabilitySolution.jpg",
     link: "#",
     content: () => (
-      <p>
-        Scalability solutions address the growing demand for blockchain
-        networks, enhancing transaction speed and capacity without compromising
-        decentralization or security.
-      </p>
+      <div>
+        <p>
+          XX-Coin is a revolutionary cryptocurrency forging a new path in the
+          digital landscape. Built on a robust Proof-of-Work mechanism, XX-Coin
+          introduces a groundbreaking concept: Proof of Truth. This innovative
+          approach transforms the energy-intensive nature of traditional PoW
+          into a powerful engine for real-world utility, specifically designed
+          to revolutionize hardware and chip manufacturing.
+          <br />
+          Proof of Truth isn't just about solving complex algorithms. It's about
+          harnessing computational power to perform verifiable and valuable
+          benchmark testing for hardware and chip manufacturers. Instead of
+          generic hashing, XX-Coin miners contribute their processing power to
+          execute standardized, industry-recognized benchmarks on cutting-edge
+          hardware. This process generates irrefutable proof of performance – a
+          "Proof of Truth" about the capabilities of the tested hardware.
+          <br />
+        </p>
+        <h2 className="text-xl font-semibold">
+          For chip manufacturers, XX-Coin offers an unprecedented solution:
+          <br />
+        </h2>
+        <ul className="list-disc ml-6">
+          <li>
+            Decentralized & Transparent Benchmarking: Access a globally
+            distributed network of testers providing unbiased and transparent
+            performance data for your latest chips and hardware.
+          </li>
+          <li>
+            Real-World Performance Validation: Benchmark tests are designed to
+            simulate real-world use cases, providing accurate insights into
+            hardware capabilities under practical conditions.
+          </li>
+          <li>
+            Cost-Effective Testing: Leverage the distributed power of the
+            XX-Coin network, potentially reducing the need for expensive,
+            in-house testing infrastructure.
+          </li>
+          <li>
+            Enhanced Product Development: Gain access to continuous performance
+            feedback throughout the development lifecycle, enabling faster
+            iteration and optimization of hardware designs.
+          </li>
+        </ul>
+      </div>
     ),
   },
 ];
