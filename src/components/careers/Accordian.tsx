@@ -8,6 +8,7 @@ import {
 } from "react";
 import { ChevronDown } from "lucide-react";
 
+// Define the context for the Accordion
 interface AccordionContextProps {
   selected: string | null;
   setSelected: (value: string | null) => void;
@@ -17,6 +18,7 @@ const AccordionContext = createContext<AccordionContextProps | undefined>(
   undefined
 );
 
+// Accordion component
 interface AccordionProps {
   children: ReactNode;
   value?: string;
@@ -29,8 +31,11 @@ export default function Accordion({
   onChange,
   ...props
 }: AccordionProps) {
-  const [selected, setSelected] = useState<string | null>(value || null);
+  const [selected, setSelected] = useState<null | string>(
+    value || "Enrollment"
+  );
 
+  // Notify parent when selected changes
   useEffect(() => {
     onChange?.(selected);
   }, [selected, onChange]);
@@ -44,6 +49,7 @@ export default function Accordion({
   );
 }
 
+// AccordionItem component
 interface AccordionItemProps {
   children: ReactNode;
   value: string;
@@ -62,29 +68,50 @@ export function AccordionItem({
   }
 
   const { selected, setSelected } = context;
-  const open = selected === value;
+  const open = selected === value; // Determine if this item is open
   const ref = useRef<HTMLDivElement>(null);
+  const [height, setHeight] = useState(0);
+
+  // Update height when open state changes
+  useEffect(() => {
+    if (open && ref.current) {
+      setHeight(ref.current.scrollHeight); // Expand to full height
+    } else {
+      setHeight(0); // Collapse
+    }
+  }, [open]);
+
+  // Handle click to toggle open/close
+  const handleClick = () => {
+    if (open) {
+      setSelected(null); // Close the currently open item
+    } else {
+      setSelected(value); // Open this item and close others
+    }
+  };
 
   return (
     <div className="shadow-lg">
       <li className="border-b border-blue bg-white" {...props}>
         <header
           role="button"
-          onClick={() => setSelected(open ? null : value)}
-          className="flex justify-between items-center p-4 "
+          onClick={handleClick}
+          className="flex justify-between items-center p-4 cursor-pointer"
         >
           <div className="md:text-xl font-semibold">{trigger}</div>
-
           <ChevronDown
             size={16}
-            className={`transition-transform ${open ? "rotate-180" : ""}`}
+            className={`transition-transform duration-300 ${
+              open ? "rotate-180" : ""
+            }`}
           />
         </header>
+
         <div
-          className="overflow-y-hidden transition-all"
-          style={{ height: open ? ref.current?.offsetHeight || 0 : 0 }}
+          className="overflow-hidden transition-all duration-500 ease-in-out"
+          style={{ maxHeight: `${height}px` }}
         >
-          <div className="pt-2 p-4" ref={ref}>
+          <div ref={ref} className="pt-2 p-4">
             {children}
           </div>
         </div>

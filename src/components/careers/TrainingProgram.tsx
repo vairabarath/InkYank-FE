@@ -92,10 +92,9 @@ const TrainingProgram = () => {
               </div>
             </div>
           </AccordionItem>
-        </Accordion>
 
-        {/* Online Training Program */}
-        <Accordion>
+          {/* Online Training Program */}
+
           <AccordionItem
             value="Online Training Program"
             trigger="Online Training Programs for Global Web3 Talent"
@@ -137,9 +136,7 @@ const TrainingProgram = () => {
               </div>
             </div>
           </AccordionItem>
-        </Accordion>
 
-        <Accordion>
           <AccordionItem value="Enrollment" trigger="Enroll Now">
             <div className="bg-blue-50 p-6 rounded-lg shadow-md ">
               <div className="pb-4 w-full flex items-center justify-between">

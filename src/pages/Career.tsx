@@ -106,7 +106,10 @@ const Career = () => {
         </div>
       </section>
 
-      <TrainingPrograms />
+      {/* Training Programs */}
+      <section>
+        <TrainingPrograms />
+      </section>
 
       {/* Footer */}
       <footer className="bg-blue-600 text-white py-8">

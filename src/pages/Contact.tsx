@@ -107,17 +107,18 @@ const Contact = () => {
                 Contact Information
               </h2>
               <div className="mt-8">
+                <div className="flex items-center  mt-2 gap-1">
+                  <Mail className="w-5 h-5 mb-3 text-blue" />
+                  <div className="mb-2 flex items-start gap-8">
+                    <h4 className="text-xl font-bold">Email:</h4>
+                    <p className="text-gray-800 text-xl">contact@inkyank.com</p>
+                  </div>
+                </div>
                 <div className="flex items-center mt-2 gap-4">
                   <Twitter className="w-5 h-5 mb-3 text-blue" />
                   <Linkedin className="w-5 h-5 mb-3 text-blue" />
                   <img src="/Discord.png" alt="" className="w-7 h-7 mb-3" />
-                </div>
-                <div className="flex items-center  mt-2 gap-1">
-                  <Mail className="w-5 h-5 mb-3 text-blue" />
-                  <div className="mb-2 flex items-start gap-8">
-                    <h4 className="text-lg font-bold">Email:</h4>
-                    <p className="text-gray-800">contact@inkyank.com</p>
-                  </div>
+                  <img src="/telegram.png" alt="" className="w-7 h-7 mb-3" />
                 </div>
               </div>
             </div>

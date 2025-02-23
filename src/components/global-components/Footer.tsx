@@ -3,12 +3,12 @@ import { Linkedin, Twitter } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="w-full bg-[#1C388C] text-white py-4">
-      <div className="flex flex-col items-center gap-5">
+      <div className="flex flex-col items-center ">
         <h2 className="text-4xl font-semibold">LOGO</h2>
 
         <div className="max-w-[1440px] w-[90%] mx-auto px-6 grid grid-cols-1 gap-10 text-center md:grid-cols-3 md:text-left">
-          {/* Column 1 - Contact */}
-          <div className="flex flex-col items-center md:items-center space-y-5">
+          {/* Column 1 - NAVIGATION */}
+          <div className="flex flex-col items-center mt-6 md:mt-0 md:items-center space-y-5">
             <h2 className="text-xl text-white">QUICK NAVIGATE</h2>
             <hr className="border-gray-600 w-16" />
             <div className="flex flex-col gap-2">
@@ -40,11 +40,14 @@ const Footer = () => {
               <a href="#" className="hover:text-gray-400 transition">
                 <Linkedin className="text-blue text-2xl" />
               </a>
+              <a href="#" className="hover:text-gray-400 transition">
+                <img src="/telegram.png" alt="" className="w-7 h-7 mb-3" />
+              </a>
             </div>
           </div>
 
           {/* Column 3 - Company */}
-          <div className="border-t border-gray-600 pt-6 md:border-l md:border-t-0 md:pl-6 space-y-5 flex flex-col items-center ">
+          <div className="border-t border-gray-600 pt-6 md:pt-0  md:border-l md:border-t-0 md:pl-6 space-y-5 flex flex-col items-center ">
             <h2 className="text-xl text-white">COMPANY</h2>
             <hr className="border-gray-600 w-16" />
             <div className="flex flex-col gap-2">
