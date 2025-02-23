@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
 import { ProductCard } from "../../components/ui/expandable-cards";
-import { div } from "framer-motion/client";
 
 const BlockchainInfrastructureCards = [
   {
-    description: "Decentralized Systems",
+    description: "In progress",
     title: "Improving PoW Transaction Speed and Scripting",
     src: "/DecenterlizedSystem.jpg",
     link: "#",
@@ -26,7 +25,7 @@ const BlockchainInfrastructureCards = [
     ),
   },
   {
-    description: "Smart Contracts",
+    description: "In progress",
     title: "Layer 01 Game Chain",
     src: "/SmartContract.jpg",
     link: "#",
@@ -49,7 +48,7 @@ const BlockchainInfrastructureCards = [
     ),
   },
   {
-    description: "Scalability Solutions",
+    description: "In progress",
     title: "Beyond Proof of Work, lies Proof of Truth.",
     src: "/ScalabilitySolution.jpg",
     link: "#",
@@ -99,6 +98,23 @@ const BlockchainInfrastructureCards = [
           </li>
         </ul>
       </div>
+    ),
+  },
+  {
+    description: "In progress",
+    title: "PoW speedaware",
+    src: "/SmartContract.jpg",
+    link: "#",
+    content: () => (
+      <p>
+        Unlock the full potential of your blockchain network with our
+        comprehensive performance monitoring plugin. Compare transaction speeds,
+        throughput, latency, and other key metrics across different blockchains
+        or network configurations. Visualize data with interactive charts and
+        graphs, set custom alerts for performance deviations, and export reports
+        for in-depth analysis. Our plugin supports [mention specific blockchains
+        or platforms] and integrates seamlessly with your existing tools.
+      </p>
     ),
   },
 ];
@@ -162,76 +178,6 @@ const BlockchainInfrastructure = () => {
             Blockchain Infrastructure Products
           </h2>
           <ProductCard cards={BlockchainInfrastructureCards} />
-        </div>
-      </section>
-
-      <section className="py-20">
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-10">
-          Blockchain by the Numbers
-        </h2>
-        <div className="flex flex-wrap justify-center gap-10 px-6">
-          {[
-            { number: "500K+", label: "Active Nodes" },
-            { number: "1B+", label: "Transactions Processed" },
-            { number: "99.99%", label: "Uptime" },
-          ].map((stat, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.1 }}
-              className="text-center bg-secondary rounded-lg p-6 shadow-lg"
-            >
-              <h3 className="text-5xl font-bold text-accent">{stat.number}</h3>
-              <p className="text-secondary-light mt-2">{stat.label}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* Interactive Timeline */}
-      <section className="py-20 bg-blue-50">
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-10">
-          Blockchain Evolution
-        </h2>
-        <div className="relative max-w-5xl mx-auto px-6">
-          <div className="border-l-4 border-accent">
-            {[
-              {
-                year: "2009",
-                event: "Bitcoin Launches",
-                description: "The first decentralized cryptocurrency is born.",
-              },
-              {
-                year: "2015",
-                event: "Ethereum Introduced",
-                description: "Smart contracts revolutionize blockchain.",
-                image: "/Ethereum-icon-purple.png",
-              },
-              {
-                year: "2021",
-                event: "NFT Boom",
-                description: "Digital assets reshape ownership.",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -50 }}
-                transition={{ delay: index * 0.2 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="mb-10 pl-8"
-              >
-                <div>
-                  <div className="text-lg font-semibold text-accent">
-                    {item.year}
-                  </div>
-                  <h3 className="text-2xl font-bold mt-2">{item.event}</h3>
-                  <p className="text-secondary-light mt-1">
-                    {item.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
     </div>

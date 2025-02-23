@@ -3,52 +3,55 @@ import { ProductCard } from "../../components/ui/expandable-cards";
 
 const DefiProductCards = [
   {
-    description: "Earn Rewards",
-    title: "Yield Farming",
+    description: "In progress",
+    title: "Project - OSM",
     src: "/yieldFarming.jpg",
     link: "#",
     content: () => (
       <p>
-        Yield farming allows users to earn rewards by staking or lending their
-        crypto assets. Maximize your returns in decentralized finance
-        ecosystems.
+        Prepare to experience a groundbreaking project that's redefining the
+        intersection of the stock market and the cryptocurrency world. We're not
+        just merging these two realms – we're reinventing them with a fresh,
+        innovative DeFi platform designed for a new era of finance. Step into a
+        revolutionary DeFi project that reimagines finance by seamlessly merging
+        traditional stock markets with the vibrant crypto space. Experience a
+        groundbreaking platform offering tokenized equities alongside
+        cryptocurrencies in an intuitive, unified interface. This innovative
+        approach democratizes market access and introduces novel financial
+        instruments, all within a transparent and decentralized ecosystem,
+        empowering users to explore wealth creation in a newly designed
+        financial landscape.
       </p>
     ),
   },
   {
-    description: "Trade Seamlessly",
-    title: "Decentralized Exchange (DEX)",
+    description: "In progress",
+    title: "Payment gateway ",
     src: "/DEX.jpg",
     link: "#",
     content: () => (
       <p>
-        Trade your favorite cryptocurrencies on a secure, peer-to-peer platform.
-        DEX offers liquidity, low fees, and complete control over your assets.
-      </p>
-    ),
-  },
-  {
-    description: "Unlock Liquidity",
-    title: "Lending & Borrowing",
-    src: "/lendingBorrowing.jpg",
-    link: "#",
-    content: () => (
-      <p>
-        Access decentralized loans or lend your digital assets for passive
-        income. Experience borderless finance with no intermediaries.
-      </p>
-    ),
-  },
-  {
-    description: "Digital Ownership",
-    title: "NFT Marketplace",
-    src: "/Nft.jpg",
-    link: "#",
-    content: () => (
-      <p>
-        Explore, buy, sell, and trade unique digital assets on our secure NFT
-        marketplace. Revolutionize ownership and creativity in the digital
-        space.
+        Our cutting-edge payment gateway empowers businesses to seamlessly
+        integrate and accept a wide range of cryptocurrencies and
+        blockchain-based assets, opening up new revenue streams and expanding
+        your customer base. We provide a secure and reliable platform that
+        simplifies the complexities of digital asset transactions, handling
+        everything from payment processing and currency conversion to fraud
+        prevention and regulatory compliance. With our solution, you can
+        effortlessly accept Bitcoin, Ethereum, stablecoins, and many other
+        digital currencies, all while enjoying competitive transaction fees and
+        fast settlement times.
+        <br />
+        Our platform is designed for both established enterprises and emerging
+        startups, offering flexible integration options and customizable
+        features to meet your specific business needs. Whether you're an
+        e-commerce platform, a brick-and-mortar store, or a SaaS provider, our
+        payment gateway allows you to tap into the growing world of digital
+        assets without the technical headaches. We prioritize security,
+        employing advanced encryption and multi-factor authentication to protect
+        your funds and your customers' data. Furthermore, our robust API and
+        developer-friendly documentation make integration quick and easy,
+        allowing you to focus on what matters most: growing your business.
       </p>
     ),
   },
@@ -68,12 +71,6 @@ const DefiPage = () => {
               Discover the limitless potential of decentralized finance. Manage
               your assets with security, transparency, and control.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              className="mt-6 px-6 py-3 bg-blue text-white font-semibold rounded-full shadow-lg hover:bg-[#2563EB]"
-            >
-              Get Started
-            </motion.button>
           </div>
           <div className="w-full md:w-1/2 flex justify-center items-center">
             <motion.div
@@ -83,9 +80,9 @@ const DefiPage = () => {
               className="relative bg-[#F1F5F9] p-6 rounded-xl shadow-blue-300 shadow-lg"
             >
               <h2 className="text-2xl font-bold text-blue">
-                Total Value Locked
+                Total Value Expected
               </h2>
-              <p className="text-lg text-[#64748B] mt-2">$125 Billion</p>
+              <p className="text-lg text-[#64748B] mt-2">$700 Million</p>
             </motion.div>
           </div>
         </div>
@@ -130,7 +127,7 @@ const DefiPage = () => {
         </div>
       </section>
 
-      <section>
+      <section className="mb-12">
         <h2 className="text-3xl text-blue md:text-5xl font-bold text-center my-10">
           Decentralized Finance Products
         </h2>

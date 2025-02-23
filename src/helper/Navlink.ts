@@ -4,7 +4,7 @@ export const navLinks = [
     path: "/",
   },
   {
-    name: "About",
+    name: "About Us",
     path: "/about",
   },
   {
@@ -31,15 +31,15 @@ export const navLinks = [
     ],
   },
   {
-    name: "Contact",
-    path: "/contact",
-  },
-  {
     name: "Community",
     path: "/community",
   },
   {
     name: "Careers",
     path: "/careers",
+  },
+  {
+    name: "Contact",
+    path: "/contact",
   },
 ];
