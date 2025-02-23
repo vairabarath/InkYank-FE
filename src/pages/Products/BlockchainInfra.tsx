@@ -4,25 +4,6 @@ import { div } from "framer-motion/client";
 
 const BlockchainInfrastructureCards = [
   {
-    description: "Secure Nodes",
-    title: "Blockchain Infrastructure",
-    src: "/BlockchainSecurity.jpg",
-    link: "#",
-
-    content: () => (
-      <p>
-        We are at the forefront of the blockchain revolution, specializing in
-        blockchain infrastructure products and services. Our expertise lies in
-        building and deploying robust, scalable, and secure solutions that form
-        the bedrock of decentralized applications and networks. From core
-        protocol development to bespoke infrastructure services, we empower
-        businesses and innovators to harness the transformative potential of
-        blockchain technology. Explore our offerings to discover how we can help
-        you build the future of decentralized systems.
-      </p>
-    ),
-  },
-  {
     description: "Decentralized Systems",
     title: "Improving PoW Transaction Speed and Scripting",
     src: "/DecenterlizedSystem.jpg",
