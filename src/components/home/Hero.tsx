@@ -30,8 +30,8 @@ const Hero = () => {
       description:
         "Harnessing machine learning and AI to solve complex business challenges",
       bgColor: "bg-purple-50/80",
-      textColor: "text-purple-600",
-      buttonColor: "bg-purple-600 hover:bg-purple-700",
+      textColor: "text-[#6B46C1]",
+      buttonColor: "bg-[#6B46C1] hover:bg-purple-700",
     },
     {
       id: "cyber",

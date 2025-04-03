@@ -88,7 +88,8 @@ const CyberSecurity = () => {
                 transition={{ duration: 0.8 }}
                 className="text-4xl md:text-5xl font-bold mb-6"
               >
-                Cybersecurity <span className="text-blue-400">Redefined</span>
+                Cybersecurity{" "}
+                <span className="text-emerald-600">Redefined</span>
               </motion.h1>
               <p className="text-lg text-gray-300 mb-8">
                 Enterprise-grade security solutions that protect your digital
@@ -96,7 +97,7 @@ const CyberSecurity = () => {
                 combines cutting-edge technology with strategic defense
                 mechanisms.
               </p>
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
                 Request Security Audit
               </button>
             </div>
@@ -111,7 +112,7 @@ const CyberSecurity = () => {
       <section className="py-20 bg-white">
         <div className="max-w-[1140px] mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-            Our <span className="text-blue-600">Security</span> Capabilities
+            Our <span className="text-emerald-600">Security</span> Capabilities
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -154,8 +155,8 @@ const CyberSecurity = () => {
                 whileHover={{ y: -5 }}
                 className="bg-gray-50 border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all"
               >
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                  <feature.icon className="w-8 h-8 text-blue-600" />
+                <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                  <feature.icon className="w-8 h-8 text-emerald-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
@@ -170,7 +171,7 @@ const CyberSecurity = () => {
         <div className="max-w-[1140px] mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Cybersecurity <span className="text-blue-600">Solutions</span>
+              Cybersecurity <span className="text-emerald-600">Solutions</span>
             </h2>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
               Comprehensive protection tailored to your organization's specific

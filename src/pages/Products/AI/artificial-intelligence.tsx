@@ -94,9 +94,9 @@ const ArtificialIntelligence = () => {
   return (
     <div className="min-h-screen">
       <section>
-        <div className="bg-gradient-to-b from-blue-100 to-white pt-20 pb-12">
+        <div className="bg-gradient-to-b from-purple-100 to-white pt-20 pb-12">
           <div className="relative flex flex-col max-w-[1140px] mx-auto items-center justify-center text-center px-6">
-            <h1 className="text-4xl text-blue md:text-5xl font-bold mb-4">
+            <h1 className="text-4xl text-violet md:text-5xl font-bold mb-4">
               Artificial Intelligence
             </h1>
             <p className="text-lg text-gray-700">
@@ -135,7 +135,7 @@ const ArtificialIntelligence = () => {
               whileHover={{ scale: 1.05 }}
               className="bg-secondary rounded-lg p-6 hover:shadow-blue-300 shadow-lg"
             >
-              <feature.icon className="w-12 h-12 text-blue" />
+              <feature.icon className="w-12 h-12 text-violet" />
               <h3 className="text-2xl font-semibold mt-4">{feature.title}</h3>
               <p className="text-secondary-light mt-2">{feature.description}</p>
             </motion.div>
@@ -143,9 +143,9 @@ const ArtificialIntelligence = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-blue-50">
+      <section className="py-20 bg-purple-50">
         <div className="max-w-[1140px] mx-auto">
-          <h2 className="text-3xl text-blue md:text-5xl font-bold text-center mb-10">
+          <h2 className="text-3xl text-violet md:text-5xl font-bold text-center mb-10">
             AI Products and Solutions
           </h2>
           <ProductCard cards={AICards} />

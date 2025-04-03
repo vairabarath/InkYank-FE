@@ -11,6 +11,8 @@
 
   --color-blue: #0869ff;
   --color-purple: #9668fd;
+  --color-green: #006600;
+  --color-violet: #6b46c1;
 
   @keyframes drawLineVertical {
     0% {

@@ -16,6 +16,7 @@ interface SubmenuItem {
   description?: string;
   icon?: React.ComponentType<{ className?: string }> | string;
   subsubmenu?: SubSubmenuItem[];
+  iconColor?: string;
 }
 
 interface NavLinkItem {
@@ -35,6 +36,10 @@ const Navbar = () => {
 
   const handleSubmenuToggle = (title: string) => {
     setOpenSubmenu(openSubmenu === title ? null : title);
+  };
+
+  const getItemColor = (item: SubmenuItem) => {
+    return item.iconColor || "text-blue";
   };
 
   return (
@@ -102,7 +107,9 @@ const Navbar = () => {
                             />
                           ) : (
                             item.icon && (
-                              <item.icon className="w-6 h-6 text-[#84AEFC]" />
+                              <item.icon
+                                className={`w-6 h-6 ${getItemColor(item)}`}
+                              />
                             )
                           )}
                           <span className="font-semibold text-gray-900 hover:text-blue">
@@ -132,10 +139,12 @@ const Navbar = () => {
                             />
                           ) : (
                             item.icon && (
-                              <item.icon className="w-6 h-6 text-[#84AEFC]" />
+                              <item.icon
+                                className={`w-6 h-6 ${getItemColor(item)}`}
+                              />
                             )
                           )}
-                          <span className="font-semibold text-gray-900 hover:text-blue">
+                          <span className={`font-semibold text-gray-900`}>
                             {item.title}
                           </span>
                         </div>
