@@ -16,7 +16,7 @@ export const FlipWords = ({
   const shouldAnimate = wordsArray.length > 1;
 
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [_isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
     if (!shouldAnimate) return;
