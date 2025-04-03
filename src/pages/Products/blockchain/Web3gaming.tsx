@@ -1,4 +1,4 @@
-import { ProductCard } from "../../components/ui/expandable-cards";
+import { ProductCard } from "../../../components/ui/expandable-cards";
 import { motion } from "framer-motion";
 
 const Web3gamingCards = [

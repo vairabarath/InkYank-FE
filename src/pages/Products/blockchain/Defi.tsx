@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ProductCard } from "../../components/ui/expandable-cards";
+import { ProductCard } from "../../../components/ui/expandable-cards";
 
 const DefiProductCards = [
   {

@@ -1,29 +1,20 @@
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
-import { Menu } from "lucide-react"; // Import the Menu icon
+import { Menu } from "lucide-react";
 
-const Header = ({ toggleSidebar }: any) => {
+const Header = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY) {
-        setIsHeaderVisible(false);
-      } else {
-        setIsHeaderVisible(true);
-      }
-
+      setIsHeaderVisible(currentScrollY < lastScrollY || currentScrollY < 10);
       setLastScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
   return (
@@ -33,15 +24,18 @@ const Header = ({ toggleSidebar }: any) => {
       }`}
     >
       <div className="max-w-[1440px] mx-auto h-full flex items-center justify-between px-4">
-        <div>
+        {/* Logo - always on left */}
+        <div className="flex-shrink-0">
           <img src="/logo.png" alt="LOGO" className="w-[150px] md:w-[225px]" />
         </div>
 
-        <div className="flex-1 flex justify-center">
+        {/* Navbar - centered on desktop, hidden on mobile */}
+        <div className="hidden lg:flex flex-1 justify-center">
           <Navbar />
         </div>
 
-        <div className="lg:hidden">
+        {/* Mobile menu button - fixed on right */}
+        <div className="lg:hidden flex-shrink-0 ml-auto">
           <button
             className="text-gray-800 focus:outline-none"
             onClick={toggleSidebar}
@@ -50,7 +44,8 @@ const Header = ({ toggleSidebar }: any) => {
           </button>
         </div>
 
-        <div className="hidden lg:block">
+        {/* CTA button - right side on desktop */}
+        <div className="hidden lg:block flex-shrink-0 ml-4">
           <button className="bg-blue cursor-pointer transition-all duration-300 ease-in-out border border-blue hover:bg-white hover:text-blue text-white font-semibold py-2 px-4 rounded-md">
             Get Started
           </button>
