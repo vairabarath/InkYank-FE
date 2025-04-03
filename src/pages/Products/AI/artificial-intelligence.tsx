@@ -97,7 +97,7 @@ const ArtificialIntelligence = () => {
         <div className="bg-gradient-to-b from-blue-100 to-white pt-20 pb-12">
           <div className="relative flex flex-col max-w-[1140px] mx-auto items-center justify-center text-center px-6">
             <h1 className="text-4xl text-blue md:text-5xl font-bold mb-4">
-              Artificial Intelligence Solutions
+              Artificial Intelligence
             </h1>
             <p className="text-lg text-gray-700">
               Transform your business with our cutting-edge AI technologies
