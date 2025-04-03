@@ -1,11 +1,6 @@
 import { motion } from "framer-motion";
 import { ProductCard } from "../../../components/ui/expandable-cards";
-import {
-  BrainCircuitIcon,
-  EyeIcon,
-  LanguagesIcon,
-  NetworkIcon,
-} from "lucide-react";
+import { BrainCircuitIcon, LanguagesIcon, NetworkIcon } from "lucide-react";
 
 const AICards = [
   {
