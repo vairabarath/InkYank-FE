@@ -22,7 +22,7 @@ const About = () => {
       <div className="mt-12">
         <Mission />
       </div>
-      <div className="mt-12">
+      <div className="mt-12 overflow-x-hidden">
         <Visions />
       </div>
       <div className="max-w-[1140px] mx-auto mt-12 px-4 md:px-0">

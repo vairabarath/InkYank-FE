@@ -4,16 +4,15 @@ import Services from "../components/home/Services";
 
 const Home = () => {
   return (
-    <main className="bg-gray-900 text-gray-200">
+    <main className="">
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex flex-col items-center justify-center text-center  overflow-hidden">
-        {/* Animated Background */}
+      <section className=" overflow-hidden border-b border-gray-300">
         <Hero />
       </section>
-      <section className="w-full">
+      <section className="my-12">
         <Services />
       </section>
-      <section>
+      <section className="mt-12">
         <BlockchainSection />
       </section>
     </main>
