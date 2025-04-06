@@ -157,7 +157,7 @@ export function ProductCard({ cards }: { cards: Card[] }) {
               <div className="flex justify-center items-center flex-col">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
-                  className="font-semibold text-neutral-800 00 text-center md:text-left text-base"
+                  className="font-semibold text-neutral-800 text-center md:text-left text-sm"
                 >
                   {card.title}
                 </motion.h3>

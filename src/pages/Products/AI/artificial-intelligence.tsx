@@ -1,91 +1,54 @@
 import { motion } from "framer-motion";
 import { ProductCard } from "../../../components/ui/expandable-cards";
-import { BrainCircuitIcon, LanguagesIcon, NetworkIcon } from "lucide-react";
+import Lottie from "lottie-react";
+import cyborg from "../../../animations/cyborg.json";
 
 const AICards = [
   {
     description: "In progress",
-    title: "AI-Powered Predictive Analytics",
-    src: "/AI-Powered Predictive Analytics.jpg",
-    link: "#",
-    content: () => (
-      <p>
-        Our advanced AI predictive analytics platform transforms raw data into
-        actionable insights. Using deep learning algorithms, it identifies
-        patterns and trends that human analysts might miss, enabling businesses
-        to forecast market movements, customer behavior, and operational needs
-        with unprecedented accuracy. The system continuously learns from new
-        data, improving its predictions over time. Key applications include
-        demand forecasting, risk assessment, and personalized recommendations.
-        By leveraging this technology, organizations can make data-driven
-        decisions that drive growth and efficiency while minimizing uncertainty.
-      </p>
-    ),
-  },
-  {
-    description: "In development",
-    title: "Computer Vision for Industrial Automation",
-    src: "/Computer Vision for Industrial Automation.jpg",
-    link: "#",
-    content: () => (
-      <p>
-        Revolutionizing quality control and process optimization with our
-        cutting-edge computer vision solutions. These AI systems can detect
-        microscopic defects in manufacturing lines, monitor equipment health in
-        real-time, and guide robotic arms with millimeter precision. The
-        technology combines convolutional neural networks with high-resolution
-        imaging to achieve superhuman accuracy in visual inspection tasks.
-        Applications span across automotive, electronics, pharmaceuticals, and
-        food production industries. By implementing this solution, manufacturers
-        can reduce waste, improve product quality, and automate previously
-        manual inspection processes.
-      </p>
-    ),
-  },
-  {
-    description: "Coming soon",
-    title: "Natural Language Processing Platform",
-    src: "/Natural Language Processing Platform.jpg",
+    title: "Rewriting Culture: Living and Working with AI",
+    src: "/rewriting-culture.jpg",
     link: "#",
     content: () => (
       <div>
-        <p>
-          Our next-generation NLP platform understands and generates human
-          language with near-human fluency. Built on transformer architectures,
-          it enables:
+        <p className="mb-4">
+          A look into how AI is transforming culture — not by replacing us, but
+          by working with us. This project explores the human side of AI and how
+          we can adapt, evolve, and thrive together.
         </p>
-        <ul className="list-disc ml-6 mt-4">
-          <li>Real-time multilingual translation with context awareness</li>
-          <li>Sentiment analysis for customer feedback and market research</li>
-          <li>Automated document summarization and knowledge extraction</li>
-          <li>Intelligent chatbots with industry-specific expertise</li>
+        <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <li>Promoting AI literacy and human-AI collaboration</li>
+          <li>
+            Exploring cultural shifts in work, education, and communication
+          </li>
+          <li>Encouraging ethical and inclusive AI adoption</li>
         </ul>
-        <p className="mt-4">
-          The system continuously learns from interactions, adapting to industry
-          jargon and evolving language patterns. It's particularly valuable for
-          legal, healthcare, and customer service applications where
-          understanding nuance is critical.
-        </p>
       </div>
     ),
   },
   {
-    description: "In research",
-    title: "Autonomous Decision-Making Systems",
-    src: "/Autonomous Decision-Making Systems.jpg",
+    description: "In progress",
+    title: "Beyond Words: Understanding Human Emotions",
+    src: "/beyond-words.jpg",
     link: "#",
     content: () => (
-      <p>
-        Developing AI systems that can make complex decisions in dynamic
-        environments with minimal human intervention. These systems combine
-        reinforcement learning with multi-objective optimization to balance
-        competing priorities in real-time. Applications include autonomous
-        supply chain management, dynamic pricing systems, and emergency response
-        coordination. The technology is designed to operate within predefined
-        ethical boundaries while adapting to changing circumstances. By
-        implementing these systems, organizations can achieve unprecedented
-        levels of operational efficiency and responsiveness.
-      </p>
+      <div>
+        <p className="mb-4">
+          This project focuses on building an AI system that not only processes
+          language but also understands the emotions behind it. By leveraging
+          large language models (LLMs), the AI can interpret tone, sentiment,
+          and context to respond with empathy — bridging the gap between
+          machines and human emotion.
+        </p>
+        <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <li>Emotion detection through text and tone analysis</li>
+          <li>Context-aware responses for better human-AI interaction</li>
+          <li>
+            Applications in mental health, education, and customer support
+          </li>
+          <li>Ongoing training to adapt to diverse human expression</li>
+        </ul>
+      </div>
     ),
   },
 ];
@@ -94,18 +57,33 @@ const ArtificialIntelligence = () => {
   return (
     <div className="min-h-screen">
       <section>
-        <div className="bg-gradient-to-b from-purple-100 to-white pt-20 pb-12">
-          <div className="relative flex flex-col max-w-[1140px] mx-auto items-center justify-center text-center px-6">
-            <h1 className="text-4xl text-violet md:text-5xl font-bold mb-4">
-              Artificial Intelligence
-            </h1>
-            <p className="text-lg text-gray-700">
-              Transform your business with our cutting-edge AI technologies
-              designed to enhance decision-making, automate complex processes,
-              and unlock new opportunities. Leverage machine learning, computer
-              vision, and natural language processing to gain competitive
-              advantages and drive innovation across your organization.
-            </p>
+        <div className="bg-gradient-to-b from-purple-100 to-white pt-12 md:pt-20 pb-12">
+          <div className="relative flex flex-col md:flex-row max-w-[1140px] mx-auto items-center justify-between px-6 gap-8">
+            {/* Left  */}
+            <div className="flex-1 text-center md:text-left">
+              <h1 className="text-4xl text-violet md:text-5xl font-bold mb-4">
+                Artificial Intelligence
+              </h1>
+              <p className="text-lg text-gray-700">
+                <p className="text-lg text-gray-700">
+                  People often fear that AI will replace human work and
+                  knowledge. But instead of resisting, we should learn and grow
+                  with it. The future is about collaboration — where humans and
+                  AI evolve together, not apart. It’s more than just tech; it’s
+                  cultural transformation.
+                </p>
+              </p>
+            </div>
+
+            {/* Right  */}
+            <div className="">
+              <Lottie
+                animationData={cyborg}
+                loop={true}
+                autoplay={true}
+                style={{ width: "100%", height: "100%" }}
+              />
+            </div>
           </div>
         </div>
 
@@ -113,31 +91,33 @@ const ArtificialIntelligence = () => {
           {[
             {
               title: "Machine Learning",
-              icon: BrainCircuitIcon,
+              icon: "/brain.gif",
               description:
-                "Extract insights and patterns from complex datasets.",
+                "Empowering systems to learn from data, improve over time, and make intelligent decisions without being explicitly programmed. From predictions to pattern recognition, machine learning drives smarter applications.",
             },
             {
-              title: "Deep Learning",
-              icon: NetworkIcon,
+              title: "Neural Networks",
+              icon: "/neural-net.gif",
               description:
-                "Advanced neural networks for complex pattern recognition.",
+                "Neural networks are at the core of deep learning — built to recognize patterns, classify images, detect objects, understand speech, and generate text by simulating the way the human brain processes information.",
             },
             {
-              title: "NLP",
-              icon: LanguagesIcon,
+              title: "Large Language Models",
+              icon: "/LLM.gif",
               description:
-                "Understand and generate human language effectively.",
+                "Harness the power of massive language models trained on diverse data to understand context, generate human-like text, answer questions, and perform complex language tasks — the foundation of modern AI applications like ChatGPT.",
             },
           ].map((feature, index) => (
             <motion.div
               key={index}
               whileHover={{ scale: 1.05 }}
-              className="bg-secondary rounded-lg p-6 hover:shadow-blue-300 shadow-lg"
+              className="bg-secondary rounded-lg p-6 hover:shadow-violet-300 shadow-lg"
             >
-              <feature.icon className="w-12 h-12 text-violet" />
-              <h3 className="text-2xl font-semibold mt-4">{feature.title}</h3>
-              <p className="text-secondary-light mt-2">{feature.description}</p>
+              <img src={feature.icon} alt="" className="w-20 h-20" />
+              <h3 className="text-2xl text-violet font-semibold mt-4">
+                {feature.title}
+              </h3>
+              <p className="text-gray-700 mt-2">{feature.description}</p>
             </motion.div>
           ))}
         </div>

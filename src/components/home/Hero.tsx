@@ -60,7 +60,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative h-[90vh] sm:h-[80vh] w-full overflow-hidden bg-white">
+    <div className="relative h-[90vh] w-full overflow-hidden bg-white">
       {/* Grid Layout */}
       <div className="h-full w-full grid grid-cols-1 lg:grid-cols-2">
         {/* Left Side - Lottie Animation */}
@@ -96,7 +96,7 @@ const Hero = () => {
         </div>
 
         {/* Right Side - Content */}
-        <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 sm:px-12 lg:px-16 text-gray-800">
+        <div className="relative z-10 h-full flex flex-col items-center justify-center px-6 py-8 sm:px-12 lg:px-16 text-gray-800">
           {/* Tab Selector */}
           <div className="flex gap-2 mb-8">
             {tabs.map((tab) => (
