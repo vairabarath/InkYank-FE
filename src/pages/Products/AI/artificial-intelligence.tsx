@@ -90,22 +90,22 @@ const ArtificialIntelligence = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 max-w-[1140px] mx-auto gap-8 px-6 py-20">
           {[
             {
-              title: "Machine Learning",
-              icon: "/brain.gif",
-              description:
-                "Empowering systems to learn from data, improve over time, and make intelligent decisions without being explicitly programmed. From predictions to pattern recognition, machine learning drives smarter applications.",
-            },
-            {
-              title: "Neural Networks",
-              icon: "/neural-net.gif",
-              description:
-                "Neural networks are at the core of deep learning — built to recognize patterns, classify images, detect objects, understand speech, and generate text by simulating the way the human brain processes information.",
-            },
-            {
-              title: "Large Language Models",
+              title: "Domain-Specific LLMs",
               icon: "/LLM.gif",
               description:
-                "Harness the power of massive language models trained on diverse data to understand context, generate human-like text, answer questions, and perform complex language tasks — the foundation of modern AI applications like ChatGPT.",
+                "We build and fine-tune large language models for specific industries, ensuring accurate, relevant, and efficient AI responses tailored to your unique domain needs and workflows.",
+            },
+            {
+              title: "Human-AI Collaboration",
+              icon: "/brain.gif",
+              description:
+                "Humans and AI are beginning to work side by side, transforming creativity, decision-making, and productivity. We’re not just witnessing this cultural evolution — we’re actively researching and building frameworks to accelerate its integration across industries.",
+            },
+            {
+              title: "AI in Action",
+              icon: "/neural-net.gif",
+              description:
+                "We create intelligent products and services that bring artificial intelligence into everyday workflows — enabling smarter automation, real-time decision-making, and seamless integration across industries.",
             },
           ].map((feature, index) => (
             <motion.div

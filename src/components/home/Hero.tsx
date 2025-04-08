@@ -4,6 +4,7 @@ import Lottie from "lottie-react";
 import blockchainAnimation from "../../animations/blockchain.json";
 import aiAnimation from "../../animations/ai.json";
 import cyberAnimation from "../../animations/cyber.json";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const [activeTab, setActiveTab] = useState<"blockchain" | "ai" | "cyber">(
@@ -32,6 +33,7 @@ const Hero = () => {
       bgColor: "bg-purple-50/80",
       textColor: "text-[#6B46C1]",
       buttonColor: "bg-[#6B46C1] hover:bg-purple-700",
+      buttonLink: "/products/ai",
     },
     {
       id: "cyber",
@@ -43,6 +45,7 @@ const Hero = () => {
       bgColor: "bg-emerald-50/80",
       textColor: "text-emerald-600",
       buttonColor: "bg-emerald-600 hover:bg-emerald-700",
+      buttonLink: "/products/cyber-security",
     },
   ];
 
@@ -168,16 +171,23 @@ const Hero = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3, delay: 0.2 }}
               >
-                <button
-                  className={`px-6 py-3 ${
-                    tabs.find((t) => t.id === activeTab)?.buttonColor
-                  } text-white rounded-lg font-medium hover:opacity-90 transition-all shadow-lg hover:shadow-xl`}
+                <Link
+                  to={tabs.find((t) => t.id === activeTab)?.buttonLink ?? "#"}
                 >
-                  Learn More
-                </button>
-                <button className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-all">
-                  Contact Us
-                </button>
+                  <button
+                    className={`px-6 py-3 ${
+                      tabs.find((t) => t.id === activeTab)?.buttonColor
+                    } text-white rounded-lg font-medium hover:opacity-90 transition-all shadow-lg hover:shadow-xl`}
+                  >
+                    Learn More
+                  </button>
+                </Link>
+
+                <Link to="/contact">
+                  <button className="px-6 py-3 border cursor-pointer border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-all">
+                    Contact Us
+                  </button>
+                </Link>
               </motion.div>
             </motion.div>
           </AnimatePresence>

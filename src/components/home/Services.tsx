@@ -78,11 +78,11 @@ const Services = () => {
               <h2 className="text-xl text-emerald-600 font-semibold mb-4">
                 Cyber Security
               </h2>
-              <p className="text-gray-600 mb-2 sm:mb-4  text-sm sm:text-base">
-                At the core of Web3, blockchain enables secure, decentralized
-                systems. We develop robust smart contracts and trustless
-                applications that redefine transparency, ownership, digital
-                identity, and seamless collaboration in the modern digital era.
+              <p className="text-gray-600 mb-2 sm:mb-4 text-sm sm:text-base">
+                From threat intelligence to zero-trust architectures, we design
+                cybersecurity solutions that proactively defend digital assets.
+                Our approach safeguards data, ensures compliance, and builds
+                resilience against evolving cyber threats.
               </p>
             </Card>
           </motion.div>
