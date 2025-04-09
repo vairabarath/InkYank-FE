@@ -11,7 +11,7 @@ const Card = ({
   className?: string;
 }) => (
   <motion.div
-    className={`p-6 bg-white rounded-lg shadow-lg shadow-blue-200 ${className}`}
+    className={`p-6 bg-white rounded-lg shadow-lg shadow-blue-200 md:h-64 ${className}`}
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6 }}
@@ -47,11 +47,11 @@ const Visions = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <Card title="Seamless On-Chain Integration">
+          <Card title="A World Where On-Chain Is Default">
             <p>
-              We envision a future where most app and game logic operates
-              efficiently on-chain, ensuring transparency, security, and
-              cost-effective execution.
+              We envision apps and games running seamlessly
+              on-chain—transparent, secure, and efficient by design, where core
+              logic lives on-chain to enhance trust and user empowerment.
             </p>
           </Card>
         </motion.div>
@@ -63,11 +63,12 @@ const Visions = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <Card title="A Truly Decentralized Financial Ecosystem">
+          <Card title="Cybersecurity That’s Invisible Yet Ironclad">
             <p>
-              We aim to create a financial landscape where DeFi empowers
-              individuals globally, eliminating intermediaries and enabling
-              open, permissionless access.
+              Modular, AI-driven defense systems that adapt to threats in real
+              time—continuously learning, evolving, and neutralizing risks
+              before they escalate, making security breaches a relic of the
+              past.
             </p>
           </Card>
         </motion.div>
@@ -79,11 +80,11 @@ const Visions = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true }}
         >
-          <Card title="Revolutionizing Gaming with Blockchain">
+          <Card title="Gaming Where Players Own the Metaverse">
             <p>
-              We see blockchain redefining gaming by enabling true digital
-              ownership, fair play, and immersive decentralized experiences for
-              players worldwide.
+              Immersive worlds where in-game assets hold real-world value,
+              players have true ownership, and fairness is ensured through
+              blockchain transparency.
             </p>
           </Card>
         </motion.div>
@@ -95,11 +96,11 @@ const Visions = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           viewport={{ once: true }}
         >
-          <Card title="Empowering Innovation with Scalable Infrastructure">
+          <Card title=" AI as a Collaborative Partner">
             <p>
-              Our vision is to build cutting-edge blockchain infrastructure that
-              supports developers and users, driving the mass adoption of
-              decentralized technologies.
+              A future where AI amplifies human creativity and decision-making,
+              tailored to every industry’s unique needs—enhancing productivity,
+              unlocking new possibilities, and driving meaningful innovation.
             </p>
           </Card>
         </motion.div>

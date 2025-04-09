@@ -7,22 +7,22 @@ const Mission = () => {
     {
       title: "Optimized On-Chain Logic",
       description:
-        "We strive to integrate most of the app and game logic on-chain while ensuring cost efficiency, maximizing transparency, and maintaining seamless performance.",
+        "We integrate core app and game logic on-chain, balancing cost efficiency, transparency, and performance—so decentralization doesn’t compromise user experience.",
     },
     {
       title: "Democratizing Finance with DeFi",
       description:
-        "Our goal is to make financial systems more accessible and inclusive through decentralized finance, eliminating barriers and promoting financial freedom for all.",
+        "We break down financial barriers through decentralized systems — providing open access to global finance, ensuring self-custody of assets, and enabling programmable money that works for everyone.",
     },
     {
-      title: "Unlocking Blockchain’s Potential in Gaming",
+      title: "AI That Works With Humans, Not Against Them",
       description:
-        "We harness the full power of blockchain to revolutionize gaming, enabling true asset ownership, transparent mechanics, and innovative play-to-earn models.",
+        "We design AI systems that augment human potential—fine-tuning LLMs for industries and creating frameworks for seamless human-AI collaboration.",
     },
     {
-      title: "Building Robust Blockchain Infrastructure",
+      title: "Unbreakable Digital Defense",
       description:
-        "We are dedicated to developing powerful infrastructure tools that strengthen blockchain networks, enhance user experience, and drive widespread adoption.",
+        "We protect businesses with proactive cybersecurity—penetration testing, threat intelligence, and real-time incident response—so innovation thrives without compromise.",
     },
   ];
 
