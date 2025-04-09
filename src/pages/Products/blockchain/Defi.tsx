@@ -89,7 +89,7 @@ const DefiPage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="relative py-20 bg-[#3B82F6] text-white">
+      <section className="relative py-20 bg-blue text-white">
         <div className="md:py-20 px-10">
           <h2 className="text-3xl md:text-5xl font-bold text-center">
             Why Choose DeFi?
@@ -117,7 +117,7 @@ const DefiPage = () => {
                 whileHover={{ scale: 1.05 }}
                 className="bg-white text-[#1E293B] p-6 rounded-lg shadow-2xl"
               >
-                <h3 className="text-xl font-semibold text-[#3B82F6]">
+                <h3 className="text-xl font-semibold text-blue">
                   {feature.title}
                 </h3>
                 <p className="text-[#64748B] mt-2">{feature.description}</p>
