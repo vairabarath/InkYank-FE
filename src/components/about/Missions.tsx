@@ -17,10 +17,10 @@ const Mission = () => {
         "We break down financial barriers through decentralized systems — providing open access to global finance, ensuring self-custody of assets, and enabling programmable money that works for everyone.",
     },
     {
-      title: "AI That Works With Humans, Not Against Them",
+      title: "Humans and AI: Partners in Progress",
       icon: "/aboutus/perspective.png",
       description:
-        "We design AI systems that augment human potential—fine-tuning LLMs for industries and creating frameworks for seamless human-AI collaboration.",
+        "We envision a future where AI and humans thrive together—enhancing creativity, guiding decisions, and solving real-world challenges across industries through responsible innovation.",
     },
     {
       title: "Unbreakable Digital Defense",

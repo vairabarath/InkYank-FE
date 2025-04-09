@@ -2,75 +2,88 @@ import { motion } from "framer-motion";
 import { ProductCard } from "../../../components/ui/expandable-cards";
 import {
   ShieldCheckIcon,
-  LockIcon,
-  NetworkIcon,
-  EyeOffIcon,
-  FingerprintIcon,
-  ServerIcon,
+  CodeIcon,
+  AlertTriangleIcon,
+  FileSearchIcon,
+  UsersIcon,
 } from "lucide-react";
+import Lottie from "lottie-react";
+import cyberAnimation from "../../../animations/cyber.json";
 
 const CyberSecurityCards = [
   {
     description: "Available now",
-    title: "Advanced Threat Protection",
+    title: "Real-time Threat Intelligence Platform",
     src: "/threat-protection.jpg",
     link: "#",
     content: () => (
       <div>
         <p>
-          Our comprehensive threat protection system combines AI-powered
-          detection with human expertise to identify and neutralize cyber
-          threats in real-time.
+          Our real-time threat intelligence platform provides comprehensive
+          monitoring and analysis of emerging cyber threats, giving you the
+          visibility needed to stay ahead of attackers.
         </p>
         <ul className="list-disc ml-6 mt-4">
-          <li>Behavioral analysis to detect zero-day exploits</li>
-          <li>Automated threat containment and remediation</li>
-          <li>Continuous monitoring and threat intelligence updates</li>
-          <li>Cross-platform protection for all endpoints</li>
+          <li>Global threat feed with real-time updates</li>
+          <li>AI-powered threat correlation and analysis</li>
+          <li>Custom alerts for your specific risk profile</li>
+          <li>Integration with existing security tools</li>
         </ul>
       </div>
     ),
   },
   {
     description: "New release",
-    title: "Data Encryption Suite",
+    title: "AI Driven Endpoint Protection Suite",
     src: "/data-encryption.jpg",
-    link: "#",
-    content: () => (
-      <p>
-        End-to-end encryption solutions that protect your data at rest, in
-        transit, and during processing. Our quantum-resistant algorithms ensure
-        your sensitive information remains secure even against future threats.
-        The suite includes centralized key management, automated encryption
-        policies, and seamless integration with existing workflows. Perfect for
-        healthcare, finance, and government applications where data privacy is
-        paramount.
-      </p>
-    ),
-  },
-  {
-    description: "Coming soon",
-    title: "Network Security Platform",
-    src: "/network-security.jpg",
     link: "#",
     content: () => (
       <div>
         <p>
-          Next-generation network protection that adapts to evolving threats:
+          Our AI-driven endpoint protection suite provides advanced security for
+          all devices in your network, using behavioral analysis to detect and
+          block threats before they execute.
         </p>
         <ul className="list-disc ml-6 mt-4">
-          <li>AI-driven anomaly detection</li>
-          <li>Automated vulnerability patching</li>
-          <li>Micro-segmentation for internal networks</li>
-          <li>Real-time threat visualization</li>
+          <li>Next-gen antivirus with machine learning</li>
+          <li>Ransomware protection and rollback</li>
+          <li>Device control and application whitelisting</li>
+          <li>Centralized management console</li>
         </ul>
-        <p className="mt-4">
-          The platform learns your network's normal behavior to detect
-          deviations that might indicate compromise, reducing false positives
-          while catching sophisticated attacks.
-        </p>
       </div>
     ),
+  },
+];
+
+const services = [
+  {
+    title: "Penetration Testing",
+    icon: CodeIcon,
+    types: ["Web", "Mobile", "Network"],
+    description:
+      "Simulated attacks to discover vulnerabilities before hackers do.",
+  },
+  {
+    title: "Vulnerability Assessments",
+    icon: AlertTriangleIcon,
+    description: "Identify, prioritize, and patch system weaknesses.",
+  },
+  {
+    title: "Security Audits",
+    icon: FileSearchIcon,
+    description:
+      "Full-stack security evaluations to ensure compliance and defense.",
+  },
+  {
+    title: "Incident Response",
+    icon: ShieldCheckIcon,
+    description:
+      "Real-time help for breaches, ransomware attacks, or suspicious activity.",
+  },
+  {
+    title: "Security Awareness Training",
+    icon: UsersIcon,
+    description: "Turn your team into your first line of defense.",
   },
 ];
 
@@ -78,107 +91,137 @@ const CyberSecurity = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-gray-900 to-gray-800 text-white py-20">
-        <div className="max-w-[1140px]  mx-auto px-6">
+      <section className="bg-gradient-to-b from-emerald-100 to-white py-20">
+        <div className="max-w-[1140px] mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center gap-12 md:gap-32">
             <div className="md:w-1/2">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-4xl md:text-5xl font-bold mb-6"
+                className="text-4xl md:text-5xl font-bold mb-6 text-gray-900"
               >
                 Cybersecurity{" "}
                 <span className="text-emerald-600">Redefined</span>
               </motion.h1>
-              <p className="text-lg text-gray-300 mb-8">
-                Enterprise-grade security solutions that protect your digital
-                assets from evolving threats. Our multi-layered approach
-                combines cutting-edge technology with strategic defense
-                mechanisms.
+              <p className="text-lg text-gray-600 mb-8">
+                At InkYank, we deliver a comprehensive suite of cybersecurity
+                products and services designed to safeguard your digital assets
+                at every layer. Our innovative security products and expert
+                services ensure you get the protection you need—without the
+                complexity.
               </p>
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
-                Request Security Audit
-              </button>
+              <div className="flex gap-4">
+                <button className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
+                  Request Security Audit
+                </button>
+                <button className="border border-gray-300 hover:border-gray-400 text-gray-700 font-semibold py-3 px-8 rounded-lg transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
             </div>
             <div className="md:w-1/2">
-              <img src="/cyber-security-hero.png" alt="Cybersecurity" />
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="relative"
+              >
+                <Lottie
+                  animationData={cyberAnimation}
+                  loop={true}
+                  autoPlay={true}
+                  style={{ width: "100%", height: "100%" }}
+                />
+              </motion.div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Security Features */}
+      {/* Services Section */}
+      {/* Services Section */}
       <section className="py-20 bg-white">
         <div className="max-w-[1140px] mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-            Our <span className="text-emerald-600">Security</span> Capabilities
-          </h2>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Our <span className="text-emerald-600">Services</span>
+            </h2>
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+              Expert cybersecurity services to protect your digital assets
+            </p>
+          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Threat Intelligence",
-                icon: EyeOffIcon,
-                description:
-                  "Real-time monitoring and analysis of emerging threats",
-              },
-              {
-                title: "Endpoint Protection",
-                icon: ShieldCheckIcon,
-                description:
-                  "Advanced security for all devices in your network",
-              },
-              {
-                title: "Identity Management",
-                icon: FingerprintIcon,
-                description: "Secure authentication and access control systems",
-              },
-              {
-                title: "Data Security",
-                icon: LockIcon,
-                description: "Encryption and data loss prevention solutions",
-              },
-              {
-                title: "Network Defense",
-                icon: NetworkIcon,
-                description: "Protection against intrusions and DDoS attacks",
-              },
-              {
-                title: "Cloud Security",
-                icon: ServerIcon,
-                description: "Specialized protection for cloud infrastructure",
-              },
-            ].map((feature, index) => (
+          {/* First row with 3 cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            {services.slice(0, 3).map((service, index) => (
               <motion.div
                 key={index}
                 whileHover={{ y: -5 }}
-                className="bg-gray-50 border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all"
+                className="bg-gray-50 border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all h-56"
               >
-                <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                  <feature.icon className="w-8 h-8 text-emerald-600" />
+                <div className="bg-emerald-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                  <service.icon className="w-6 h-6 text-emerald-600" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
+                {service.types && (
+                  <div className="flex gap-1 mb-2 flex-wrap">
+                    {service.types.map((type, i) => (
+                      <span
+                        key={i}
+                        className="bg-emerald-50 text-emerald-700 text-xs px-2 py-1 rounded-full"
+                      >
+                        {type}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                <p className="text-gray-600 text-sm">{service.description}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Second row with 2 cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:w-2/3 md:mx-auto">
+            {services.slice(3).map((service, index) => (
+              <motion.div
+                key={index + 3}
+                whileHover={{ y: -5 }}
+                className="bg-gray-50 border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all h-56"
+              >
+                <div className="bg-emerald-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                  <service.icon className="w-6 h-6 text-emerald-600" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
+                {service.types && (
+                  <div className="flex gap-1 mb-2 flex-wrap">
+                    {service.types.map((type, i) => (
+                      <span
+                        key={i}
+                        className="bg-emerald-50 text-emerald-700 text-xs px-2 py-1 rounded-full"
+                      >
+                        {type}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                <p className="text-gray-600 text-sm">{service.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Solutions Section */}
-      <section className="py-20 bg-blue-50">
+      {/* Products Section */}
+      <section className="py-20 bg-emerald-50">
         <div className="max-w-[1140px] mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Cybersecurity <span className="text-emerald-600">Solutions</span>
+              Our <span className="text-emerald-600">Products</span>
             </h2>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Comprehensive protection tailored to your organization's specific
-              needs and risk profile.
+              Innovative security solutions for comprehensive protection
             </p>
           </div>
-
           <ProductCard cards={CyberSecurityCards} />
         </div>
       </section>
