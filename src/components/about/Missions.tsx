@@ -6,21 +6,25 @@ const Mission = () => {
   const missions = [
     {
       title: "Optimized On-Chain Logic",
+      icon: "/aboutus/blockchainIcon.png",
       description:
         "We integrate core app and game logic on-chain, balancing cost efficiency, transparency, and performance—so decentralization doesn’t compromise user experience.",
     },
     {
       title: "Democratizing Finance with DeFi",
+      icon: "/aboutus/market.png",
       description:
         "We break down financial barriers through decentralized systems — providing open access to global finance, ensuring self-custody of assets, and enabling programmable money that works for everyone.",
     },
     {
       title: "AI That Works With Humans, Not Against Them",
+      icon: "/aboutus/perspective.png",
       description:
         "We design AI systems that augment human potential—fine-tuning LLMs for industries and creating frameworks for seamless human-AI collaboration.",
     },
     {
       title: "Unbreakable Digital Defense",
+      icon: "/aboutus/security.png",
       description:
         "We protect businesses with proactive cybersecurity—penetration testing, threat intelligence, and real-time incident response—so innovation thrives without compromise.",
     },
@@ -47,7 +51,15 @@ const Mission = () => {
           >
             {missions.map((mission, index) => (
               <SwiperSlide key={index}>
-                <div className="relative bg-white p-6 rounded-lg border min-h-70 max-h-70 border-blue">
+                <div className="relative bg-white p-6 rounded-lg border min-h-74 max-h-74 border-blue">
+                  {mission.icon && (
+                    <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                      <img
+                        src={mission.icon}
+                        className="w-10 h-10 text-emerald-600"
+                      />
+                    </div>
+                  )}
                   <h3 className="text-xl font-bold text-gray-900 mb-4">
                     {mission.title}
                   </h3>
@@ -64,8 +76,17 @@ const Mission = () => {
           {missions.map((mission, index) => (
             <div
               key={index}
-              className="relative bg-white p-6 rounded-lg shadow-lg shadow-blue-200 "
+              className="relative bg-white p-8 rounded-lg shadow-lg shadow-blue-200"
             >
+              {mission.icon && (
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                  <img
+                    src={mission.icon}
+                    className="w-10 h-10 text-emerald-600"
+                  />
+                </div>
+              )}
+
               <h3 className="text-xl font-bold text-gray-900 mb-4">
                 {mission.title}
               </h3>

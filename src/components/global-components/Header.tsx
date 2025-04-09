@@ -19,7 +19,7 @@ const Header = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
 
   return (
     <div
-      className={`w-full h-[88px] shadow-[0_1px_0_#CED0D5] fixed top-0 left-0 bg-white z-50 transition-transform duration-300 ease-in-out ${
+      className={`w-full h-[88px] shadow-[0_1px_0_#CED0D5] fixed top-0 left-0 bg-white z-[1000] transition-transform duration-300 ease-in-out ${
         isHeaderVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
