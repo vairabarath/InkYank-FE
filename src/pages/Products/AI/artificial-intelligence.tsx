@@ -60,10 +60,15 @@ const ArtificialIntelligence = () => {
         <div className="bg-gradient-to-b from-purple-100 to-white pt-12 md:pt-20 pb-12">
           <div className="relative flex flex-col md:flex-row max-w-[1140px] mx-auto items-center justify-between px-6 gap-8">
             {/* Left  */}
-            <div className="flex-1 text-center md:text-left">
-              <h1 className="text-4xl text-violet md:text-5xl font-bold mb-4">
+            <div className=" text-center md:text-left w-1/2">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-4xl md:text-5xl font-bold mb-6 text-violet"
+              >
                 Artificial Intelligence
-              </h1>
+              </motion.h1>
               <p className="text-lg text-gray-700">
                 <p className="text-lg text-gray-700">
                   People often fear that AI will replace human work and
