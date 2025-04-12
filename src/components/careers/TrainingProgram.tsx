@@ -1,4 +1,20 @@
-import { ArrowRightIcon, CircleHelp, Stars } from "lucide-react";
+import {
+  ArrowRightCircle,
+  Award,
+  Bookmark,
+  BookOpen,
+  Check,
+  CheckCircle2,
+  CircleHelp,
+  Code2,
+  Database,
+  LayoutPanelLeft,
+  Link2,
+  Network,
+  Server,
+  ShieldCheck,
+  Star,
+} from "lucide-react";
 import Accordion, { AccordionItem } from "./Accordian";
 import { motion } from "framer-motion";
 import { FlipWords } from "../ui/Flipwords";
@@ -7,22 +23,22 @@ import { FlipWords } from "../ui/Flipwords";
 const TrainingProgram = () => {
   const Programs = [
     {
+      title: "Artificial Intelligence",
+      location: "Remote",
+      type: "Part-time / Full-time",
+    },
+    {
+      title: "Cyber Security",
+      location: "Remote",
+      type: "Part-time / Full-time",
+    },
+    {
       title: "Blockchain and Web3 Development",
       location: "Remote",
       type: "Part-time / Full-time",
     },
     {
-      title: "Front-end Development",
-      location: "Remote",
-      type: "Part-time / Full-time",
-    },
-    {
-      title: "Back-end Development",
-      location: "Remote",
-      type: "Part-time / Full-time",
-    },
-    {
-      title: "Full-stack Development",
+      title: "Full Stack Development",
       location: "Remote",
       type: "Part-time / Full-time",
     },
@@ -36,70 +52,133 @@ const TrainingProgram = () => {
       <div className="max-w-4xl mx-auto">
         <Accordion>
           <AccordionItem
-            value="Sudar – Annual Training Program"
+            value="sudar-annual-program"
             trigger="Sudar – Annual Training Program"
+            color="blue"
           >
-            <div className="bg-blue-100 p-6 rounded-lg border border-gray-200 shadow-md">
-              <p className="text-gray-700">
-                We conduct <strong>Sudar-Annual training programs</strong> in
-                colleges across India and abroad, equipping students with
-                hands-on expertise in:
-              </p>
+            <div className="bg-blue-50 p-8 rounded-lg border border-blue-100 shadow-sm">
+              {/* Course List Section */}
+              <div className="mb-8">
+                <h3 className="font-bold text-gray-800 mb-4 text-xl flex items-center">
+                  <BookOpen className="mr-2 text-blue-600" size={20} />
+                  Available Courses
+                </h3>
 
-              {/* Key Highlights Section */}
-              <ul className="mt-4 space-y-2 text-gray-600">
-                <li>
-                  <ArrowRightIcon className="inline-block mr-1" /> Core
-                  Blockchain Technology
-                </li>
-                <li>
-                  <ArrowRightIcon className="inline-block mr-1" /> DApp
-                  Development
-                </li>
-                <li>
-                  <ArrowRightIcon className="inline-block mr-1" /> Web3 Game
-                  Development
-                </li>
-                <li>
-                  <ArrowRightIcon className="inline-block mr-1" /> Smart
-                  Contract Development
-                </li>
-                <li>
-                  <ArrowRightIcon className="inline-block mr-1" /> Decentralized
-                  Protocols & Tokenomics
-                </li>
-                <li>
-                  <ArrowRightIcon className="inline-block mr-1" /> Practical,
-                  Project-Based Learning
-                </li>
-              </ul>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3 p-3 hover:bg-blue-100/50 rounded-lg transition-colors">
+                    <ArrowRightCircle
+                      className="mt-0.5 flex-shrink-0 text-blue-500"
+                      size={18}
+                    />
+                    <div>
+                      <span className="font-medium text-gray-800">
+                        Artificial Intelligence
+                      </span>
+                      <p className="text-sm text-gray-500 mt-1">
+                        ML, Deep Learning, Computer Vision
+                      </p>
+                    </div>
+                  </li>
 
-              <p className="text-gray-700 mt-4">
-                Our goal is to <strong>empower young minds</strong> with the
-                skills required to thrive in the blockchain industry, bridging
-                the gap between
-                <strong> academia and real-world applications.</strong>
-              </p>
+                  <li className="flex items-start gap-3 p-3 hover:bg-blue-100/50 rounded-lg transition-colors">
+                    <ShieldCheck
+                      className="mt-0.5 flex-shrink-0 text-emerald-500"
+                      size={18}
+                    />
+                    <div>
+                      <span className="font-medium text-gray-800">
+                        Cyber Security
+                      </span>
+                      <p className="text-sm text-gray-500 mt-1">
+                        Ethical Hacking, Network Defense
+                      </p>
+                    </div>
+                  </li>
 
-              {/* Talent Hiring Section */}
-              <div className="mt-6 p-4 bg-gray-50 border-l-4 border-blue-500 rounded-md text-blue-900">
-                <p>
-                  <strong>
-                    <Stars className="inline-block mr-2 text-yellow-500" />"
-                    Career Opportunity:
-                  </strong>{" "}
-                  We actively identify and hire the most talented individuals
-                  from each batch, integrating them into our ecosystem.
-                </p>
+                  <li className="flex items-start gap-3 p-3 hover:bg-blue-100/50 rounded-lg transition-colors">
+                    <Link2
+                      className="mt-0.5 flex-shrink-0 text-purple-500"
+                      size={18}
+                    />
+                    <div>
+                      <span className="font-medium text-gray-800">
+                        Blockchain & Web3
+                      </span>
+                      <p className="text-sm text-gray-500 mt-1">
+                        Smart Contracts, DApps, DeFi
+                      </p>
+                    </div>
+                  </li>
+
+                  <li className="flex items-start gap-3 p-3 hover:bg-blue-100/50 rounded-lg transition-colors">
+                    <Code2
+                      className="mt-0.5 flex-shrink-0 text-amber-500"
+                      size={18}
+                    />
+                    <div>
+                      <span className="font-medium text-gray-800">
+                        Full Stack Development
+                      </span>
+                      <p className="text-sm text-gray-500 mt-1">
+                        MERN Stack, Cloud Deployment
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Program Features */}
+              <div className="bg-white p-5 rounded-lg border border-gray-200">
+                <h4 className="font-semibold text-gray-700 mb-3 flex items-center">
+                  <Star className="mr-2 text-yellow-500" size={16} />
+                  Program Highlights
+                </h4>
+                <ul className="space-y-2.5">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2
+                      className="mt-0.5 flex-shrink-0 text-green-500"
+                      size={16}
+                    />
+                    <span className="text-gray-600">
+                      Hands-on projects with real-world applications
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2
+                      className="mt-0.5 flex-shrink-0 text-green-500"
+                      size={16}
+                    />
+                    <span className="text-gray-600">
+                      1:1 mentorship from industry experts
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2
+                      className="mt-0.5 flex-shrink-0 text-green-500"
+                      size={16}
+                    />
+                    <span className="text-gray-600">
+                      Industry-recognized certification
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2
+                      className="mt-0.5 flex-shrink-0 text-green-500"
+                      size={16}
+                    />
+                    <span className="text-gray-600">
+                      Placement assistance upon completion
+                    </span>
+                  </li>
+                </ul>
               </div>
             </div>
           </AccordionItem>
 
-          {/* Online Training Program */}
-
+          {/* Online Training Program for Global Web3 Talent */}
           <AccordionItem
             value="Online Training Program"
-            trigger="Online Training Programs for Global Web3 Talent"
+            trigger="Online Global Web3 Talent Training Program"
           >
             <div className="bg-blue-100 p-6 rounded-lg border border-gray-200 shadow-md">
               <p className="text-gray-700">
@@ -135,6 +214,289 @@ const TrainingProgram = () => {
                   developer, or blockchain enthusiast, our program gives you the
                   skills to excel in the decentralized future.
                 </p>
+              </div>
+            </div>
+          </AccordionItem>
+
+          {/* online training program for artificial intelligence */}
+          <AccordionItem
+            value="AI-Training-Program"
+            trigger="Online AI & Machine Learning Training Programs"
+            color="purple"
+          >
+            <div className="bg-purple-100 p-6 rounded-lg border border-gray-200 shadow-md">
+              <p className="text-gray-700">
+                We offer <strong>cutting-edge AI training programs</strong>{" "}
+                designed to{" "}
+                <strong>democratize artificial intelligence education</strong>.
+                Our curriculum covers <strong>fundamental to advanced</strong>{" "}
+                topics including:
+              </p>
+
+              {/* Key Features Section */}
+              <ul className="mt-4 space-y-2 text-gray-600">
+                <li>🤖 Machine Learning Fundamentals</li>
+                <li>🧠 Deep Learning & Neural Networks</li>
+                <li>🖼️ Computer Vision & Image Processing</li>
+                <li>🗣️ Natural Language Processing (NLP)</li>
+                <li>📊 Data Science & Predictive Analytics</li>
+              </ul>
+
+              {/* Learning Approach Section */}
+              <p className="text-gray-700 mt-4">
+                Our <strong>project-based learning</strong> methodology
+                includes:
+              </p>
+              <ul className="mt-2 space-y-2 text-gray-600">
+                <li>🎥 Live AI Workshops with Industry Leaders</li>
+                <li>💻 Real-world Dataset Challenges</li>
+                <li>🛠️ End-to-End AI Model Development</li>
+                <li>📈 Model Deployment & Optimization</li>
+              </ul>
+
+              {/* Highlighted Box for Impact */}
+              <div className="mt-6 p-4 bg-gray-50 border-l-4 border-purple-500 rounded-md text-purple-900">
+                <p>
+                  <CircleHelp className="inline-block mb-1 text-purple-500 w-5 h-5" />{" "}
+                  <strong>Who Should Enroll? </strong> Perfect for developers,
+                  data professionals, and tech enthusiasts looking to master AI
+                  technologies that are transforming industries.
+                </p>
+              </div>
+            </div>
+          </AccordionItem>
+
+          {/* Online Training Program for Cyber Security */}
+          <AccordionItem
+            value="Cybersecurity-Training-Program"
+            trigger="Online Cybersecurity Training Program"
+            color="emerald"
+          >
+            <div className="bg-emerald-100 p-6 rounded-lg border border-gray-200 shadow-md">
+              <p className="text-gray-700">
+                Our <strong>intensive cybersecurity program</strong> equips
+                participants with <strong>real-world defense strategies</strong>{" "}
+                against evolving digital threats. The curriculum covers{" "}
+                <strong>essential security domains</strong> including:
+              </p>
+
+              {/* Key Features Section */}
+              <ul className="mt-4 space-y-2 text-gray-600">
+                <li>🔒 Introduction to Cybersecurity Principles</li>
+                <li>🛡️ Network Security & Threat Analysis</li>
+                <li>💻 Secure Software Development Practices</li>
+                <li>🕵️ Ethical Hacking & Penetration Testing</li>
+                <li>🔐 Cryptography and Encryption Techniques</li>
+                <li>🚨 Incident Response & Disaster Recovery</li>
+              </ul>
+
+              {/* Learning Approach Section */}
+              <p className="text-gray-700 mt-4">
+                Our <strong>hands-on security training</strong> includes:
+              </p>
+              <ul className="mt-2 space-y-2 text-gray-600">
+                <li>🎯 Live Cyber Range Exercises</li>
+                <li>💥 Simulated Attack/Defense Scenarios</li>
+                <li>🛡️ Vulnerability Assessment Labs</li>
+                <li>📝 Security Policy Development Workshops</li>
+              </ul>
+
+              {/* Highlighted Box for Impact */}
+              <div className="mt-6 p-4 bg-gray-50 border-l-4 border-emerald-500 rounded-md text-emerald-900">
+                <p>
+                  <CircleHelp className="inline-block mb-1 text-emerald-500 w-5 h-5" />{" "}
+                  <strong>Ideal For: </strong> IT professionals, system
+                  administrators, developers, and anyone serious about building
+                  cyber resilience in today's threat landscape.
+                </p>
+              </div>
+            </div>
+          </AccordionItem>
+
+          {/* Online Training Program for Full Stack Development  */}
+          <AccordionItem
+            value="fullstack-development"
+            trigger="Full Stack Web Development Training Program"
+            color="amber"
+          >
+            <div className="bg-amber-50 p-8 rounded-lg border border-amber-100 shadow-sm">
+              {/* Course Header */}
+              <div className="flex items-center gap-3 mb-6">
+                <Code2 className="text-amber-600" size={24} />
+                <h3 className="text-2xl font-bold text-gray-800">
+                  Full Stack Development Program
+                </h3>
+              </div>
+
+              {/* Curriculum Section */}
+              <div className="mb-8">
+                <h4 className="font-semibold text-gray-700 mb-4 flex items-center gap-2">
+                  <Bookmark className="text-amber-500" size={18} />
+                  Comprehensive Curriculum
+                </h4>
+
+                <div className="grid gap-4">
+                  <div className="p-4 bg-white rounded-lg border border-amber-100 shadow-xs">
+                    <h5 className="font-medium text-amber-700 mb-2 flex items-center gap-2">
+                      <LayoutPanelLeft className="text-amber-500" size={16} />
+                      Front-End Development
+                    </h5>
+                    <ul className="text-gray-600 space-y-1.5 text-sm">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2
+                          className="mt-0.5 flex-shrink-0 text-amber-500"
+                          size={14}
+                        />
+                        HTML5, CSS3, JavaScript (ES6+)
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2
+                          className="mt-0.5 flex-shrink-0 text-amber-500"
+                          size={14}
+                        />
+                        React.js / Angular frameworks
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2
+                          className="mt-0.5 flex-shrink-0 text-amber-500"
+                          size={14}
+                        />
+                        Responsive design & accessibility
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="p-4 bg-white rounded-lg border border-amber-100 shadow-xs">
+                    <h5 className="font-medium text-amber-700 mb-2 flex items-center gap-2">
+                      <Server className="text-amber-500" size={16} />
+                      Back-End Development
+                    </h5>
+                    <ul className="text-gray-600 space-y-1.5 text-sm">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2
+                          className="mt-0.5 flex-shrink-0 text-amber-500"
+                          size={14}
+                        />
+                        Node.js with Express
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2
+                          className="mt-0.5 flex-shrink-0 text-amber-500"
+                          size={14}
+                        />
+                        Python (Django/Flask)
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2
+                          className="mt-0.5 flex-shrink-0 text-amber-500"
+                          size={14}
+                        />
+                        Authentication & authorization
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="p-4 bg-white rounded-lg border border-amber-100 shadow-xs">
+                    <h5 className="font-medium text-amber-700 mb-2 flex items-center gap-2">
+                      <Database className="text-amber-500" size={16} />
+                      Database Management
+                    </h5>
+                    <ul className="text-gray-600 space-y-1.5 text-sm">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2
+                          className="mt-0.5 flex-shrink-0 text-amber-500"
+                          size={14}
+                        />
+                        SQL (PostgreSQL, MySQL)
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2
+                          className="mt-0.5 flex-shrink-0 text-amber-500"
+                          size={14}
+                        />
+                        NoSQL (MongoDB, Firebase)
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2
+                          className="mt-0.5 flex-shrink-0 text-amber-500"
+                          size={14}
+                        />
+                        ORMs & database design
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="p-4 bg-white rounded-lg border border-amber-100 shadow-xs">
+                    <h5 className="font-medium text-amber-700 mb-2 flex items-center gap-2">
+                      <Network className="text-amber-500" size={16} />
+                      APIs & Advanced Concepts
+                    </h5>
+                    <ul className="text-gray-600 space-y-1.5 text-sm">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2
+                          className="mt-0.5 flex-shrink-0 text-amber-500"
+                          size={14}
+                        />
+                        RESTful API design
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2
+                          className="mt-0.5 flex-shrink-0 text-amber-500"
+                          size={14}
+                        />
+                        GraphQL implementation
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2
+                          className="mt-0.5 flex-shrink-0 text-amber-500"
+                          size={14}
+                        />
+                        WebSockets & real-time data
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Program Outcomes */}
+              <div className="bg-white p-5 rounded-lg border-l-4 border-amber-500">
+                <h4 className="font-semibold text-gray-700 mb-3 flex items-center gap-2">
+                  <Award className="text-amber-500" size={18} />
+                  What You'll Achieve
+                </h4>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <div className="bg-amber-100 p-1 rounded-full">
+                      <Check className="text-amber-600" size={14} />
+                    </div>
+                    <span className="text-gray-600">
+                      <strong className="text-gray-800">
+                        Portfolio Development:
+                      </strong>{" "}
+                      Build and deploy 5+ full stack applications
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="bg-amber-100 p-1 rounded-full">
+                      <Check className="text-amber-600" size={14} />
+                    </div>
+                    <span className="text-gray-600">
+                      <strong className="text-gray-800">
+                        Industry Skills:
+                      </strong>{" "}
+                      Master modern development tools and workflows
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="bg-amber-100 p-1 rounded-full">
+                      <Check className="text-amber-600" size={14} />
+                    </div>
+                    <span className="text-gray-600">
+                      <strong className="text-gray-800">Career Ready:</strong>{" "}
+                      Complete preparation for junior developer roles
+                    </span>
+                  </li>
+                </ul>
               </div>
             </div>
           </AccordionItem>

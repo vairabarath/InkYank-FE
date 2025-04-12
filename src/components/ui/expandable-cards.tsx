@@ -162,7 +162,7 @@ export function ProductCard({ cards }: { cards: Card[] }) {
                   {card.title}
                 </motion.h3>
                 <motion.p
-                  layoutId={`description-${card.description}-${id}`}
+                  layoutId={`description-${card.title}-${card.description}-${id}`}
                   className={` ${
                     card.description == "lanching soon"
                       ? "text-red-600"

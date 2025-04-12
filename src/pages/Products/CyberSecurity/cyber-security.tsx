@@ -12,7 +12,7 @@ import cyberAnimation from "../../../animations/cyber.json";
 
 const CyberSecurityCards = [
   {
-    description: "Available now",
+    description: "In progress",
     title: "Real-time Threat Intelligence Platform",
     src: "/threat-protection.jpg",
     link: "#",
@@ -33,7 +33,7 @@ const CyberSecurityCards = [
     ),
   },
   {
-    description: "New release",
+    description: "In progress",
     title: "AI Driven Endpoint Protection Suite",
     src: "/data-encryption.jpg",
     link: "#",

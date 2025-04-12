@@ -102,7 +102,10 @@ const Career = () => {
                 <h3 className="text-2xl font-bold mb-2">{job.title}</h3>
                 <p className="text-gray-600">{job.location}</p>
                 <p className="text-blue-600 font-semibold">{job.type}</p>
-                <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-700">
+                <button
+                  disabled
+                  className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-700 disabled:opacity-80 disabled:cursor-not-allowed"
+                >
                   Apply Now
                 </button>
               </motion.div>
@@ -115,8 +118,8 @@ const Career = () => {
       <footer className="bg-blue-600 text-white py-8">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <p className="text-lg">
-            If you are interested in teaching blockchain to empower the youths ?
-            Join us today!
+            If you are interested in teaching and mentoring the technologies to
+            empower the youths ? Join us today!
           </p>
           <button className="mt-4 bg-white text-blue-600 px-6 py-3 rounded-md font-semibold shadow-lg hover:bg-gray-100">
             Get Started

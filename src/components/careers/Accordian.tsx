@@ -53,18 +53,48 @@ interface AccordionItemProps {
   children: ReactNode;
   value: string;
   trigger: ReactNode;
+  color?: "blue" | "purple" | "emerald" | "amber";
 }
 
 export function AccordionItem({
   children,
   value,
   trigger,
+  color = "blue",
   ...props
 }: AccordionItemProps) {
   const context = useContext(AccordionContext);
   if (!context) {
     throw new Error("AccordionItem must be used within an Accordion");
   }
+
+  const colorClasses = {
+    blue: {
+      text: "from-blue-500 to-blue-500",
+      hover: "group-hover:text-blue",
+      icon: "group-hover:text-blue",
+      border: "border-blue-500",
+    },
+    purple: {
+      text: "from-violet to-violet",
+      hover: "group-hover:text-purple",
+      icon: "group-hover:text-purple",
+      border: "border-purple-500",
+    },
+    emerald: {
+      text: "from-emerald-500 to-emerald-500",
+      hover: "group-hover:text-emerald",
+      icon: "group-hover:text-emerald",
+      border: "border-emerald-500",
+    },
+
+    amber: {
+      text: "from-amber-400 to-amber-400",
+      hover: "group-hover:text-amber",
+      icon: "group-hover:text-amber",
+      border: "border-amber-500",
+    },
+  };
 
   const { selected, setSelected } = context;
   const open = selected === value;
@@ -96,7 +126,9 @@ export function AccordionItem({
           className="flex justify-between items-center p-4 cursor-pointer"
         >
           <div
-            className={`md:text-xl font-semibold bg-gradient-to-r from-blue-500 to-blue-500 
+            className={`md:text-xl font-semibold bg-gradient-to-r ${
+              colorClasses[color].text
+            }
                    bg-[length:0%_100%] bg-no-repeat transition-all duration-700  ${
                      open ? "bg-[length:100%_100%] text-transparent" : ""
                    }
@@ -107,9 +139,9 @@ export function AccordionItem({
           </div>
           <ChevronDown
             size={16}
-            className={`transition-transform duration-300 group-hover:text-blue ${
-              open ? "rotate-180" : ""
-            }`}
+            className={`transition-transform duration-300 ${
+              colorClasses[color].icon
+            } ${open ? "rotate-180" : ""}`}
           />
         </header>
 

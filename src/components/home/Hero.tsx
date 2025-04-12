@@ -63,7 +63,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative h-[90vh] w-full overflow-hidden bg-white">
+    <div className="relative h-[90vh] w-full overflow-hidden bg-white ">
       {/* Grid Layout */}
       <div className="h-full w-full grid grid-cols-1 lg:grid-cols-2">
         {/* Left Side - Lottie Animation */}

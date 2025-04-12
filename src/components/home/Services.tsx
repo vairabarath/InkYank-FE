@@ -57,7 +57,7 @@ const Services = () => {
               <h2 className="text-xl text-blue font-semibold mb-4">
                 Blockchain
               </h2>
-              <p className="text-gray-600 mb-2 sm:mb-4  text-sm sm:text-base">
+              <p className="text-gray-600 mb-2 sm:mb-4 text-sm sm:text-base">
                 At the core of Web3, blockchain enables secure, decentralized
                 systems. We develop robust smart contracts and trustless
                 applications that redefine transparency, ownership, digital
