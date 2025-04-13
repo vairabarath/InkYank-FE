@@ -14,6 +14,7 @@ import Community from "./pages/Community";
 import Footer from "./components/global-components/Footer";
 import ArtificialIntelligence from "./pages/Products/AI/artificial-intelligence";
 import CyberSecurity from "./pages/Products/CyberSecurity/cyber-security";
+import Enrollment from "./pages/Enrollment";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -37,6 +38,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/careers" element={<Career />} />
+          <Route path="/enrollment" element={<Enrollment />} />
           <Route path="/form" element={<RecruitmentForm />} />
           <Route path="/community" element={<Community />} />
 
