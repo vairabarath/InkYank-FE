@@ -18,9 +18,13 @@ import {
 import Accordion, { AccordionItem } from "./Accordian";
 import { motion } from "framer-motion";
 import { FlipWords } from "../ui/Flipwords";
+import { useEffect, useState } from "react";
+import { EnrollmentForm } from "./EnrollmentForm";
+
 // Import icons
 
 const TrainingProgram = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
   const Programs = [
     {
       title: "Artificial Intelligence",
@@ -43,6 +47,19 @@ const TrainingProgram = () => {
       type: "Part-time / Full-time",
     },
   ];
+
+  useEffect(() => {
+    if (isFormOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    // Cleanup function to reset overflow when component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isFormOpen]);
 
   return (
     <div className="">
@@ -513,12 +530,64 @@ const TrainingProgram = () => {
                 <h2 className="text-xl md:text-2xl font-semibold mb-4">
                   <FlipWords words="Available Training Programs" />
                 </h2>
-                <button
-                  className="bg-blue-600 hidden md:block transition-all duration-300 ease-in-out border border-blue-600 
-                    hover:bg-white hover:text-blue-600 text-white font-semibold py-2 px-6 rounded-md"
-                >
-                  Enroll Now
-                </button>
+                <div>
+                  {/* Your existing content */}
+                  <button
+                    onClick={() => setIsFormOpen(true)}
+                    className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+                  >
+                    Enroll Now
+                  </button>
+
+                  {/* Custom Modal Implementation */}
+                  {isFormOpen && (
+                    <div className="fixed inset-0 z-50 overflow-y-auto">
+                      {/* overlay */}
+                      <div
+                        className="fixed inset-0 bg-black/50 transition-opacity"
+                        aria-hidden="true"
+                        onClick={() => setIsFormOpen(false)}
+                      />
+
+                      {/* Modal container */}
+                      <div className="flex min-h-[80vh] items-center justify-center p-4">
+                        {/* Modal content */}
+                        <div
+                          className="relative w-full max-w-4xl bg-white rounded-lg shadow-xl"
+                          onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
+                        >
+                          {/* Close button */}
+                          <button
+                            onClick={() => setIsFormOpen(false)}
+                            className="absolute cursor-pointer top-4 right-4 text-gray-500 hover:text-gray-700"
+                            aria-label="Close"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-6 w-6"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M6 18L18 6M6 6l12 12"
+                              />
+                            </svg>
+                          </button>
+
+                          {/* Form content */}
+                          <EnrollmentForm
+                            onClose={() => setIsFormOpen(false)}
+                            isModal
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
 
               {/* Animated Program Cards */}

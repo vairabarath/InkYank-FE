@@ -3,15 +3,19 @@ import {
   ArrowRight,
   ChevronDown,
   ChevronUp,
+  Contact2Icon,
+  GraduationCap,
+  IdCardIcon,
   Laptop,
   Smartphone,
+  Users2Icon,
   Wifi,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface EnrollmentFormProps {
-  onClose?: () => void; // Optional close function for modal use
-  isModal?: boolean; // Flag to determine if it's being used as a modal
+  onClose?: () => void;
+  isModal?: boolean;
 }
 
 export const EnrollmentForm = ({
@@ -95,12 +99,6 @@ export const EnrollmentForm = ({
       {isModal && (
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold text-gray-800">Enrollment Form</h2>
-          <button
-            onClick={onClose}
-            className="text-gray-500 hover:text-gray-700"
-          >
-            ✕
-          </button>
         </div>
       )}
 
@@ -117,10 +115,10 @@ export const EnrollmentForm = ({
 
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Personal Information Section */}
-        <div className="bg-gray-50 p-6 rounded-lg">
+        <div className="bg-gray-50 p-6 hover:bg-blue-50 rounded-lg">
           <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
             <span className="bg-blue-100 p-2 rounded-full mr-3">
-              <ArrowRight className="text-blue-600" size={18} />
+              <IdCardIcon className="text-blue-600" size={18} />
             </span>
             Personal Information
           </h3>
@@ -224,10 +222,10 @@ export const EnrollmentForm = ({
         </div>
 
         {/* Family Information Section */}
-        <div className="bg-gray-50 p-6 rounded-lg">
+        <div className="bg-gray-50 hover:bg-blue-50 p-6 rounded-lg">
           <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
             <span className="bg-blue-100 p-2 rounded-full mr-3">
-              <ArrowRight className="text-blue-600" size={18} />
+              <Users2Icon className="text-blue-600" size={18} />
             </span>
             Family Information
           </h3>
@@ -264,10 +262,10 @@ export const EnrollmentForm = ({
         </div>
 
         {/* Contact Information Section */}
-        <div className="bg-gray-50 p-6 rounded-lg">
+        <div className="bg-gray-50 hover:bg-blue-50 p-6 rounded-lg">
           <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
             <span className="bg-blue-100 p-2 rounded-full mr-3">
-              <ArrowRight className="text-blue-600" size={18} />
+              <Contact2Icon className="text-blue-600" size={18} />
             </span>
             Contact Information
           </h3>
@@ -318,10 +316,10 @@ export const EnrollmentForm = ({
         </div>
 
         {/* Educational Background Section */}
-        <div className="bg-gray-50 p-6 rounded-lg">
+        <div className="bg-gray-50 hover:bg-blue-50 p-6 rounded-lg">
           <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
             <span className="bg-blue-100 p-2 rounded-full mr-3">
-              <ArrowRight className="text-blue-600" size={18} />
+              <GraduationCap className="text-blue-600" size={18} />
             </span>
             Educational Background
           </h3>
@@ -414,7 +412,7 @@ export const EnrollmentForm = ({
         </div>
 
         {/* Learning Preferences Section */}
-        <div className="bg-gray-50 p-6 rounded-lg">
+        <div className="bg-gray-50 p-6  hover:bg-blue-50 rounded-lg">
           <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
             <span className="bg-blue-100 p-2 rounded-full mr-3">
               <ArrowRight className="text-blue-600" size={18} />
@@ -477,7 +475,7 @@ export const EnrollmentForm = ({
         </div>
 
         {/* Career Preferences Section */}
-        <div className="bg-gray-50 p-6 rounded-lg">
+        <div className="bg-gray-50 hover:bg-blue-50 p-6 rounded-lg">
           <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
             <span className="bg-blue-100 p-2 rounded-full mr-3">
               <ArrowRight className="text-blue-600" size={18} />
@@ -564,7 +562,7 @@ export const EnrollmentForm = ({
         </div>
 
         {/* Technical Skills Section */}
-        <div className="bg-gray-50 p-6 rounded-lg">
+        <div className="bg-gray-50 p-6 hover:bg-blue-50 rounded-lg">
           <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
             <span className="bg-blue-100 p-2 rounded-full mr-3">
               <ArrowRight className="text-blue-600" size={18} />
@@ -688,7 +686,7 @@ export const EnrollmentForm = ({
         </div>
 
         {/* Expectations Section */}
-        <div className="bg-gray-50 p-6 rounded-lg">
+        <div className="bg-gray-50 p-6 hover:bg-blue-50 rounded-lg">
           <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
             <span className="bg-blue-100 p-2 rounded-full mr-3">
               <ArrowRight className="text-blue-600" size={18} />

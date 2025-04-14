@@ -1,7 +1,22 @@
 import { motion } from "framer-motion";
 import TrainingPrograms from "../components/careers/TrainingProgram";
+import { useEffect, useState } from "react";
+import { TeachingApplicationForm } from "../components/careers/TeachingApplicationForm";
 
 const Career = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
+  useEffect(() => {
+    if (isFormOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isFormOpen]);
   return (
     <div className="bg-blue-50 text-gray-800">
       {/* Hero Section */}
@@ -114,18 +129,46 @@ const Career = () => {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Teacher section */}
       <footer className="bg-blue-600 text-white py-8">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <p className="text-lg">
             If you are interested in teaching and mentoring the technologies to
             empower the youths ? Join us today!
           </p>
-          <button className="mt-4 bg-white text-blue-600 px-6 py-3 rounded-md font-semibold shadow-lg hover:bg-gray-100">
+          <button
+            onClick={() => setIsFormOpen(true)}
+            className="mt-4 bg-white text-blue-600 px-6 py-3 rounded-md font-semibold shadow-lg hover:bg-gray-100"
+          >
             Get Started
           </button>
         </div>
       </footer>
+
+      {isFormOpen && (
+        <div className="fixed inset-0 z-50 overflow-y-auto">
+          {/* Background overlay */}
+          <div
+            className="fixed inset-0 bg-black/50 transition-opacity"
+            aria-hidden="true"
+            onClick={() => setIsFormOpen(false)}
+          />
+
+          {/* Modal container */}
+          <div className="flex min-h-screen items-center justify-center p-4">
+            {/* Modal content */}
+            <div
+              className="relative w-full max-w-4xl bg-white rounded-lg shadow-xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <TeachingApplicationForm
+                onClose={() => setIsFormOpen(false)}
+                isModal
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
