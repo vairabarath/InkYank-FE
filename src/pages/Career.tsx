@@ -33,7 +33,9 @@ const Career = () => {
       {/* Why Join Us */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Why Join Us?</h2>
+          <h2 className="text-3xl md:text-4xl text-blue font-bold mb-8">
+            Why Join Us?
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -80,7 +82,7 @@ const Career = () => {
       {/* Open Positions */}
       <section className="bg-white  py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+          <h2 className="text-3xl md:text-4xl text-blue font-bold text-center mb-8">
             Open Positions
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

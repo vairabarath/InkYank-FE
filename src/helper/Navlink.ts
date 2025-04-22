@@ -48,7 +48,7 @@ export const navLinks = [
       },
       {
         icon: EarthLockIcon,
-        title: "Cyber Security",
+        title: "CyberSecurity",
         description:
           "Dive into decentralized finance platforms that redefine how you manage, trade, and invest in digital assets securely.",
         path: "/products/cyber-security",

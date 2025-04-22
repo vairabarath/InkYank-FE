@@ -35,7 +35,7 @@ const Visions = () => {
         >
           <div className="p-6 w-full bg-blue shadow-md rounded-xl">
             <h2 className="text-2xl mt-2 text-white font-semibold mb-4 text-center">
-              Our Visions
+              Our Vision
             </h2>
           </div>
         </motion.div>

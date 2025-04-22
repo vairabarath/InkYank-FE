@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import { Menu } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
@@ -46,9 +47,11 @@ const Header = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
 
         {/* CTA button - right side on desktop */}
         <div className="hidden lg:block flex-shrink-0 ml-4">
-          <button className="bg-blue cursor-pointer transition-all duration-300 ease-in-out border border-blue hover:bg-white hover:text-blue text-white font-semibold py-2 px-4 rounded-md">
-            Get Started
-          </button>
+          <Link to="/about">
+            <button className="bg-blue cursor-pointer transition-all duration-300 ease-in-out border border-blue hover:bg-white hover:text-blue text-white font-semibold py-2 px-4 rounded-md">
+              Get Started
+            </button>
+          </Link>
         </div>
       </div>
     </div>

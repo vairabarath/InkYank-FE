@@ -22,6 +22,7 @@ const Hero = () => {
       bgColor: "bg-blue-50/80",
       textColor: "text-blue-600",
       buttonColor: "bg-blue-600 hover:bg-blue-700",
+      buttonLink: "/products/blockchain/web3-gaming",
     },
     {
       id: "ai",
@@ -177,7 +178,7 @@ const Hero = () => {
                   <button
                     className={`px-6 py-3 ${
                       tabs.find((t) => t.id === activeTab)?.buttonColor
-                    } text-white rounded-lg font-medium hover:opacity-90 transition-all shadow-lg hover:shadow-xl`}
+                    } text-white cursor-pointer rounded-lg font-medium hover:opacity-90 transition-all shadow-lg hover:shadow-xl`}
                   >
                     Learn More
                   </button>

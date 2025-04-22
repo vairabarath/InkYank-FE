@@ -45,7 +45,7 @@ const communityActivity = [
 
 const CardData = [
   {
-    body: "A community-led approach fosters transparent decision-making through DAOs It builds trust, as decisions are made collectively rather than by a central authority.",
+    body: "A community-led approach fosters transparent decision-making through DAOs. It builds trust, as decisions are made collectively rather than by a central authority.",
   },
   {
     body: "Open-source development and community contributions drive continuous improvement Decentralized models align incentives: users, developers, investors benefit directly from network growth.",

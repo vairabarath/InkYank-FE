@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import Lottie from "lottie-react";
 import cyberAnimation from "../../../animations/cyber.json";
+import { Link } from "react-router-dom";
 
 const CyberSecurityCards = [
   {
@@ -112,12 +113,11 @@ const CyberSecurity = () => {
                 complexity.
               </p>
               <div className="flex gap-4">
-                <button className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
-                  Request Security Audit
-                </button>
-                <button className="border border-gray-300 hover:border-gray-400 text-gray-700 font-semibold py-3 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
+                <Link to="/contact">
+                  <button className="bg-emerald-600 cursor-pointer hover:bg-emerald-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
+                    Request Security Audit
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="md:w-1/2">

@@ -1,19 +1,14 @@
 import {
-  ArrowRightCircle,
   Award,
   Bookmark,
-  BookOpen,
   Check,
   CheckCircle2,
   CircleHelp,
   Code2,
   Database,
   LayoutPanelLeft,
-  Link2,
   Network,
   Server,
-  ShieldCheck,
-  Star,
 } from "lucide-react";
 import Accordion, { AccordionItem } from "./Accordian";
 import { motion } from "framer-motion";
@@ -62,136 +57,20 @@ const TrainingProgram = () => {
   }, [isFormOpen]);
 
   return (
-    <div className="">
-      <h2 className="text-3xl text-center md:text-4xl font-bold mb-10">
+    <div>
+      {/* <h2 className="text-3xl text-center md:text-4xl font-bold mb-10">
         Training Program
-      </h2>
+      </h2> */}
+      <div className="text-center mb-6">
+        <h3 className="text-3xl md:text-4xl font-bold text-blue mb-3">
+          Sudar Online Training Program
+        </h3>
+        <p className="text-gray-600">
+          Comprehensive courses designed for industry-ready skills
+        </p>
+      </div>
       <div className="max-w-4xl mx-auto">
         <Accordion>
-          <AccordionItem
-            value="sudar-annual-program"
-            trigger="Sudar – Annual Training Program"
-            color="blue"
-          >
-            <div className="bg-blue-50 p-8 rounded-lg border border-blue-100 shadow-sm">
-              {/* Course List Section */}
-              <div className="mb-8">
-                <h3 className="font-bold text-gray-800 mb-4 text-xl flex items-center">
-                  <BookOpen className="mr-2 text-blue-600" size={20} />
-                  Available Courses
-                </h3>
-
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3 p-3 hover:bg-blue-100/50 rounded-lg transition-colors">
-                    <ArrowRightCircle
-                      className="mt-0.5 flex-shrink-0 text-blue-500"
-                      size={18}
-                    />
-                    <div>
-                      <span className="font-medium text-gray-800">
-                        Artificial Intelligence
-                      </span>
-                      <p className="text-sm text-gray-500 mt-1">
-                        ML, Deep Learning, Computer Vision
-                      </p>
-                    </div>
-                  </li>
-
-                  <li className="flex items-start gap-3 p-3 hover:bg-blue-100/50 rounded-lg transition-colors">
-                    <ShieldCheck
-                      className="mt-0.5 flex-shrink-0 text-emerald-500"
-                      size={18}
-                    />
-                    <div>
-                      <span className="font-medium text-gray-800">
-                        Cyber Security
-                      </span>
-                      <p className="text-sm text-gray-500 mt-1">
-                        Ethical Hacking, Network Defense
-                      </p>
-                    </div>
-                  </li>
-
-                  <li className="flex items-start gap-3 p-3 hover:bg-blue-100/50 rounded-lg transition-colors">
-                    <Link2
-                      className="mt-0.5 flex-shrink-0 text-purple-500"
-                      size={18}
-                    />
-                    <div>
-                      <span className="font-medium text-gray-800">
-                        Blockchain & Web3
-                      </span>
-                      <p className="text-sm text-gray-500 mt-1">
-                        Smart Contracts, DApps, DeFi
-                      </p>
-                    </div>
-                  </li>
-
-                  <li className="flex items-start gap-3 p-3 hover:bg-blue-100/50 rounded-lg transition-colors">
-                    <Code2
-                      className="mt-0.5 flex-shrink-0 text-amber-500"
-                      size={18}
-                    />
-                    <div>
-                      <span className="font-medium text-gray-800">
-                        Full Stack Development
-                      </span>
-                      <p className="text-sm text-gray-500 mt-1">
-                        MERN Stack, Cloud Deployment
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Program Features */}
-              <div className="bg-white p-5 rounded-lg border border-gray-200">
-                <h4 className="font-semibold text-gray-700 mb-3 flex items-center">
-                  <Star className="mr-2 text-yellow-500" size={16} />
-                  Program Highlights
-                </h4>
-                <ul className="space-y-2.5">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2
-                      className="mt-0.5 flex-shrink-0 text-green-500"
-                      size={16}
-                    />
-                    <span className="text-gray-600">
-                      Hands-on projects with real-world applications
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2
-                      className="mt-0.5 flex-shrink-0 text-green-500"
-                      size={16}
-                    />
-                    <span className="text-gray-600">
-                      1:1 mentorship from industry experts
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2
-                      className="mt-0.5 flex-shrink-0 text-green-500"
-                      size={16}
-                    />
-                    <span className="text-gray-600">
-                      Industry-recognized certification
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2
-                      className="mt-0.5 flex-shrink-0 text-green-500"
-                      size={16}
-                    />
-                    <span className="text-gray-600">
-                      Placement assistance upon completion
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </AccordionItem>
-
           {/* Online Training Program for Global Web3 Talent */}
           <AccordionItem
             value="Online Training Program"
@@ -238,7 +117,7 @@ const TrainingProgram = () => {
           {/* online training program for artificial intelligence */}
           <AccordionItem
             value="AI-Training-Program"
-            trigger="Online AI & Machine Learning Training Programs"
+            trigger="Online AI & Machine Learning Training Program"
             color="purple"
           >
             <div className="bg-purple-100 p-6 rounded-lg border border-gray-200 shadow-md">

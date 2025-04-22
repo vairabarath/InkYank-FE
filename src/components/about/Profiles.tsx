@@ -4,38 +4,52 @@ const Profiles = () => {
   const testimonials = [
     {
       quote:
-        "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
+        "Vinoth sets the overall vision and long-term goals for the company while focusing on innovative ideas and managing operations. He excels in integrating technology and business to drive growth and success.",
       name: "Vinoth",
       designation: "CEO",
-      src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      src: "/Profiles/vinoth.jpg",
     },
     {
       quote:
-        "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
+        "Anand develops and leads the company's tech vision and roadmap, ensuring alignment with business goals. He manages technical teams and drives the adoption of new technologies and R&D efforts.",
       name: "Anandh",
       designation: "CTO at Rakamura & InkYank",
       src: "/Profiles/anandh.jpg",
     },
     {
       quote:
-        "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
+        "Lakshmi leads the development and implementation of AI solutions, optimizing processes and enhancing decision-making with machine learning. She drives innovation by exploring new AI technologies and applying them to real-world business challenges.",
       name: "Lakshmi",
-      designation: "Business Head",
+      designation: "AI Expert",
       src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Ds",
     },
     {
       quote:
-        "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
+        "Vigneshwaran manages project timelines, resources, and team coordination to ensure timely delivery. He oversees project execution from planning to completion, ensuring that all objectives and client expectations are met.",
       name: "Vigneshwaran",
       designation: "Project Lead",
       src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       quote:
-        "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
+        "Arun Santhosh specializes in protecting systems and data from cyber threats, implementing robust security measures across the organization. He ensures the integrity, confidentiality, and availability of digital assets through proactive security strategies.",
+      name: "Arun Santhosh",
+      designation: "Cyber Security Expert",
+      src: "/Profiles/arunSanthosh.jpg",
+    },
+    {
+      quote:
+        "MAP is an expert in blockchain and AI technologies, driving the development of innovative and secure solutions. He ensures high-quality, scalable code and stays at the forefront of emerging tech trends.",
       name: "MAP",
-      designation: "Senior Blockchain Developer",
-      src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      designation: "Senior Developer",
+      src: "/Profiles/MAP.jpg",
+    },
+    {
+      quote:
+        "Barath is skilled in both frontend and backend development, building seamless and efficient web applications. He handles the entire development lifecycle, ensuring smooth user experiences and robust server-side functionality.",
+      name: "Barath",
+      designation: "Full Stack Developer ",
+      src: "/Profiles/barath.jpeg",
     },
   ];
   return <AnimatedTestimonials testimonials={testimonials} />;

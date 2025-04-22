@@ -76,7 +76,7 @@ const Services = () => {
           >
             <Card fixedHeight className="border-t-4 border-emerald-600">
               <h2 className="text-xl text-emerald-600 font-semibold mb-4">
-                Cyber Security
+                CyberSecurity
               </h2>
               <p className="text-gray-600 mb-2 sm:mb-4 text-sm sm:text-base">
                 From threat intelligence to zero-trust architectures, we design

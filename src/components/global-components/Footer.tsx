@@ -4,7 +4,12 @@ const Footer = () => {
   return (
     <footer className="w-full bg-[#1C388C] text-white py-4">
       <div className="flex flex-col items-center ">
-        <h2 className="text-4xl font-semibold">LOGO</h2>
+        {/* <h2 className="text-4xl font-semibold">LOGO</h2> */}
+        <img
+          src="/inkyankLogos/INKYANK_DARK.png"
+          alt="logo"
+          className="w-[150px] md:w-[225px] mb-4"
+        />
 
         <div className="max-w-[1440px] w-[90%] mx-auto px-6 grid grid-cols-1 gap-10 text-center md:grid-cols-3 md:text-left">
           {/* Column 1 - NAVIGATION */}
@@ -14,7 +19,7 @@ const Footer = () => {
             <div className="flex flex-col gap-2">
               <a
                 className="border border-gray-500 py-2 px-6 hover:bg-gray-800 transition"
-                href="/community"
+                href="/"
               >
                 Home
               </a>
