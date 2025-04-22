@@ -13,7 +13,7 @@ const Profiles = () => {
       quote:
         "Anand develops and leads the company's tech vision and roadmap, ensuring alignment with business goals. He manages technical teams and drives the adoption of new technologies and R&D efforts.",
       name: "Anandh",
-      designation: "CTO at Rakamura & InkYank",
+      designation: "CTO",
       src: "/Profiles/anandh.jpg",
     },
     {
