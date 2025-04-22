@@ -21,7 +21,7 @@ const Profiles = () => {
         "Lakshmi leads the development and implementation of AI solutions, optimizing processes and enhancing decision-making with machine learning. She drives innovation by exploring new AI technologies and applying them to real-world business challenges.",
       name: "Lakshmi",
       designation: "AI Expert",
-      src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Ds",
+      src: "/Profiles/lakshmi.jpg",
     },
     {
       quote:

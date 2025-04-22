@@ -29,7 +29,7 @@ const Services = () => {
     <>
       {/* heading div */}
       <div className="w-full bg-white px-6 ">
-        <div className="py-8 md:px-8 rounded-2xl sm:shadow-xl mx-auto max-w-3xl mb-4">
+        <div className="py-8 md:pxP-8 rounded-2xl sm:shadow-xl mx-auto max-w-3xl mb-4">
           <h2 className="text-xl md:text-3xl font-bold text-center text-blue max-w-3xl mx-auto">
             Shaping the future with more than just technology — we deliver
             impact.
