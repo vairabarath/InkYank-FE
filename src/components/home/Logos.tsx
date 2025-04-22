@@ -26,7 +26,7 @@ const BlockchainSection = () => {
   return (
     <div className="py-12 bg-white">
       <div className="container mx-auto text-center">
-        <h2 className="text-2xl md:text-4xl font-bold mb-6 md:mb-8 text-gray-900">
+        <h2 className="text-2xl md:text-4xl font-bold mb-6 mx-2 md:mb-8 text-gray-900">
           Leading Industry Chains We Have Experience With
         </h2>
 

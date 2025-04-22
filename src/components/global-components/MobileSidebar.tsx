@@ -31,12 +31,16 @@ const MobileSidebar = ({
       >
         {/* Rest of your sidebar content remains the same */}
         <div className="flex items-center justify-between p-4 border-b">
-          <img src="/logo.png" alt="LOGO" className="w-[150px] md:w-[225px]" />
+          <img
+            src="/inkyankLogos/INKYANKLITE.png"
+            alt="LOGO"
+            className="w-[190px] md:w-[2px]"
+          />
           <button
             className="text-gray-800 focus:outline-none"
             onClick={toggleSidebar}
           >
-            <X size={25} />
+            <X size={25} className="text-blue" />
           </button>
         </div>
 

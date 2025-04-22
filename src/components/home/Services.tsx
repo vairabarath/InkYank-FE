@@ -29,12 +29,12 @@ const Services = () => {
     <>
       {/* heading div */}
       <div className="w-full bg-white px-6 ">
-        <div className="p-8 rounded-2xl sm:shadow-xl mx-auto max-w-3xl mb-4">
+        <div className="py-8 md:px-8 rounded-2xl sm:shadow-xl mx-auto max-w-3xl mb-4">
           <h2 className="text-xl md:text-3xl font-bold text-center text-blue max-w-3xl mx-auto">
             Shaping the future with more than just technology — we deliver
             impact.
           </h2>
-          <p className="text-gray-600 mt-2 sm:mb-4 text-justify text-sm sm:text-base">
+          <p className="text-gray-600 mt-2 sm:mb-4 text-center text-sm sm:text-base">
             By uniting blockchain, AI, and cybersecurity, we build secure,
             intelligent, and decentralized systems. Not just innovation —
             purposeful solutions that drive real-world transformation.

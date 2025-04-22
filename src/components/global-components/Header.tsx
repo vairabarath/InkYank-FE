@@ -27,7 +27,11 @@ const Header = ({ toggleSidebar }: { toggleSidebar: () => void }) => {
       <div className="max-w-[1440px] mx-auto h-full flex items-center justify-between px-4">
         {/* Logo - always on left */}
         <div className="flex-shrink-0">
-          <img src="/logo.png" alt="LOGO" className="w-[150px] md:w-[225px]" />
+          <img
+            src="/inkyankLogos/INKYANKLITE.png"
+            alt="LOGO"
+            className="w-[210px] md:w-[270px]"
+          />
         </div>
 
         {/* Navbar - centered on desktop, hidden on mobile */}
