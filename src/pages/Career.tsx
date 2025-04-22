@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import TrainingPrograms from "../components/careers/TrainingProgram";
 import { useEffect, useState } from "react";
 import { TeachingApplicationForm } from "../components/careers/TeachingApplicationForm";
+import { GraduationCap, RocketIcon, ZapIcon } from "lucide-react";
 
 const Career = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -39,22 +40,22 @@ const Career = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                icon: "🌟",
-                title: "Growth Opportunities",
+                icon: GraduationCap,
+                title: "Industry-Relevant Training",
                 description:
-                  "Accelerate your professional growth with exciting challenges.",
+                  "We empower students and youth with high-quality software training that bridges the gap between education and real-world demands, equipping you with practical skills for today's job market.",
               },
               {
-                icon: "📚",
-                title: "Training Programs",
+                icon: ZapIcon,
+                title: "Completely Free",
                 description:
-                  "Upskill yourself with cutting-edge training programs.",
+                  "Our training programs are offered at no cost to ensure equal opportunity for all. We're committed to developing talent without financial barriers, though we don't provide monetary compensation during the program.",
               },
               {
-                icon: "🌍",
-                title: "Global Impact",
+                icon: RocketIcon,
+                title: "Future-Ready Skills",
                 description:
-                  "Be part of projects that make a difference worldwide.",
+                  "We prepare future professionals to face industry challenges with confidence and expertise, focusing on building the skills that matter most in today's competitive landscape.",
               },
             ].map((item, index) => (
               <motion.div
@@ -65,9 +66,11 @@ const Career = () => {
                 transition={{ duration: 0.6 }}
                 className="bg-white p-6 rounded-lg shadow-lg hover:shadow-blue-300"
               >
-                <div className="text-4xl mb-4">{item.icon}</div>
+                <div className="bg-blue-100 p-4 rounded-full w-fit mx-auto mb-4">
+                  <item.icon className="w-8 h-8 text-blue" />
+                </div>
                 <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
+                <p className="text-gray-600 text-left">{item.description}</p>
               </motion.div>
             ))}
           </div>

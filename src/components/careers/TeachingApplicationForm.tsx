@@ -250,7 +250,7 @@ export const TeachingApplicationForm = ({
                 {[
                   "Blockchain",
                   "AI/ML",
-                  "Cyber Security",
+                  "CyberSecurity",
                   "Full Stack Development",
                 ].map((subject) => (
                   <label key={subject} className="flex items-center space-x-2">

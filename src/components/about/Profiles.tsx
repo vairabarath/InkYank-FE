@@ -34,7 +34,7 @@ const Profiles = () => {
       quote:
         "Arun Santhosh specializes in protecting systems and data from cyber threats, implementing robust security measures across the organization. He ensures the integrity, confidentiality, and availability of digital assets through proactive security strategies.",
       name: "Arun Santhosh",
-      designation: "Cyber Security Expert",
+      designation: "CyberSecurity Expert",
       src: "/Profiles/arunSanthosh.jpg",
     },
     {

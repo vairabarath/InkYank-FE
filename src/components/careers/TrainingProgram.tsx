@@ -27,7 +27,7 @@ const TrainingProgram = () => {
       type: "Part-time / Full-time",
     },
     {
-      title: "Cyber Security",
+      title: "CyberSecurity",
       location: "Remote",
       type: "Part-time / Full-time",
     },
@@ -164,13 +164,13 @@ const TrainingProgram = () => {
 
           {/* Online Training Program for Cyber Security */}
           <AccordionItem
-            value="Cybersecurity-Training-Program"
-            trigger="Online Cybersecurity Training Program"
+            value="CyberSecurity-Training-Program"
+            trigger="Online CyberSecurity Training Program"
             color="emerald"
           >
             <div className="bg-emerald-100 p-6 rounded-lg border border-gray-200 shadow-md">
               <p className="text-gray-700">
-                Our <strong>intensive cybersecurity program</strong> equips
+                Our <strong>intensive CyberSecurity program</strong> equips
                 participants with <strong>real-world defense strategies</strong>{" "}
                 against evolving digital threats. The curriculum covers{" "}
                 <strong>essential security domains</strong> including:
