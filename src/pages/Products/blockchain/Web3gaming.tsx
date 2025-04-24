@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Web3gamingCards = [
   {
-    description: "lanching soon",
+    description: "launching soon",
     title: "Completely Decentralized Web3 Game",
     src: "/web3gaming1.png",
     link: "#",
