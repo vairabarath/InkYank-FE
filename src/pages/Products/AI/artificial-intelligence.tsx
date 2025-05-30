@@ -57,7 +57,7 @@ const ArtificialIntelligence = () => {
   return (
     <div className="min-h-screen">
       <section>
-        <div className="bg-gradient-to-b from-purple-100 to-white pt-12 md:pt-20 pb-12">
+        <div className="bg-gradient-to-b from-purple-100 to-white pt-12 md:pt-20 md:pb-12">
           <div className="relative flex flex-col md:flex-row max-w-[1140px] mx-auto items-center justify-between px-6 gap-8">
             {/* Left  */}
             <div className=" text-center md:text-left md:w-1/2">
