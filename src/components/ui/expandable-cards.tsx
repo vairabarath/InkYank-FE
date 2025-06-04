@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "../../hooks/use-outside-click.ts";
@@ -13,7 +14,7 @@ type Card = {
 export function ProductCard({ cards }: { cards: Card[] }) {
   const [active, setActive] = useState<Card[][number] | boolean | null>(null);
   const id = useId();
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null!);
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
