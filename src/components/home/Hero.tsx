@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   const [activeTab, setActiveTab] = useState<"blockchain" | "ai" | "cyber">(
-    "blockchain"
+    "blockchain",
   );
 
   const tabs = [

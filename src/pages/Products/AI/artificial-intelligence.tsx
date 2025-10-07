@@ -8,7 +8,7 @@ const AICards = [
     description: "In progress",
     title: "Rewriting Culture: Living and Working with AI",
     src: "/rewriting-culture.jpg",
-    link: "#",
+    link: "/products/living-and-working-with-ai",
     content: () => (
       <div>
         <p className="mb-4">
