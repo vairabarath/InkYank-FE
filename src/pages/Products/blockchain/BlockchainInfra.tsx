@@ -4,30 +4,25 @@ import { ProductCard } from "../../../components/ui/expandable-cards";
 const BlockchainInfrastructureCards = [
   {
     description: "In progress",
-    title: "Improving PoW Transaction Speed and Scripting",
+    title: "ShieldNet: A Decentralized VPN with Blockchain Security",
     src: "/DecenterlizedSystem.jpg",
     link: "#",
     content: () => (
       <p>
-        In the world of blockchain, transaction speed and scripting capabilities
-        are critical for scalability and user experience. This infrastructure
-        project focuses on enhancing the Proof of Work (PoW) consensus mechanism
-        to significantly improve transaction processing speeds. By optimizing
-        block propagation times, reducing latency, and implementing advanced
-        scripting features, this project aims to make PoW-based networks more
-        efficient and versatile. The improvements will not only accelerate
-        transaction confirmations but also enable more complex and customizable
-        smart contract functionalities, opening doors for innovative use cases.
-        This upgrade is designed to ensure that PoW chains remain competitive in
-        an era where speed and flexibility are paramount, while maintaining the
-        security and decentralization that PoW is known for.
+        Traditional VPNs offer privacy, but they often rely on centralized
+        servers that can be compromised. ShieldNet flips the model—built on a
+        decentralized network, it uses blockchain technology to enhance
+        security, transparency, and trust. Users not only gain robust protection
+        for their data, but also earn crypto rewards for contributing to the
+        network. By merging VPN functionality with blockchain incentives,
+        ShieldNet defends digital freedom while empowering its community.
       </p>
     ),
   },
   {
     description: "In progress",
     title: "Layer 01 Game Chain",
-    src: "/SmartContract.jpg",
+    src: "/DecenterlizedSystem.jpg",
     link: "#",
     content: () => (
       <p>

@@ -4,21 +4,21 @@ import { motion } from "framer-motion";
 const Web3gamingCards = [
   {
     description: "launching soon",
-    title: "Completely Decentralized Web3 Game",
+    title: "Decent Coin: Redefining Randomness in Blockchain",
     src: "/web3gaming1.png",
-    link: "#",
+    link: "/products/blockchain/web3-gaming/decent-coin",
     content: () => {
       return (
         <p>
-          Introducing a fully decentralized guess game that will change the way
-          you think about decentralized interactive entertainment. This
-          innovative game relies on decentralized principles to create a fair,
-          transparent, and secure environment for players. Every element, from
-          the mechanics to the rewards, is governed by the players themselves,
-          ensuring no central authority or interference. While we can’t reveal
-          all the details just yet, trust that it’s designed to bring an
-          entirely new level of excitement and engagement. Get ready – the full
-          unveiling will be coming soon!
+          At first glance, using block hashes for randomness may seem
+          ineffective. But when we delve into the core principles of blockchain
+          and the challenges of the blockchain trilemma—balancing
+          decentralization, scalability, and security—a powerful opportunity
+          emerges. Leveraging block hash randomness, we've developed a fully
+          decentralized hash prediction game. This game isn't just
+          entertainment; it's a practical demonstration of our concept designed
+          to reinforce decentralization and enhance security within Proof of
+          Stake (PoS) networks.
         </p>
       );
     },

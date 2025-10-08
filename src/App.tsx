@@ -17,6 +17,7 @@ import CyberSecurity from "./pages/Products/CyberSecurity/cyber-security";
 import Enrollment from "./pages/Enrollment";
 import RewritingCulture from "./components/aiProducts/RewritingCulture";
 import MeekaanAIPage from "./components/aiProducts/MeekaanAI";
+import DecentPage from "./components/blockchain/infra/DecentPage";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -61,6 +62,10 @@ function App() {
             element={<RewritingCulture />}
           />
           <Route path="/products/AI/meekaan-ai" element={<MeekaanAIPage />} />
+          <Route
+            path="/products/blockchain/web3-gaming/decent-coin"
+            element={<DecentPage />}
+          />
         </Routes>
         <Footer />
       </div>
