@@ -116,38 +116,40 @@ const RewritingCulture = () => {
       {isMobile ? (
         <section className="py-16">
           <motion.div
-            initial={{ clipPath: 'inset(0 100% 0 0)' }}
-            whileInView={{ clipPath: 'inset(0 0% 0 0)' }}
+            initial={{ clipPath: "inset(0 100% 0 0)" }}
+            whileInView={{ clipPath: "inset(0 0% 0 0)" }}
             transition={{ duration: 2, ease: "easeInOut" }}
             viewport={{ once: true, amount: 0.5 }}
             className="max-w-[1440px] mx-auto px-6"
           >
-            <img src="/human.png" alt="Evolution of Human and AI" className="rounded-lg w-full h-auto" />
+            <img
+              src="/human.png"
+              alt="Evolution of Human and AI"
+              className="rounded-lg w-full h-auto"
+            />
           </motion.div>
         </section>
-      ) : (
-        !animationCompleted ? (
-          <section ref={evolutionRef} className="relative h-[200vh]">
-            <div className="sticky top-0 flex items-center justify-center py-40">
-              <div className="max-w-[1440px] mx-auto px-6 w-full">
-                <EvolutionAnimation
-                  targetRef={evolutionRef}
-                  onComplete={handleAnimationComplete}
-                />
-              </div>
-            </div>
-          </section>
-        ) : (
-          <section className="flex items-center justify-center py-40">
+      ) : !animationCompleted ? (
+        <section ref={evolutionRef} className="relative h-[200vh]">
+          <div className="sticky top-0 flex items-center justify-center py-40">
             <div className="max-w-[1440px] mx-auto px-6 w-full">
-              <img
-                src="/human.png"
-                alt="Evolution of Human and AI"
-                className="rounded-lg w-full h-auto"
+              <EvolutionAnimation
+                targetRef={evolutionRef as React.RefObject<HTMLDivElement>}
+                onComplete={handleAnimationComplete}
               />
             </div>
-          </section>
-        )
+          </div>
+        </section>
+      ) : (
+        <section className="flex items-center justify-center py-40">
+          <div className="max-w-[1440px] mx-auto px-6 w-full">
+            <img
+              src="/human.png"
+              alt="Evolution of Human and AI"
+              className="rounded-lg w-full h-auto"
+            />
+          </div>
+        </section>
       )}
 
       {/* PDF Download Section */}

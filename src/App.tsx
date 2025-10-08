@@ -16,6 +16,7 @@ import ArtificialIntelligence from "./pages/Products/AI/artificial-intelligence"
 import CyberSecurity from "./pages/Products/CyberSecurity/cyber-security";
 import Enrollment from "./pages/Enrollment";
 import RewritingCulture from "./components/aiProducts/RewritingCulture";
+import MeekaanAIPage from "./components/aiProducts/MeekaanAI";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -56,9 +57,10 @@ function App() {
           <Route path="/products/AI" element={<ArtificialIntelligence />} />
           <Route path="/products/cyber-security" element={<CyberSecurity />} />
           <Route
-            path="/products/living-and-working-with-ai"
+            path="/products/AI/living-and-working-with-ai"
             element={<RewritingCulture />}
           />
+          <Route path="/products/AI/meekaan-ai" element={<MeekaanAIPage />} />
         </Routes>
         <Footer />
       </div>

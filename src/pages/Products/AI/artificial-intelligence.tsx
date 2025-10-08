@@ -6,47 +6,61 @@ import cyborg from "../../../animations/cyborg.json";
 const AICards = [
   {
     description: "In progress",
-    title: "Rewriting Culture: Living and Working with AI",
+    title: "AI and the future: A Theoretical approach - In Layman's terms",
     src: "/rewriting-culture.jpg",
-    link: "/products/living-and-working-with-ai",
+    link: "/products/AI/living-and-working-with-ai",
     content: () => (
       <div>
         <p className="mb-4">
-          A look into how AI is transforming culture — not by replacing us, but
-          by working with us. This project explores the human side of AI and how
-          we can adapt, evolve, and thrive together.
+          Is the rise of artificial intelligence the final and most
+          transformative wave of technology for humanity? This isn't another
+          doomsday prediction. Instead, it offers a logical and grounded
+          exploration of how the human race can adapt, survive, and flourish in
+          the age of AI. The approach is rooted in a fresh evolutionary
+          framework—steering away from idealistic visions of utopia often
+          imagined by futurists, and focusing instead on practical, realistic
+          pathways forward.
         </p>
-        <ul className="list-disc list-inside text-gray-700 space-y-2">
-          <li>Promoting AI literacy and human-AI collaboration</li>
-          <li>
-            Exploring cultural shifts in work, education, and communication
-          </li>
-          <li>Encouraging ethical and inclusive AI adoption</li>
-        </ul>
       </div>
     ),
   },
   {
     description: "In progress",
-    title: "Beyond Words: Understanding Human Emotions",
+    title: "MeeKaan AI: AI tailored for everyone",
     src: "/beyond-words.jpg",
-    link: "#",
+    link: "/products/AI/meekaan-ai",
     content: () => (
       <div>
         <p className="mb-4">
-          This project focuses on building an AI system that not only processes
-          language but also understands the emotions behind it. By leveraging
-          large language models (LLMs), the AI can interpret tone, sentiment,
-          and context to respond with empathy — bridging the gap between
-          machines and human emotion.
+          AI for anyone and everyone. AI the way any individual wants it to be.
+          The individual could be a regular inference user, developer, an AI
+          SaaS provider, privacy wary users, creator etc. This product enables
+          users to configure their AI framework at any level, any
+          combination/configuration, any form—mobile/desktop, any price—no price
+          to suit their needs.
+        </p>
+        <p className="mb-4">
+          While ever evolving AI keeps pushing new standards, features and
+          models, the need for ease of access, safety and privacy for everyone
+          is still a nascent space. One size fits all is still the norm of the
+          industry. And inference usage and free tier hopping are the main usage
+          among price deprived markets. On the other hand, lack of knowledge and
+          exposure prevents the mass adoption and AI to become a real people's
+          technology. 'MeeKaan AI,' as the name suggests—an Explorer—addresses
+          these gaps. With this tool, anyone can intuitively make AI work for
+          them, the way they want it to be.
         </p>
         <ul className="list-disc list-inside text-gray-700 space-y-2">
-          <li>Emotion detection through text and tone analysis</li>
-          <li>Context-aware responses for better human-AI interaction</li>
           <li>
-            Applications in mental health, education, and customer support
+            Designed to stack up as the industry evolves with new features.
           </li>
-          <li>Ongoing training to adapt to diverse human expression</li>
+          <li>Empowers users with absolute control at every level.</li>
+          <li>Extensible—users can enhance and customize the tool.</li>
+          <li>Inclusive—no technology or user barred.</li>
+          <li>
+            Experience the full expanse of your AI exposure, and cherish how AI
+            works for you.
+          </li>
         </ul>
       </div>
     ),
