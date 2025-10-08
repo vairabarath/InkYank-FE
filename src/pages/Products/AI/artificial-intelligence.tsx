@@ -8,7 +8,7 @@ const AICards = [
     description: "In progress",
     title: "AI and the future: A Theoretical approach - In Layman's terms",
     src: "/rewriting-culture.jpg",
-    link: "/products/AI/living-and-working-with-ai",
+    link: "/products/AI/ai-and-the-future",
     content: () => (
       <div>
         <p className="mb-4">

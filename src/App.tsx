@@ -57,7 +57,7 @@ function App() {
           <Route path="/products/AI" element={<ArtificialIntelligence />} />
           <Route path="/products/cyber-security" element={<CyberSecurity />} />
           <Route
-            path="/products/AI/living-and-working-with-ai"
+            path="/products/AI/ai-and-the-future"
             element={<RewritingCulture />}
           />
           <Route path="/products/AI/meekaan-ai" element={<MeekaanAIPage />} />
