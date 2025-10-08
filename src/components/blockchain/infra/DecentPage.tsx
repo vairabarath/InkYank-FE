@@ -24,7 +24,7 @@ export default function DecentPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 via-blue-50 to-blue-50 text-center px-6 py-20 md:py-28">
         <h1 className="text-4xl md:text-6xl font-bold text-blue mb-4">
-          DeGuess: Blockchain Prediction Game
+          Decent: Blockchain Prediction Game
         </h1>
         <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-8">
           Predict future block hashes and earn rewards. A gamified approach to
@@ -46,21 +46,21 @@ export default function DecentPage() {
         </div>
       </section>
 
-      {/* Section 1: What is DeGuess - Left Text, Right Image */}
+      {/* Section 1: What is Decent - Left Text, Right Image */}
       <section className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-blue mb-6">
-              What is DeGuess?
+              What is Decent?
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              DeGuess transforms Proof-of-Stake validation into an engaging
+              Decent transforms Proof-of-Stake validation into an engaging
               prediction challenge. Players test their intuition by matching
               4–64 hexadecimal digits of future block hashes, contributing to
               network transparency while earning GES tokens.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              With provably fair mechanics and on-chain verification, DeGuess
+              With provably fair mechanics and on-chain verification, Decent
               ensures every prediction is secure, transparent, and rewarding.
               Choose between free play or paid mode with higher rewards.
             </p>
@@ -198,7 +198,7 @@ export default function DecentPage() {
                 Sustainable Tokenomics
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                GES tokens power the DeGuess ecosystem with a fixed maximum
+                GES tokens power the Decent ecosystem with a fixed maximum
                 supply set at launch. Rewards are minted for successful
                 predictions until the cap is reached, ensuring scarcity.
               </p>
@@ -226,7 +226,7 @@ export default function DecentPage() {
             </h2>
             <p className="text-gray-700 leading-relaxed mb-6">
               Polygon's Ethereum-aligned architecture provides the perfect
-              foundation for DeGuess. With 100+ validators, low gas fees, and
+              foundation for Decent. With 100+ validators, low gas fees, and
               fast transactions, it delivers the transparency and efficiency
               needed for seamless gameplay.
             </p>
