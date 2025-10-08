@@ -16,16 +16,13 @@ export const FlipWords = ({
   const shouldAnimate = wordsArray.length > 1;
 
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [_isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
     if (!shouldAnimate) return;
 
     const interval = setInterval(() => {
-      setIsAnimating(true);
       setTimeout(() => {
         setCurrentWordIndex((prev) => (prev + 1) % wordsArray.length);
-        setIsAnimating(false);
       }, 1000); // Matches exit animation duration
     }, duration);
 

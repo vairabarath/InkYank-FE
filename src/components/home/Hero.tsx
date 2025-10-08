@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Lottie from "lottie-react";
 import blockchainAnimation from "../../animations/blockchain.json";
@@ -11,44 +11,47 @@ const Hero = () => {
     "blockchain",
   );
 
-  const tabs = [
-    {
-      id: "blockchain",
-      label: "Blockchain",
-      animation: blockchainAnimation,
-      title: "Decentralized Future",
-      description:
-        "Building secure, transparent distributed systems with blockchain technology",
-      bgColor: "bg-blue-50/80",
-      textColor: "text-blue-600",
-      buttonColor: "bg-blue-600 hover:bg-blue-700",
-      buttonLink: "/products/blockchain/web3-gaming",
-    },
-    {
-      id: "ai",
-      label: "AI",
-      animation: aiAnimation,
-      title: "Intelligent Systems",
-      description:
-        "Harnessing machine learning and AI to solve complex business challenges",
-      bgColor: "bg-purple-50/80",
-      textColor: "text-[#6B46C1]",
-      buttonColor: "bg-[#6B46C1] hover:bg-purple-700",
-      buttonLink: "/products/ai",
-    },
-    {
-      id: "cyber",
-      label: "Cybersecurity",
-      animation: cyberAnimation,
-      title: "Digital Protection",
-      description:
-        "Advanced security solutions to safeguard your digital assets",
-      bgColor: "bg-emerald-50/80",
-      textColor: "text-emerald-600",
-      buttonColor: "bg-emerald-600 hover:bg-emerald-700",
-      buttonLink: "/products/cyber-security",
-    },
-  ];
+  const tabs = useMemo(
+    () => [
+      {
+        id: "blockchain",
+        label: "Blockchain",
+        animation: blockchainAnimation,
+        title: "Decentralized Future",
+        description:
+          "Building secure, transparent distributed systems with blockchain technology",
+        bgColor: "bg-blue-50/80",
+        textColor: "text-blue-600",
+        buttonColor: "bg-blue-600 hover:bg-blue-700",
+        buttonLink: "/products/blockchain/web3-gaming",
+      },
+      {
+        id: "ai",
+        label: "AI",
+        animation: aiAnimation,
+        title: "Intelligent Systems",
+        description:
+          "Harnessing machine learning and AI to solve complex business challenges",
+        bgColor: "bg-purple-50/80",
+        textColor: "text-[#6B46C1]",
+        buttonColor: "bg-[#6B46C1] hover:bg-purple-700",
+        buttonLink: "/products/ai",
+      },
+      {
+        id: "cyber",
+        label: "Cybersecurity",
+        animation: cyberAnimation,
+        title: "Digital Protection",
+        description:
+          "Advanced security solutions to safeguard your digital assets",
+        bgColor: "bg-emerald-50/80",
+        textColor: "text-emerald-600",
+        buttonColor: "bg-emerald-600 hover:bg-emerald-700",
+        buttonLink: "/products/cyber-security",
+      },
+    ],
+    [],
+  );
 
   // Auto-switch tabs every 5 seconds
   useEffect(() => {
@@ -61,7 +64,7 @@ const Hero = () => {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [tabs]);
 
   return (
     <div className="relative h-[90vh] w-full overflow-hidden bg-white ">
@@ -106,7 +109,9 @@ const Hero = () => {
             {tabs.map((tab) => (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id as any)}
+                onClick={() =>
+                  setActiveTab(tab.id as "blockchain" | "ai" | "cyber")
+                }
                 className={`px-4 py-2 rounded-full font-medium transition-all relative overflow-hidden ${
                   activeTab === tab.id
                     ? "text-white"

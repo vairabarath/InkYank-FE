@@ -6,7 +6,7 @@ const Web3gamingCards = [
     description: "launching soon",
     title: "Decent Coin: Redefining Randomness in Blockchain",
     src: "/web3gaming1.png",
-    link: "/products/blockchain/web3-gaming/decent-coin",
+    link: "/products/blockchain/web3-gaming/decentra-coin",
     content: () => {
       return (
         <p>
@@ -90,7 +90,7 @@ const Web3gamingCards = [
           transactions are used, creating a unique opportunity for blockchain
           ecosystems across all chains—completely agnostic to any specific
           blockchain. Get ready for a new era of gaming where your actions shape
-          the entire world, and every transaction brings value to the community.
+          the entire world, and every transaction brings value to the community.
         </p>
       );
     },

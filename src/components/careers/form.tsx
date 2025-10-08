@@ -1,7 +1,16 @@
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
+
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  experience: string;
+  skills: string[];
+  motivation: string;
+}
 
 const RecruitmentForm = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     phone: "",
@@ -10,14 +19,17 @@ const RecruitmentForm = () => {
     motivation: "",
   });
 
-  const handleChange = (e: any) => {
-    const { name, value, type, checked } = e.target;
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value, type } = e.target;
+    const checked = (e.target as HTMLInputElement).checked;
     if (type === "checkbox") {
-      setFormData((prevData: any) => ({
+      setFormData((prevData: FormData) => ({
         ...prevData,
         skills: checked
           ? [...prevData.skills, value]
-          : prevData.skills.filter((skill: string[]) => skill !== value),
+          : prevData.skills.filter((skill: string) => skill !== value),
       }));
     } else {
       setFormData((prevData) => ({
@@ -27,7 +39,7 @@ const RecruitmentForm = () => {
     }
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted", formData);
   };

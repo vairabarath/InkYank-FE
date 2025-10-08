@@ -89,7 +89,7 @@ const BlockchainInfrastructureCards = [
           <li>
             Enhanced Product Development: Gain access to continuous performance
             feedback throughout the development lifecycle, enabling faster
-            iteration and optimization of hardware designs.
+            iteration and optimization of hardware designs.
           </li>
         </ul>
       </div>
@@ -108,7 +108,7 @@ const BlockchainInfrastructureCards = [
         or network configurations. Visualize data with interactive charts and
         graphs, set custom alerts for performance deviations, and export reports
         for in-depth analysis. Our plugin supports [mention specific blockchains
-        or platforms] and integrates seamlessly with your existing tools.
+        or platforms] and integrates seamlessly with your existing tools.
       </p>
     ),
   },

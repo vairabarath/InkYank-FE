@@ -20,7 +20,7 @@ const DefiProductCards = [
         approach democratizes market access and introduces novel financial
         instruments, all within a transparent and decentralized ecosystem,
         empowering users to explore wealth creation in a newly designed
-        financial landscape.
+        financial landscape.
       </p>
     ),
   },
@@ -51,7 +51,7 @@ const DefiProductCards = [
         employing advanced encryption and multi-factor authentication to protect
         your funds and your customers' data. Furthermore, our robust API and
         developer-friendly documentation make integration quick and easy,
-        allowing you to focus on what matters most: growing your business.
+        allowing you to focus on what matters most: growing your business.
       </p>
     ),
   },
