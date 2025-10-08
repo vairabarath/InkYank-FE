@@ -116,9 +116,9 @@ const RewritingCulture = () => {
       {isMobile ? (
         <section className="py-16">
           <motion.div
-            initial={{ clipPath: "inset(0 100% 0 0)" }}
-            whileInView={{ clipPath: "inset(0 0% 0 0)" }}
-            transition={{ duration: 2, ease: "easeInOut" }}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
             viewport={{ once: true, amount: 0.5 }}
             className="max-w-[1440px] mx-auto px-6"
           >
