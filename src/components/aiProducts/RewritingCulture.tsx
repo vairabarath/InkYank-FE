@@ -10,6 +10,9 @@ const RewritingCulture = () => {
   const [animationCompleted, setAnimationCompleted] = useState(false);
   const handleAnimationComplete = () => setAnimationCompleted(true);
   const isMobile = useIsMobile();
+
+  const googleDriveFileId = "1UfkxW_0ZoQa67XCSr5sU9vvc-JVwrtK-";
+  const directDownloadUrl = `https://drive.google.com/uc?export=download&id=${googleDriveFileId}`;
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -32,9 +35,8 @@ const RewritingCulture = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <a
-                href="/Rewriting_Culture_with_AI.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={directDownloadUrl}
+                download="Rewriting_Culture_with_AI.pdf"
                 className="inline-flex items-center gap-2 bg-violet text-white font-bold py-3 px-6 rounded-lg hover:bg-violet-700 transition-colors"
               >
                 <FileText />

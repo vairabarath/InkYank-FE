@@ -218,11 +218,6 @@ const GuessPage: React.FC = () => {
         isFormReadonly={isFormReadonly}
         onSubmit={handleSubmit}
         onClear={handleClear}
-        onBack={() =>
-          navigate(
-            "/products/blockchain/web3-gaming/decent-coin/demo-guess-game",
-          )
-        }
       />
 
       {/* Results Section */}

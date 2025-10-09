@@ -18,7 +18,6 @@ import Enrollment from "./pages/Enrollment";
 import RewritingCulture from "./components/aiProducts/RewritingCulture";
 import MeekaanAIPage from "./components/aiProducts/MeekaanAI";
 import DecentPage from "./components/blockchain/infra/DecentPage";
-import DemoGuessGameHome from "./pages/Products/blockchain/demoGuess/DemoGuessGameHome";
 import GuessPage from "./pages/Products/blockchain/demoGuess";
 import Roadmap from "./pages/Products/blockchain/demoGuess/Roadmap";
 import FeedbackPage from "./pages/FeedbackPage";
@@ -77,10 +76,6 @@ function App() {
           />
           <Route
             path="/products/blockchain/web3-gaming/decent-coin/demo-guess-game"
-            element={<DemoGuessGameHome />}
-          />
-          <Route
-            path="/products/blockchain/web3-gaming/decent-coin/demo-guess-game/guess/1"
             element={<GuessPage />}
           />
         </Routes>

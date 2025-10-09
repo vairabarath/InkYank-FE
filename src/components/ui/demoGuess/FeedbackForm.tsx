@@ -1,3 +1,4 @@
+import { Info } from "lucide-react";
 import React, { useState } from "react";
 
 type FormData = {
@@ -16,11 +17,11 @@ const FeedbackForm = () => {
     fullName: "",
     organization: "",
     role: "",
-    email: "", // Fixed: removed @gmail.com
+    email: "",
     mobileNo: "",
     walletAddress: "",
     comments: "",
-    experienceRating: "", // Fixed: removed default "1"
+    experienceRating: "",
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -29,7 +30,7 @@ const FeedbackForm = () => {
 
   const validateMobileNumber = (mobile: string): boolean => {
     if (mobile === "") {
-      return true; // Optional field
+      return true;
     }
 
     const cleanedMobile = mobile.replace(/[\s\-()]/g, "");
@@ -40,10 +41,9 @@ const FeedbackForm = () => {
 
   const validateWalletAddress = (address: string): boolean => {
     if (address === "") {
-      return true; // Optional field
+      return true;
     }
 
-    // Polygon/Ethereum address validation: starts with 0x, 42 characters total
     const polygonRegex = /^0x[a-fA-F0-9]{40}$/;
     return polygonRegex.test(address);
   };
@@ -58,10 +58,8 @@ const FeedbackForm = () => {
       [name]: value,
     }));
 
-    // Clear error when user starts typing
     setErrors((prev) => ({ ...prev, [name]: "" }));
 
-    // Real-time validation for mobile number
     if (name === "mobileNo" && value && !validateMobileNumber(value)) {
       setErrors((prev) => ({
         ...prev,
@@ -69,7 +67,6 @@ const FeedbackForm = () => {
       }));
     }
 
-    // Real-time validation for wallet address
     if (name === "walletAddress" && value && !validateWalletAddress(value)) {
       setErrors((prev) => ({
         ...prev,
@@ -81,7 +78,6 @@ const FeedbackForm = () => {
   const validateForm = (): boolean => {
     const newErrors: Record<string, string> = {};
 
-    // Required fields validation
     if (!formData.fullName.trim()) {
       newErrors.fullName = "Full name is required.";
     }
@@ -96,7 +92,6 @@ const FeedbackForm = () => {
       newErrors.email = "Enter a valid email address.";
     }
 
-    // Optional fields validation (only if filled)
     if (formData.mobileNo && !validateMobileNumber(formData.mobileNo)) {
       newErrors.mobileNo = "Please enter a valid mobile number (10-15 digits)";
     }
@@ -118,7 +113,6 @@ const FeedbackForm = () => {
     setSubmitting(true);
     setSubmitResult("");
 
-    // Validate form before submission
     if (!validateForm()) {
       setSubmitting(false);
       return;
@@ -186,7 +180,6 @@ const FeedbackForm = () => {
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-8">
-          {/* Section 1: Participant Info */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-gray-800 mb-4">
               Participant Info
@@ -296,10 +289,18 @@ const FeedbackForm = () => {
                   errors.walletAddress ? "border-red-500" : "border-gray-300"
                 } rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors`}
               />
-              {errors.walletAddress && (
+              {errors.walletAddress ? (
                 <p className="text-red-500 text-sm mt-1">
                   {errors.walletAddress}
                 </p>
+              ) : (
+                <div className="mt-2 flex items-start space-x-2">
+                  <Info className="text-blue w-4" />
+                  <p className=" text-blue-600 text-sm">
+                    Provide your Polygon wallet address to be eligible for
+                    exclusive token airdrops and rewards!
+                  </p>
+                </div>
               )}
             </div>
 
@@ -334,7 +335,6 @@ const FeedbackForm = () => {
             </div>
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
             disabled={submitting}
@@ -343,7 +343,6 @@ const FeedbackForm = () => {
             {submitting ? "Submitting..." : "Submit"}
           </button>
 
-          {/* Submission feedback */}
           {submitResult && (
             <p
               className={`text-center mt-4 font-medium ${

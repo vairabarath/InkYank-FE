@@ -7,7 +7,6 @@ import {
   RotateCcw,
   DollarSign,
   Zap,
-  ArrowLeft,
   HelpCircle,
 } from "lucide-react";
 import { RealisticHammer } from "../../../../components/ui/demoGuess/RealisticHammer";
@@ -40,7 +39,6 @@ interface GuessUIProps {
   onGenerateSecretHash: () => void;
   onSubmit: () => void;
   onClear: () => void;
-  onBack: () => void;
 }
 
 const GuessUI: React.FC<GuessUIProps> = ({
@@ -67,21 +65,19 @@ const GuessUI: React.FC<GuessUIProps> = ({
   onGenerateSecretHash,
   onSubmit,
   onClear,
-  onBack,
 }) => {
   // State for managing the help modal visibility
   const [isHelpModalOpen, setHelpModalOpen] = useState(false);
+  // State to track if form has been submitted
+  const [hasSubmitted, setHasSubmitted] = useState(false);
 
   // Automatically open help modal on first visit
   useEffect(() => {
-    // Check if user has seen the help modal before
     const hasSeenHelp = sessionStorage.getItem("hasSeenGuessHelp");
 
     if (!hasSeenHelp) {
-      // Open help modal after a short delay for better UX
       const timer = setTimeout(() => {
         setHelpModalOpen(true);
-        // Mark that user has seen the help
         sessionStorage.setItem("hasSeenGuessHelp", "true");
       }, 500);
 
@@ -95,14 +91,27 @@ const GuessUI: React.FC<GuessUIProps> = ({
 
   const isActualHashValid = actualHash.replace(/^0x/i, "").length === 64;
   const isSecretHashValid = secretHash.replace(/^0x/i, "").length === 64;
-  const canSubmit = isActualHashValid && isSecretHashValid && !isSubmitting;
+  const canSubmit =
+    isActualHashValid && isSecretHashValid && !isSubmitting && !hasSubmitted; // Added hasSubmitted check
+
+  // Handle submit with state tracking
+  const handleSubmit = () => {
+    setHasSubmitted(true);
+    onSubmit();
+  };
+
+  // Handle clear with state reset
+  const handleClear = () => {
+    setHasSubmitted(false);
+    onClear();
+  };
 
   return (
     <div className="min-h-screen bg-gray-950 p-4 sm:p-8 font-mono relative">
       {/* Help Button */}
       <motion.button
         onClick={() => setHelpModalOpen(true)}
-        className="fixed top-6 right-6 sm:top-24 sm:right-10 z-20 text-purple-300 hover:text-purple-100 transition-colors bg-white/5 hover:bg-white/10 p-3 rounded-full border border-purple-500/30 shadow-md"
+        className="fixed bottom-6 right-6 sm:bottom-10 sm:right-10 z-20 text-purple-300 hover:text-purple-100 transition-colors bg-white/5 hover:bg-white/10 p-3 rounded-full border border-purple-500/30 shadow-md"
         whileHover={{ scale: 1.1, rotate: 15 }}
         whileTap={{ scale: 0.9 }}
         aria-label="Help"
@@ -117,23 +126,6 @@ const GuessUI: React.FC<GuessUIProps> = ({
       />
 
       <div className="max-w-4xl lg:max-w-7xl mx-auto space-y-6 lg:space-y-12">
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.4 }}
-          className="pt-4 pb-0 text-left"
-        >
-          <motion.button
-            onClick={onBack}
-            className="flex items-center text-purple-300 hover:text-purple-100 transition-colors font-semibold text-sm sm:text-base bg-white/5 hover:bg-white/10 px-4 py-2 rounded-lg border border-purple-500/30 shadow-md"
-            whileHover={{ scale: 1.05, x: 5 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <ArrowLeft className="w-5 h-5 mr-2" />
-            Back to Start
-          </motion.button>
-        </motion.div>
-
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -478,7 +470,7 @@ const GuessUI: React.FC<GuessUIProps> = ({
         >
           {overwrite && (
             <motion.button
-              onClick={onSubmit}
+              onClick={handleSubmit}
               disabled={!canSubmit}
               className={`px-8 py-4 rounded-xl font-semibold text-lg flex items-center justify-center gap-3 transition-all ${
                 canSubmit
@@ -493,12 +485,16 @@ const GuessUI: React.FC<GuessUIProps> = ({
               ) : (
                 <Send className="w-5 h-5" />
               )}
-              {isSubmitting ? "VERIFYING..." : "SUBMIT GUESS"}
+              {isSubmitting
+                ? "VERIFYING..."
+                : hasSubmitted
+                  ? "SUBMITTED"
+                  : "SUBMIT GUESS"}
             </motion.button>
           )}
 
           <motion.button
-            onClick={onClear}
+            onClick={handleClear}
             disabled={isSubmitting}
             className="px-8 py-4 bg-gray-600 hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed text-white rounded-xl font-semibold text-lg flex items-center justify-center gap-3"
             whileHover={{ scale: 1.05 }}
@@ -510,7 +506,7 @@ const GuessUI: React.FC<GuessUIProps> = ({
         </motion.div>
 
         {/* Validation Message */}
-        {!canSubmit && !isSubmitting && (
+        {!canSubmit && !isSubmitting && !hasSubmitted && (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -523,6 +519,17 @@ const GuessUI: React.FC<GuessUIProps> = ({
                 : !isSecretHashValid
                   ? "⚠️ Secret Hash must be exactly 64 characters to submit"
                   : null}
+          </motion.div>
+        )}
+
+        {/* Submitted Message */}
+        {hasSubmitted && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center text-sm text-green-400 bg-green-900/20 border border-green-500/30 rounded-lg p-3"
+          >
+            ✅ Form submitted successfully! Click CLEAR to submit again.
           </motion.div>
         )}
       </div>
