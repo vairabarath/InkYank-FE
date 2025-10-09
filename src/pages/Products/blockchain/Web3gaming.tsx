@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 const Web3gamingCards = [
   {
     description: "launching soon",
-    title: "Decent Coin: Redefining Randomness in Blockchain",
+    title: "Decent Guess: Hash Prediction Game",
     src: "/web3gaming1.png",
-    link: "/products/blockchain/web3-gaming/decentra-coin",
+    link: "/products/blockchain/web3-gaming/decent-coin",
     content: () => {
       return (
         <p>

@@ -20,6 +20,8 @@ import MeekaanAIPage from "./components/aiProducts/MeekaanAI";
 import DecentPage from "./components/blockchain/infra/DecentPage";
 import DemoGuessGameHome from "./pages/Products/blockchain/demoGuess/DemoGuessGameHome";
 import GuessPage from "./pages/Products/blockchain/demoGuess";
+import Roadmap from "./pages/Products/blockchain/demoGuess/Roadmap";
+import FeedbackPage from "./pages/FeedbackPage";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -46,6 +48,7 @@ function App() {
           <Route path="/enrollment" element={<Enrollment />} />
           <Route path="/form" element={<RecruitmentForm />} />
           <Route path="/community" element={<Community />} />
+          <Route path="/feedback" element={<FeedbackPage />} />
 
           {/* products routes */}
           <Route
@@ -65,15 +68,19 @@ function App() {
           />
           <Route path="/products/AI/meekaan-ai" element={<MeekaanAIPage />} />
           <Route
-            path="/products/blockchain/web3-gaming/decentra-coin"
+            path="/products/blockchain/web3-gaming/decent-coin"
             element={<DecentPage />}
           />
           <Route
-            path="/products/blockchain/web3-gaming/decentra-coin/demo-guess-game"
+            path="/products/blockchain/web3-gaming/decent-coin/roadmap"
+            element={<Roadmap />}
+          />
+          <Route
+            path="/products/blockchain/web3-gaming/decent-coin/demo-guess-game"
             element={<DemoGuessGameHome />}
           />
           <Route
-            path="/products/blockchain/web3-gaming/decentra-coin/demo-guess-game/guess/1"
+            path="/products/blockchain/web3-gaming/decent-coin/demo-guess-game/guess/1"
             element={<GuessPage />}
           />
         </Routes>

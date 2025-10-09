@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github } from "lucide-react";
+import { Download } from "lucide-react";
 
 const MeekaanAI = () => {
   return (
@@ -31,13 +31,13 @@ const MeekaanAI = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <a
-              href="https://github.com/your-repo"
+              href="https://drive.google.com/uc?export=download&id=1-nPL1zKZ8-pYBYeGW0xAT_xFngfqhR3L"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-violet text-white font-bold py-3 px-6 rounded-lg hover:bg-violet-700 transition-colors"
             >
-              <Github />
-              View on GitHub
+              <Download />
+              Download APK
             </a>
           </motion.div>
         </section>
@@ -58,7 +58,7 @@ const MeekaanAI = () => {
                 developer, an AI SaaS provider, privacy wary users, or a
                 creator. This product enables users to configure their AI
                 framework at any level, any combination/configuration, any form
-                (mobile/desktop), and any price to suit their needs.
+                (mobile/desktop), and any price - no price to suit their needs.
               </p>
             </div>
             <div className="md:w-1/2">

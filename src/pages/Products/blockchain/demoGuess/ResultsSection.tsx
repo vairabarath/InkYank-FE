@@ -615,7 +615,7 @@ const TokenSequenceComparison: React.FC<TokenSequenceComparisonProps> = ({
   return (
     <div className="bg-gray-900/40 p-6 rounded-xl border border-gray-700">
       <h3 className="text-xl font-bold text-white mb-4 text-center">
-        TOKEN SEQUENCE COMPARISON (Size: {tokenSize})
+        TOKEN SEQUENCE COMPARISON (Token Size: {tokenSize})
       </h3>
       <p className="text-sm text-gray-400 text-center mb-6">
         Comparing sliding window sequences of {tokenSize} characters. Found{" "}
@@ -901,9 +901,6 @@ export const ResultsSection: React.FC<ResultsSectionProps> = ({
         checkTokenMatchesSequence(token, realBlockHash, guessData.tokenSize),
       ).length
     : 0;
-  const tokenMatchPercentage = realBlockHash
-    ? ((tokenMatches / guessData.tokens.length) * 100).toFixed(1)
-    : "0.0";
 
   if (targetBlockNumber === 0) {
     return (
@@ -1182,8 +1179,9 @@ export const ResultsSection: React.FC<ResultsSectionProps> = ({
                   MATCH ANALYSIS
                 </h3>
 
-                <div className="flex justify-center">
-                  <div className="bg-gray-900/60 p-6 sm:p-8 rounded-lg text-center w-full sm:min-w-[300px]">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                  {/* Total Tokens Matched */}
+                  <div className="bg-gray-900/60 p-6 sm:p-8 rounded-lg text-center flex flex-col items-center justify-center">
                     <div className="text-4xl sm:text-6xl font-bold text-purple-400 mb-2">
                       {tokenMatches}
                     </div>
@@ -1194,17 +1192,104 @@ export const ResultsSection: React.FC<ResultsSectionProps> = ({
                       out of {guessData.tokens.length} tokens
                     </div>
                   </div>
-                </div>
 
-                <div className="relative h-6 bg-gray-900/60 rounded-full overflow-hidden mt-6">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: `${tokenMatchPercentage}%` }}
-                    transition={{ duration: 1, delay: 0.3 }}
-                    className="absolute h-full bg-gradient-to-r from-purple-600 to-blue-600"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center text-xs font-semibold text-white">
-                    {tokenMatchPercentage}% Token Match Rate
+                  {/* Total Rewards */}
+                  <div
+                    className={`bg-gray-900/60 p-6 sm:p-8 rounded-lg text-center border-2 ${
+                      tokenMatches > 0
+                        ? "border-yellow-500/30"
+                        : "border-red-500/30"
+                    }`}
+                  >
+                    <div
+                      className={`text-4xl sm:text-6xl font-bold mb-2 ${
+                        tokenMatches > 0 ? "text-yellow-400" : "text-red-400"
+                      }`}
+                    >
+                      {(() => {
+                        // If no matches, return 0
+                        if (tokenMatches === 0) {
+                          return 0;
+                        }
+
+                        // Calculate base rewards (tokenMatches × 100 × tokenSize)
+                        const baseReward =
+                          tokenMatches * 100 * guessData.tokenSize;
+                        // Add complex rewards if applicable (+500 tokens)
+                        const complexReward = guessData.complex ? 500 : 0;
+                        // Calculate total based on guess type
+                        const totalReward = guessData.paidGuess
+                          ? (baseReward + complexReward) * 2
+                          : baseReward + complexReward;
+                        return totalReward;
+                      })()}
+                    </div>
+                    <div className="text-base sm:text-lg text-gray-300 font-semibold">
+                      Total Earned Tokens
+                    </div>
+                    <div className="text-xs sm:text-sm text-gray-400 mt-2">
+                      {tokenMatches === 0 ? (
+                        <span className="text-red-400">
+                          No matches - No rewards
+                        </span>
+                      ) : (
+                        <>
+                          {guessData.paidGuess
+                            ? "Paid Guess (2x)"
+                            : "Free Guess"}
+                          {guessData.complex && " + Complex Bonus"}
+                        </>
+                      )}
+                    </div>
+
+                    {/* Reward Breakdown - Only show if there are matches */}
+                    {tokenMatches > 0 && (
+                      <div className="mt-4 pt-4 border-t border-gray-700 text-left space-y-1.5">
+                        <div className="flex justify-between text-xs text-gray-400">
+                          <span>Matches:</span>
+                          <span className="text-gray-300 font-mono">
+                            {tokenMatches} × 100 = {tokenMatches * 100}
+                          </span>
+                        </div>
+                        <div className="flex justify-between text-xs text-gray-400">
+                          <span>Token Size Multiplier:</span>
+                          <span className="text-gray-300 font-mono">
+                            {tokenMatches * 100} × {guessData.tokenSize} ={" "}
+                            {tokenMatches * 100 * guessData.tokenSize}
+                          </span>
+                        </div>
+                        {guessData.complex && (
+                          <div className="flex justify-between text-xs text-gray-400">
+                            <span>Complex Bonus:</span>
+                            <span className="text-green-400 font-mono">
+                              +500
+                            </span>
+                          </div>
+                        )}
+                        {guessData.paidGuess && (
+                          <div className="flex justify-between text-xs text-gray-400">
+                            <span>Paid Multiplier:</span>
+                            <span className="text-yellow-400 font-mono">
+                              × 2
+                            </span>
+                          </div>
+                        )}
+                        <div className="flex justify-between text-sm font-bold text-white pt-2 border-t border-gray-600">
+                          <span>Total:</span>
+                          <span className="text-yellow-400">
+                            {(() => {
+                              const baseReward =
+                                tokenMatches * 100 * guessData.tokenSize;
+                              const complexReward = guessData.complex ? 500 : 0;
+                              return guessData.paidGuess
+                                ? (baseReward + complexReward) * 2
+                                : baseReward + complexReward;
+                            })()}{" "}
+                            tokens
+                          </span>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

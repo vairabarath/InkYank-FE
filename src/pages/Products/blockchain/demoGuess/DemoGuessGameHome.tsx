@@ -8,7 +8,7 @@ const DemoGuessGameHome = () => {
   // For this demo, we always navigate to Guess ID 1
   const startGuess = () => {
     navigate(
-      "/products/blockchain/web3-gaming/decentra-coin/demo-guess-game/guess/1",
+      "/products/blockchain/web3-gaming/decent-coin/demo-guess-game/guess/1",
     );
   };
 

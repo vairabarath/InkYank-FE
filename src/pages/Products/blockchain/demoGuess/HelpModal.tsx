@@ -35,17 +35,17 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
 
             <h1 className="text-3xl font-bold mb-6 text-cyan-400 flex items-center gap-3">
               <HelpCircle className="w-8 h-8" />
-              Welcome to GuessCoin!
+              Welcome to Decent Guess!
             </h1>
 
             <div className="space-y-8 text-gray-300 max-h-[70vh] overflow-y-auto pr-4 font-mono">
               {/* --- NEW SECTION AS REQUESTED --- */}
               <section>
                 <p className="bg-gray-800/70 p-4 rounded-lg border border-gray-700">
-                  <strong className="text-white">What is GuessCoin?</strong>{" "}
-                  GuessCoin is a simple and fun blockchain-based guessing game.
-                  Your goal is to correctly guess a secret number within a set
-                  range. It’s a game of chance, secured by cryptography to
+                  <strong className="text-white">What is Decent Guess?</strong>{" "}
+                  Decent Guess is a simple and fun blockchain-based guessing
+                  game. Your goal is to correctly guess a secret number within a
+                  set range. It's a game of chance, secured by cryptography to
                   ensure fairness.
                 </p>
               </section>
@@ -53,7 +53,7 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
               {/* --- NEW MAIN TITLE AS REQUESTED --- */}
               <div className="text-center">
                 <h2 className="text-2xl font-bold text-purple-300 border-b-2 border-purple-500/30 pb-2 inline-block">
-                  Advanced Prediction Protocol
+                  Decentralized Prediction Protocol
                 </h2>
               </div>
 
@@ -77,8 +77,13 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
                   </li>
                   <li>
                     <strong>Configure Tokens:</strong> Use the "Token Size"
-                    slider to break your main hash into smaller pieces called
-                    "Power Hammers". This is a key part of the strategy!
+                    slider to adjust your strategy:
+                    <br />
+                    <span className="text-sm">
+                      Less Token Size ⇒ Lower Reward Rates and Easy Level
+                      <br />
+                      Higher Token Size ⇒ Higher Reward Rates and Hard Level
+                    </span>
                   </li>
                   <li>
                     <strong>Submit Your Guess:</strong> Once both hashes are
@@ -92,6 +97,43 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
                     how your prediction compares to the real block hash.
                   </li>
                 </ul>
+              </section>
+
+              {/* --- NEW REWARD CALCULATION SECTION --- */}
+              <div className="text-center">
+                <h2 className="text-2xl font-bold text-purple-300 border-b-2 border-purple-500/30 pb-2 inline-block">
+                  Reward Calculation
+                </h2>
+              </div>
+
+              <section>
+                <div className="space-y-4 bg-gray-800/70 p-5 rounded-lg border border-gray-700">
+                  <div>
+                    <h4 className="text-lg font-semibold text-green-400 mb-2">
+                      Free Guess Total Rewards
+                    </h4>
+                    <p className="font-mono text-base bg-gray-900/50 p-3 rounded border border-green-500/30">
+                      Total Rewards = (No of Hits × Token Size) + Complex
+                      Rewards [If Complex Guess]
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-yellow-400 mb-2">
+                      Paid Guess Total Rewards
+                    </h4>
+                    <p className="font-mono text-base bg-gray-900/50 p-3 rounded border border-yellow-500/30">
+                      Total Rewards = [(No of Hits × Token Size) + Complex
+                      Rewards [If Complex Guess]] × 2
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-gray-700">
+                    <p className="text-sm text-gray-400">
+                      <strong className="text-white">Note:</strong> Paid guesses
+                      offer double the rewards of free guesses. Complex guesses
+                      add bonus rewards on top of your base calculation.
+                    </p>
+                  </div>
+                </div>
               </section>
 
               {/* --- NEW SECTION FOR RESULTS EXPLANATION --- */}
@@ -123,9 +165,7 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
                 <p>
                   This is your main scorecard. It tells you exactly how many of
                   your predicted tokens ("Power Hammers") were found in the
-                  actual block's hash. The percentage gives you a clear grade on
-                  your prediction's accuracy. A higher match count is a better
-                  score.
+                  actual block's hash. A higher match count is a better score.
                 </p>
               </section>
 

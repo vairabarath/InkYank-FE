@@ -39,9 +39,9 @@ const Profiles = () => {
     },
     {
       quote:
-        "MAP is an expert in blockchain and AI technologies, driving the development of innovative and secure solutions. He ensures high-quality, scalable code and stays at the forefront of emerging tech trends.",
+        "MAP leads technical innovation and AI research, architecting scalable solutions while guiding teams through cutting-edge developments. He shapes strategic roadmaps and ensures excellence in emerging technologies.",
       name: "MAP",
-      designation: "Senior Developer",
+      designation: "Tech Lead, AI R&D Head",
       src: "/Profiles/MAP.jpg",
     },
     {

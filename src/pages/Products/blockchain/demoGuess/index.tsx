@@ -137,7 +137,7 @@ const GuessPage: React.FC = () => {
 
   const handleFeedbackClick = () => {
     // Navigate to decent page with feedback form hash
-    navigate("/products/blockchain/web3-gaming/decentra-coin#feedback-form");
+    navigate("/products/blockchain/web3-gaming/decent-coin#feedback-form");
   };
 
   const handleSubmit = async () => {
@@ -220,7 +220,7 @@ const GuessPage: React.FC = () => {
         onClear={handleClear}
         onBack={() =>
           navigate(
-            "/products/blockchain/web3-gaming/decentra-coin/demo-guess-game",
+            "/products/blockchain/web3-gaming/decent-coin/demo-guess-game",
           )
         }
       />

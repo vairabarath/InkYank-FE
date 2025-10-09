@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import StarRating from "./StarRating";
 
 type FormData = {
   fullName: string;
   organization: string;
   role: string;
   email: string;
+  mobileNo: string;
   walletAddress: string;
+  comments: string;
   experienceRating: string;
 };
 
@@ -15,42 +16,129 @@ const FeedbackForm = () => {
     fullName: "",
     organization: "",
     role: "",
-    email: "@gmail.com",
+    email: "", // Fixed: removed @gmail.com
+    mobileNo: "",
     walletAddress: "",
-    experienceRating: "1",
+    comments: "",
+    experienceRating: "", // Fixed: removed default "1"
   });
 
+  const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitting, setSubmitting] = useState(false);
   const [submitResult, setSubmitResult] = useState("");
+
+  const validateMobileNumber = (mobile: string): boolean => {
+    if (mobile === "") {
+      return true; // Optional field
+    }
+
+    const cleanedMobile = mobile.replace(/[\s\-()]/g, "");
+    const mobileRegex = /^\+?[0-9]{10,15}$/;
+
+    return mobileRegex.test(cleanedMobile);
+  };
+
+  const validateWalletAddress = (address: string): boolean => {
+    if (address === "") {
+      return true; // Optional field
+    }
+
+    // Polygon/Ethereum address validation: starts with 0x, 42 characters total
+    const polygonRegex = /^0x[a-fA-F0-9]{40}$/;
+    return polygonRegex.test(address);
+  };
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
-    const { name, value, type } = e.target;
+    const { name, value } = e.target;
 
-    if (type === "checkbox") {
-      console.log("Checkbox changed");
-    } else {
-      setFormData((prev) => ({
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+
+    // Clear error when user starts typing
+    setErrors((prev) => ({ ...prev, [name]: "" }));
+
+    // Real-time validation for mobile number
+    if (name === "mobileNo" && value && !validateMobileNumber(value)) {
+      setErrors((prev) => ({
         ...prev,
-        [name]: value,
+        mobileNo: "Please enter a valid mobile number (10-15 digits)",
       }));
     }
+
+    // Real-time validation for wallet address
+    if (name === "walletAddress" && value && !validateWalletAddress(value)) {
+      setErrors((prev) => ({
+        ...prev,
+        walletAddress: "Please enter a valid Polygon wallet address (0x...)",
+      }));
+    }
+  };
+
+  const validateForm = (): boolean => {
+    const newErrors: Record<string, string> = {};
+
+    // Required fields validation
+    if (!formData.fullName.trim()) {
+      newErrors.fullName = "Full name is required.";
+    }
+
+    if (!formData.role.trim()) {
+      newErrors.role = "Role is required.";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Enter a valid email address.";
+    }
+
+    // Optional fields validation (only if filled)
+    if (formData.mobileNo && !validateMobileNumber(formData.mobileNo)) {
+      newErrors.mobileNo = "Please enter a valid mobile number (10-15 digits)";
+    }
+
+    if (
+      formData.walletAddress &&
+      !validateWalletAddress(formData.walletAddress)
+    ) {
+      newErrors.walletAddress =
+        "Please enter a valid Polygon wallet address (0x...)";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
     setSubmitResult("");
-    const endpoint = import.meta.env.VITE_SHEETDB_API_ENDPOINT;
+
+    // Validate form before submission
+    if (!validateForm()) {
+      setSubmitting(false);
+      return;
+    }
+
+    const endpoint = import.meta.env.VITE_SHEETDB_API_ENDPOINT_DECENT;
 
     const payload = {
-      fullName: formData.fullName,
-      organization: formData.organization,
-      role: formData.role,
-      email: formData.email,
-      walletAddress: formData.walletAddress,
-      experienceRating: formData.experienceRating,
+      data: [
+        {
+          fullName: formData.fullName,
+          organization: formData.organization || "",
+          role: formData.role,
+          email: formData.email,
+          mobileNo: formData.mobileNo || "",
+          walletAddress: formData.walletAddress || "",
+          comments: formData.comments || "",
+          experienceRating: formData.experienceRating || "",
+        },
+      ],
     };
 
     try {
@@ -60,6 +148,9 @@ const FeedbackForm = () => {
         body: JSON.stringify(payload),
       });
 
+      const responseData = await response.json();
+      console.log("Response:", responseData);
+
       if (response.ok) {
         setSubmitResult("Thank you for your feedback!");
         setFormData({
@@ -67,14 +158,20 @@ const FeedbackForm = () => {
           organization: "",
           role: "",
           email: "",
+          mobileNo: "",
           walletAddress: "",
+          comments: "",
           experienceRating: "",
         });
+        setErrors({});
       } else {
-        setSubmitResult("Failed to submit feedback. Please try again.");
+        console.error("Error response:", responseData);
+        setSubmitResult(
+          `Failed to submit: ${responseData.message || "Please try again."}`,
+        );
       }
     } catch (error) {
-      console.log(error);
+      console.error("Fetch error:", error);
       setSubmitResult("Error submitting the form. Please try again later.");
     }
 
@@ -88,7 +185,7 @@ const FeedbackForm = () => {
           Feedback Form
         </h2>
 
-        <div className="space-y-8">
+        <form onSubmit={handleSubmit} className="space-y-8">
           {/* Section 1: Participant Info */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-gray-800 mb-4">
@@ -105,8 +202,13 @@ const FeedbackForm = () => {
                 placeholder="Enter your full name"
                 value={formData.fullName}
                 onChange={handleInputChange}
-                className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors"
+                className={`w-full border-2 ${
+                  errors.fullName ? "border-red-500" : "border-gray-300"
+                } rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors`}
               />
+              {errors.fullName && (
+                <p className="text-red-500 text-sm mt-1">{errors.fullName}</p>
+              )}
             </div>
 
             <div>
@@ -133,9 +235,13 @@ const FeedbackForm = () => {
                 placeholder="e.g., Engineer, Product Manager, Founder"
                 value={formData.role}
                 onChange={handleInputChange}
-                required
-                className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors"
+                className={`w-full border-2 ${
+                  errors.role ? "border-red-500" : "border-gray-300"
+                } rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors`}
               />
+              {errors.role && (
+                <p className="text-red-500 text-sm mt-1">{errors.role}</p>
+              )}
             </div>
 
             <div>
@@ -148,52 +254,89 @@ const FeedbackForm = () => {
                 placeholder="Enter your email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors"
+                className={`w-full border-2 ${
+                  errors.email ? "border-red-500" : "border-gray-300"
+                } rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors`}
+              />
+              {errors.email && (
+                <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+              )}
+            </div>
+
+            <div>
+              <label className="block text-gray-800 font-semibold mb-2">
+                Mobile Number
+              </label>
+              <input
+                type="tel"
+                name="mobileNo"
+                placeholder="Enter your mobile number"
+                value={formData.mobileNo}
+                onChange={handleInputChange}
+                className={`w-full border-2 ${
+                  errors.mobileNo ? "border-red-500" : "border-gray-300"
+                } rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors`}
+              />
+              {errors.mobileNo && (
+                <p className="text-red-500 text-sm mt-1">{errors.mobileNo}</p>
+              )}
+            </div>
+
+            <div>
+              <label className="block text-gray-800 font-semibold mb-2">
+                Polygon Wallet Address
+              </label>
+              <input
+                type="text"
+                name="walletAddress"
+                placeholder="0x..."
+                value={formData.walletAddress}
+                onChange={handleInputChange}
+                className={`w-full border-2 ${
+                  errors.walletAddress ? "border-red-500" : "border-gray-300"
+                } rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors`}
+              />
+              {errors.walletAddress && (
+                <p className="text-red-500 text-sm mt-1">
+                  {errors.walletAddress}
+                </p>
+              )}
+            </div>
+
+            <div>
+              <label className="block text-gray-800 font-semibold mb-2">
+                Comments / Feedback
+              </label>
+              <textarea
+                name="comments"
+                placeholder="Share your thoughts, suggestions, or feedback..."
+                value={formData.comments}
+                onChange={handleInputChange}
+                rows={5}
+                className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors resize-vertical"
               />
             </div>
 
             <div>
               <label className="block text-gray-800 font-semibold mb-2">
-                Wallet Address <span className="text-red-500">*</span>
+                Experience Rating (1-5)
               </label>
               <input
-                type="text"
-                name="walletAddress"
-                placeholder="Enter your polygon wallet address"
-                value={formData.walletAddress}
+                type="number"
+                name="experienceRating"
+                placeholder="Rate from 1 to 5"
+                min="1"
+                max="5"
+                value={formData.experienceRating}
                 onChange={handleInputChange}
                 className="w-full border-2 border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-500 transition-colors"
               />
             </div>
           </div>
 
-          {/* Section 3: Experience Feedback */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold text-gray-800 mb-4">
-              Experience Feedback
-            </h3>
-
-            <div>
-              <label className="block text-gray-800 font-semibold mb-3">
-                Overall experience rating:{" "}
-                <span className="text-red-500">*</span>
-              </label>
-              <StarRating
-                totalStars={5}
-                initialRating={parseInt(formData.experienceRating, 10)}
-                onChange={(rating) =>
-                  setFormData((prev) => ({
-                    ...prev,
-                    experienceRating: rating.toString(),
-                  }))
-                }
-              />
-            </div>
-          </div>
-
           {/* Submit Button */}
           <button
-            onClick={handleSubmit}
+            type="submit"
             disabled={submitting}
             className="w-full bg-blue-600 text-white font-bold text-lg py-4 rounded-lg hover:bg-blue-700 disabled:opacity-50 transition-colors duration-200 shadow-md"
           >
@@ -212,7 +355,7 @@ const FeedbackForm = () => {
               {submitResult}
             </p>
           )}
-        </div>
+        </form>
       </div>
     </div>
   );

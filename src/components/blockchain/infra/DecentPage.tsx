@@ -23,8 +23,8 @@ export default function DecentPage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-50 to-blue-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 via-blue-50 to-blue-50 text-center px-6 py-20 md:py-28">
-        <h1 className="text-4xl md:text-6xl font-bold text-blue mb-4">
-          Decent: Blockchain Prediction Game
+        <h1 className="text-4xl md:text-5xl font-bold text-blue mb-4">
+          Decent Guess: Hash Prediction Game
         </h1>
         <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-8">
           Predict future block hashes and earn rewards. A gamified approach to
@@ -32,13 +32,13 @@ export default function DecentPage() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            to="/roadmap"
+            to="/products/blockchain/web3-gaming/decent-coin/roadmap"
             className="bg-blue text-white font-semibold text-lg px-8 py-3 rounded-md hover:bg-blue-700 transition-colors"
           >
             View Roadmap
           </Link>
           <Link
-            to="/products/blockchain/web3-gaming/decentra-coin/demo-guess-game"
+            to="/products/blockchain/web3-gaming/decent-coin/demo-guess-game"
             className="bg-blue text-white font-semibold text-lg px-8 py-3 rounded-md hover:bg-blue-700 transition-colors"
           >
             Play Demo Game
@@ -51,18 +51,12 @@ export default function DecentPage() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-3xl md:text-4xl font-bold text-blue mb-6">
-              What is Decent?
+              What is Decent GUESS GAME?
             </h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Decent transforms Proof-of-Stake validation into an engaging
-              prediction challenge. Players test their intuition by matching
-              4–64 hexadecimal digits of future block hashes, contributing to
-              network transparency while earning GES tokens.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              With provably fair mechanics and on-chain verification, Decent
-              ensures every prediction is secure, transparent, and rewarding.
-              Choose between free play or paid mode with higher rewards.
+            <p className="text-gray-700 text-lg leading-relaxed mb-4">
+              A complete decentralized hash prediction game entirely build on
+              blockhash based randomness. Complete game logic is written into
+              smart contracts
             </p>
           </div>
           <div className="">
@@ -197,20 +191,11 @@ export default function DecentPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-blue mb-6">
                 Sustainable Tokenomics
               </h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                GES tokens power the Decent ecosystem with a fixed maximum
-                supply set at launch. Rewards are minted for successful
-                predictions until the cap is reached, ensuring scarcity.
-              </p>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Every paid guess burns 25 GES tokens permanently, creating
-                deflationary pressure that counteracts reward minting. This burn
-                mechanism ensures long-term value sustainability.
-              </p>
-              <p className="text-gray-700 leading-relaxed">
-                Rewards scale based on matches, token size, and game mode
-                complexity. The more accurate your prediction, the higher your
-                earnings.
+              <p className="text-gray-700 text-lg leading-relaxed mb-4">
+                A mint only game where coin rewards will be minted for the
+                successful predictions Transparent and organic token launch,
+                which means make the game attractive and popular And then
+                launching the coins to the exchange in an organic manner
               </p>
             </div>
           </div>

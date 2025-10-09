@@ -5,8 +5,9 @@ import cyborg from "../../../animations/cyborg.json";
 
 const AICards = [
   {
-    description: "In progress",
-    title: "AI and the future: A Theoretical approach - In Layman's terms",
+    description: "published",
+    title:
+      "Evolution Beyond Flesh: A Unified Theory of Externalization, Automation, and Inevitable Integration",
     src: "/rewriting-culture.jpg",
     link: "/products/AI/ai-and-the-future",
     content: () => (
@@ -25,7 +26,7 @@ const AICards = [
     ),
   },
   {
-    description: "In progress",
+    description: "alpha",
     title: "MeeKaan AI: AI tailored for everyone",
     src: "/beyond-words.jpg",
     link: "/products/AI/meekaan-ai",

@@ -147,7 +147,7 @@ const GuessUI: React.FC<GuessUIProps> = ({
             }}
             transition={{ duration: 3, repeat: Infinity }}
           >
-            NEW GUESS PROTOCOL
+            DECENT GUESS GAME
           </motion.h1>
         </motion.div>
 
