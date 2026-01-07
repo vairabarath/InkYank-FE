@@ -25,21 +25,35 @@ const MeekaanAI = () => {
             AI for anyone and everyone. AI the way any individual wants it to
             be.
           </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <a
-              href="https://drive.google.com/uc?export=download&id=1-nPL1zKZ8-pYBYeGW0xAT_xFngfqhR3L"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-violet text-white font-bold py-3 px-6 rounded-lg hover:bg-violet-700 transition-colors"
-            >
-              <Download />
-              Download APK
-            </a>
-          </motion.div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.4 }}
+    >
+      <button
+        onClick={async () => {
+          // Track (fire-and-forget)
+          fetch("https://sheetdb.io/api/v1/bhb2gu0t2aj73", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              TimeStamp: new Date().toISOString(),
+              Count: 1,
+            }),
+          }).catch(() => {});
+
+          // Open download
+          window.open(
+            "https://drive.google.com/uc?export=download&id=1-nPL1zKZ8-pYBYeGW0xAT_xFngfqhR3L",
+            "_blank"
+          );
+        }}
+        className="inline-flex items-center gap-2 bg-violet text-white font-bold py-3 px-6 rounded-lg hover:bg-violet-700 transition-colors"
+      >
+        <Download />
+        Download APK
+      </button>
+    </motion.div>
         </section>
       </div>
 

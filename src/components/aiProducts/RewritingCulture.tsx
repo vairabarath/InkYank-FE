@@ -34,14 +34,29 @@ const RewritingCulture = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <a
-                href={directDownloadUrl}
-                download="Rewriting_Culture_with_AI.pdf"
-                className="inline-flex items-center gap-2 bg-violet text-white font-bold py-3 px-6 rounded-lg hover:bg-violet-700 transition-colors"
-              >
-                <FileText />
-                Download PDF
-              </a>
+      <button
+        onClick={async () => {
+          // Track (fire-and-forget)
+          fetch("https://sheetdb.io/api/v1/ly72w6c78yydw", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              TimeStamp: new Date().toISOString(),
+              Count: 1,
+            }),
+          }).catch(() => {});
+
+          // Open download
+          window.open(
+            directDownloadUrl,
+            "_blank"
+          );
+        }}
+        className="inline-flex items-center gap-2 bg-violet text-white font-bold py-3 px-6 rounded-lg hover:bg-violet-700 transition-colors"
+      >
+        <FileText />
+        Download APK
+      </button>
               <p className="text-sm text-gray-600 mt-4 max-w-2xl mx-auto">
                 Download and explore our research. Thank you for your interest!
               </p>
