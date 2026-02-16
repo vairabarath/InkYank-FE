@@ -39,7 +39,7 @@ const Profiles = () => {
     },
     {
       quote:
-        "Arunprabhu Murugesan leads technical innovation and AI research, architecting scalable solutions while guiding teams through cutting-edge developments. He shapes strategic roadmaps and ensures excellence in emerging technologies.",
+        "Arunprabhu Murugesan dual-leads the firm’s technical operations and scientific research. As Technical Lead, he oversees large-scale engineering and emerging tech deployment while directing internal R&D into AI theory and evolutionary computational models.",
       name: "Arunprabhu Murugesan",
       designation: "Tech Lead, AI R&D Head",
       src: "/Profiles/arun.png",

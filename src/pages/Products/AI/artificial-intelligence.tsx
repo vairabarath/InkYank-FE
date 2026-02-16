@@ -7,7 +7,7 @@ const AICards = [
   {
     description: "yet to be published",
     title:
-      "Evolution Beyond Flesh: A Unified Theory of Externalization, Automation, and Inevitable Integration",
+      "Evolution Beyond Flesh - A Unified Theory of Externalization, Autonomous Intelligence, and Structural Convergence",
     src: "/rewriting-culture.jpg",
     link: "/products/AI/ai-and-the-future",
     content: () => (
