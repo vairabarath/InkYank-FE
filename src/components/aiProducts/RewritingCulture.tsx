@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
-import { FileText } from "lucide-react";
 import EvolutionAnimation from "../ui/EvolutionAnimation";
 import useIsMobile from "../../hooks/use-is-mobile";
 import AIResearchTeam from "./AIResearchTeam";
@@ -11,8 +10,6 @@ const RewritingCulture = () => {
   const handleAnimationComplete = () => setAnimationCompleted(true);
   const isMobile = useIsMobile();
 
-  const googleDriveFileId = "1UfkxW_0ZoQa67XCSr5sU9vvc-JVwrtK-";
-  const directDownloadUrl = `https://drive.google.com/uc?export=download&id=${googleDriveFileId}`;
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -24,41 +21,17 @@ const RewritingCulture = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-3xl md:text-4xl font-bold text-violet mb-6"
+              className="text-2xl md:text-4xl font-bold text-violet mb-6"
             >
-              Evolution Beyond Flesh: A Unified Theory of Externalization,
-              Automation, and Inevitable Integration
+              Evolution Beyond Flesh - A Unified Theory of Externalization, Autonomous Intelligence, and Structural Convergence
             </motion.h1>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-      <button
-        onClick={async () => {
-          // Track (fire-and-forget)
-          fetch("https://sheetdb.io/api/v1/ly72w6c78yydw", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              TimeStamp: new Date().toISOString(),
-              Count: 1,
-            }),
-          }).catch(() => {});
-
-          // Open download
-          window.open(
-            directDownloadUrl,
-            "_blank"
-          );
-        }}
-        className="inline-flex items-center gap-2 bg-violet text-white font-bold py-3 px-6 rounded-lg hover:bg-violet-700 transition-colors"
-      >
-        <FileText />
-        Download APK
-      </button>
-              <p className="text-sm text-gray-600 mt-4 max-w-2xl mx-auto">
-                Download and explore our research. Thank you for your interest!
+              <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
+                Yet to be published
               </p>
             </motion.div>
           </div>
@@ -71,7 +44,7 @@ const RewritingCulture = () => {
           {/* Section 1: Image on the right */}
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold mb-4 text-violet">
+              <h2 className="text-2xl font-bold mb-4 text-violet">
                 AGI Inevitability
               </h2>
               <p>
@@ -92,7 +65,7 @@ const RewritingCulture = () => {
           {/* Section 2: Image on the left */}
           <div className="flex flex-col md:flex-row-reverse items-center gap-8">
             <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold mb-4 text-violet">
+              <h2 className="text-2xl font-bold mb-4 text-violet">
                 Control over autonomous intelligence
               </h2>
               <p>
@@ -114,7 +87,7 @@ const RewritingCulture = () => {
           {/* Section 3: Image on the right */}
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="md:w-1/2">
-              <h2 className="text-3xl font-bold mb-4 text-violet">
+              <h2 className="text-2xl font-bold mb-4 text-violet">
                 Brain Computer Interface
               </h2>
               <p>

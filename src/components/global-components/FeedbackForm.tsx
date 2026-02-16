@@ -83,7 +83,7 @@ const FeedbackForm = () => {
       return true;
     }
 
-    const cleanedPhone = phone.replace(/[\s\-\(\)]/g, "");
+    const cleanedPhone = phone.replace(/[\s-()]/g, "");
     const phoneRegex = /^\+?[0-9]{10,15}$/;
 
     return phoneRegex.test(cleanedPhone);

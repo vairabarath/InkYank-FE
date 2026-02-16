@@ -5,7 +5,7 @@ import cyborg from "../../../animations/cyborg.json";
 
 const AICards = [
   {
-    description: "published",
+    description: "yet to be published",
     title:
       "Evolution Beyond Flesh: A Unified Theory of Externalization, Automation, and Inevitable Integration",
     src: "/rewriting-culture.jpg",

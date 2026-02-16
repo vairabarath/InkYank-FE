@@ -4,17 +4,10 @@ const AIResearchTeam = () => {
   const testimonials = [
     {
       quote:
-        "MAP leads technical innovation and AI research, architecting scalable solutions while guiding teams through cutting-edge developments. He shapes strategic roadmaps and ensures excellence in emerging technologies.",
-      name: "MAP",
+        "Arunprabhu Murugesan leads technical innovation and AI research, architecting scalable solutions while guiding teams through cutting-edge developments. He shapes strategic roadmaps and ensures excellence in emerging technologies.",
+      name: "Arunprabhu Murugesan",
       designation: "Tech Lead, AI R&D Head",
-      src: "/Profiles/MAP.jpg",
-    },
-    {
-      quote:
-        "In the realm where silicon dreams merge with human consciousness, I weave algorithms that transcend mere code. Every function is a spell, every neural network a gateway to understanding the infinite dance between mind and machine.",
-      name: "Aetheron",
-      designation: "Architect of Digital Realms",
-      src: "/Profiles/aetheron.png",
+      src: "/Profiles/arun.png",
     },
     {
       quote:

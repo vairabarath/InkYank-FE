@@ -39,10 +39,10 @@ const Profiles = () => {
     },
     {
       quote:
-        "MAP leads technical innovation and AI research, architecting scalable solutions while guiding teams through cutting-edge developments. He shapes strategic roadmaps and ensures excellence in emerging technologies.",
-      name: "MAP",
+        "Arunprabhu Murugesan leads technical innovation and AI research, architecting scalable solutions while guiding teams through cutting-edge developments. He shapes strategic roadmaps and ensures excellence in emerging technologies.",
+      name: "Arunprabhu Murugesan",
       designation: "Tech Lead, AI R&D Head",
-      src: "/Profiles/MAP.jpg",
+      src: "/Profiles/arun.png",
     },
     {
       quote:
